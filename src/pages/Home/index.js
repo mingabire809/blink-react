@@ -28,9 +28,12 @@ import Icon3 from '../../assets/images/Icons-3.png'
 import Component48 from '../../assets/images/Component48.png'
 import DeliveryMan from '../../assets/images/delivery.jpg'
 import PhoneMockup2 from '../../assets/images/PhoneMockup2.png'
+import { useNavigate } from "react-router-dom";
 
 
 const Home = () =>{
+
+    const navigate = useNavigate()
     const [delivery, setDelivery] = useState(true)
     const freshArray = [
         <FreshContent>
@@ -344,17 +347,17 @@ const Home = () =>{
                         <CareerContent>
                         <ContentCareer>
                         <h1>Career Opportunities!</h1>
-                        <CareerButton>Apply</CareerButton>
+                        <CareerButton onClick={()=>navigate('/careers')}>Apply</CareerButton>
                         </ContentCareer>
                         <hr/>
                         <ContentCareer2>
                             <h1>Become A Supplier</h1>
-                            <CareerButton2>Apply</CareerButton2>
+                            <CareerButton2 onClick={()=>navigate('/suppliers')}>Apply</CareerButton2>
                         </ContentCareer2>
                         <hr/>
                         <ContentCareer>
                         <h1>Become A Delivery Agent</h1>
-                        <CareerButton>Apply</CareerButton>
+                        <CareerButton onClick={()=>navigate('/delivery-agents')}>Apply</CareerButton>
                         </ContentCareer>
                         <hr/>
                         </CareerContent>
