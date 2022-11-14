@@ -126,6 +126,7 @@ export const CategoryContent = styled.div`
     margin-left: auto;
     margin-right: auto;
     
+    margin-left: 5.5%;
 
 `;
 
@@ -134,6 +135,7 @@ text-align: center;
 width: 160px;
 height: fit-content;
 margin-right: 5.3%;
+cursor: pointer;
 `;
 
 export const ProductContent = styled.div`

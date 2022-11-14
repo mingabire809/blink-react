@@ -139,7 +139,7 @@ const Home = () =>{
             </ProductContent>
             <h3>Electronics</h3>
         </Product>
-        <Product>
+        <Product onClick={()=>navigate('/pharm-App')}>
             <ProductContent>
                 <WhiteContent>
                     <ImageCategory src={PharmApp} alt="category"/>
@@ -232,7 +232,7 @@ const Home = () =>{
                             
                         </DeliveryTitle>
 
-                       <Marquee gradient={false} speed={45} play={delivery}>
+                       <Marquee gradient={false} speed={120} play={delivery}>
                         <h1 style={{color: 'rgba(255,200,1,255)', fontSize: 85, marginRight: 70, marginLeft: 70}}>KILELESHWA</h1>
                         <h1 style={{color: 'rgba(255,200,1,255)', fontSize: 85, marginRight: 70, marginLeft: 70}}>LAVINGTON</h1>
                         <h1 style={{color: 'rgba(255,200,1,255)', fontSize: 85, marginRight: 70, marginLeft: 70}}>HURLINGHAM</h1>

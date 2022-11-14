@@ -1,9 +1,10 @@
 import React from "react";
-import { Content, Icon, LockerContent, NumberContent, Option, Wrapper } from "./Header.styles";
+import { Content, Icon, Option, Wrapper } from "./Header.styles";
 import Search from '../../assets/images/search.svg'
 import User from '../../assets/images/user.png'
 import Lock from '../../assets/images/lock.png'
 import { useLocation, useNavigate } from "react-router-dom";
+import Cart from '../../assets/images/cart.png'
 
 const Header = ()=>{
     const location = useLocation()
@@ -25,15 +26,16 @@ const Header = ()=>{
                     <img src={User} style={{
                         width: 20
                     }} alt="user"/>
-                    <LockerContent>
+                    
                     <img src={Lock} style={{
                         width: 15,
                         height: 20
                     }} alt="lock"/>
-                    <NumberContent>
-                        2
-                    </NumberContent>
-                    </LockerContent>
+                    
+                    
+                    <img src={Cart} style={{
+                        width: 20
+                    }} alt="cart"/>
                     
                 </Icon>
             </Content>
