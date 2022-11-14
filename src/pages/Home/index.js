@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Categories, CategoryContent, Content, Data, FirstDot, Open,FreshContent, FreshCourt, FreshProduct, ImageCategory, Phone, PhoneContainer, PhoneContent, Play, Product, ProductContent, SecondDot, Welcome, WhiteContent, Word, Wrapper, FreshImage, Delivery, DeliveryTitle, ButtonMoving, MapContent, MapImage, MapDescription, InputContent, OpenInput, OpenButton, Advertisment, Advertise1, Advertise2 } from "./Home.styles";
+import { Categories, CategoryContent, Content,CareerButton2, Data, FirstDot, Open,FreshContent, Hand,FreshCourt, FreshProduct, ImageCategory, Phone, PhoneContainer, PhoneContent, Play, Product, ProductContent, SecondDot, Welcome, WhiteContent, Word, Wrapper, FreshImage, Delivery, DeliveryTitle, ButtonMoving, MapContent, MapImage, MapDescription, InputContent, OpenInput, OpenButton, Advertisment, Advertise1, Advertise2, Order, OrderWord, Why, WhyContent, WhyImage, Ads, AdsContent, AdsButton, Career, CareerContent, ContentCareer, CareerButton, ContentCareer2, Download, DownloadWord, PhoneMock } from "./Home.styles";
 import PhoneMockup from '../../assets/images/PhoneMockup.png'
 import AppStore from '../../assets/images/appstore.jpg'
 import PlayStore from '../../assets/images/google.jpg'
@@ -21,6 +21,13 @@ import PlayButton from '../../assets/images/play.png'
 import Pause from '../../assets/images/pause.png'
 import Marquee from "react-fast-marquee";
 import Map from '../../assets/images/map.png'
+import PhoneHand from '../../assets/images/phonehand.png'
+import Icon1 from '../../assets/images/Icons-1.png'
+import Icon2 from '../../assets/images/Icons-2.png'
+import Icon3 from '../../assets/images/Icons-3.png'
+import Component48 from '../../assets/images/Component48.png'
+import DeliveryMan from '../../assets/images/delivery.jpg'
+import PhoneMockup2 from '../../assets/images/PhoneMockup2.png'
 
 
 const Home = () =>{
@@ -280,6 +287,96 @@ const Home = () =>{
                 </div>)}
                </Slider>
                         </div>
+
+                       
+                        
+                    </Content>
+                     <Order>
+                            <OrderWord>
+                                <h1>1. ORDER</h1>
+                                <h2 style={{marginTop: -15}}>Buy what you need.</h2>
+                                <h1>2. CHECKOUT</h1>
+                                <h2 style={{marginTop: -15}}>Complete your payment.</h2>
+                                <h1>3. WAIT</h1>
+                                <h2 style={{marginTop: -15}}>Our legendary rides will be at your door step in 10 mins.</h2>
+                            </OrderWord>
+                            <Hand src={PhoneHand}/>
+                    </Order>
+
+                    <Content>
+                    <h1 style={{textAlign: 'center', textDecoration: 'underline 5px rgba(255,200,1,255)', marginTop: 100}}>Why Blink?</h1>
+                    <Why>
+                        <WhyContent>
+                            <WhyImage src={Icon1}/>
+                            <h2>Supermarket Prices</h2>
+                            <h3>Over 3,000 items direct to your doorstep at normal supermarket prices</h3>
+                        </WhyContent>
+                        <WhyContent>
+                            <WhyImage src={Icon2}/>
+                            <h2>Ultrafast Delivery</h2>
+                            <h3>Timing is everything! We will be at our doorstep before you know it.</h3>
+                        </WhyContent>
+                        <WhyContent>
+                            <WhyImage src={Icon3}/>
+                            <h2>Environmental Friendly</h2>
+                            <h3>Our decisions and goals towards becoming carbon negative</h3>
+                        </WhyContent>
+                    </Why>
+                    </Content>
+                    <Ads style={{
+                        backgroundImage: `url(${Component48})`
+                    }}>
+                        <AdsContent style={{marginLeft: 40}}>
+                            <h1>Build your brand with us!</h1>
+                            <h3>Promote your products within the blink app, across our marketing channels, and through our store & rider network</h3>
+                            <AdsButton>More Info</AdsButton>
+                        </AdsContent>
+
+                        <AdsContent style={{marginRight: 40}}>
+                            <h1>Advertise with us!</h1>
+                            <h3>Advertise on our website and app</h3>
+                            <AdsButton>More Info</AdsButton>
+                        </AdsContent>
+                    </Ads>
+
+                    <Career>
+                        <img src={DeliveryMan} alt="delivery" style={{width: '40%'}}/>
+                        <CareerContent>
+                        <ContentCareer>
+                        <h1>Career Opportunities!</h1>
+                        <CareerButton>Apply</CareerButton>
+                        </ContentCareer>
+                        <hr/>
+                        <ContentCareer2>
+                            <h1>Become A Supplier</h1>
+                            <CareerButton2>Apply</CareerButton2>
+                        </ContentCareer2>
+                        <hr/>
+                        <ContentCareer>
+                        <h1>Become A Delivery Agent</h1>
+                        <CareerButton>Apply</CareerButton>
+                        </ContentCareer>
+                        <hr/>
+                        </CareerContent>
+                    </Career>
+                    <Content>
+                        <Download>
+                    <DownloadWord>
+                        <h1>Download Blink App Now.</h1>
+                        <h2>The future of supermarkets is here.</h2>
+                        <h2 style={{marginTop: -20}}>Download now and start shopping!</h2>
+                        <Play><img src={PlayStore} style={{
+                    width: 200,
+                    cursor: 'pointer'
+                }} alt="app"/>
+                <img src={AppStore} style={{
+                    width: 200,
+                    cursor: 'pointer'
+                }} alt="app"/>
+                </Play>
+                    </DownloadWord>
+                    <PhoneMock src={PhoneMockup2}/>
+                        </Download>
                         
                     </Content>
 

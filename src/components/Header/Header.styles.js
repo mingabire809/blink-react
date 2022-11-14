@@ -5,6 +5,8 @@ width: 100%;
 height: 70px;
 background-color: rgba(255,200,1,255);
 z-index: 997;
+position: sticky;
+top: 0;
 `;
 
 export const Content = styled.div`

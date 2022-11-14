@@ -238,6 +238,9 @@ export const MapContent = styled.div`
 
 export const MapImage = styled.img`
     width: 1000px;
+    @media screen and (max-width: 1000px){
+        width: 500px;
+    }
 `;
 
 export const MapDescription = styled.div`
@@ -249,6 +252,10 @@ margin-left: 715px;
 margin-top: 380px;
 width: 350px;
 justify-content: space-between;
+@media screen and (max-width: 1000px){
+        margin-top: 160px;
+        margin-left: 380px;
+    }
 
 `;
 export const Open = styled.div`
@@ -315,4 +322,201 @@ h1{
     margin-top: 150px;
     font-size: 45px;
 }
+`;
+
+export const Order = styled.div`
+background-color: rgba(255,200,1,255);
+width: 100%;
+height: 550px;
+display: flex;
+justify-content: space-around;
+margin-top: 100px;
+`;
+
+export const OrderWord = styled.div`
+ 
+ width: 40%;
+ h1{
+    font-size: 40px;
+ }
+ h2{
+    font-size: 30px;
+ }
+`;
+
+export const Hand = styled.img`
+
+`;
+export const Why = styled.div`
+ width: 95%;
+ 
+ height: 400px;
+ margin-left: auto;
+ margin-right: auto;
+ transition: 2s;
+ display: flex;
+ justify-content: space-between;
+ :hover{
+    width: 100%;
+    transition: 2s;
+ }
+`;
+
+export const WhyContent = styled.div`
+
+width: 350px;
+
+text-align: center;
+height: fit-content;
+h3{
+    font-weight: 400;
+}
+`;
+
+export const WhyImage = styled.img`
+
+`;
+
+export const Ads = styled.div`
+    width: 100%;
+    height: 410px;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+`;
+
+export const AdsContent = styled.div`
+    width: 300px;
+    height: fit-content;
+    h3{
+        font-weight: 400;
+    }
+    h1{
+        font-size: 45px;
+    }
+`;
+
+export const AdsButton = styled.button`
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    background-color: rgba(228,228,228,255);
+    border-radius: 10px;
+    border: 3px solid black;
+
+    cursor: pointer;
+
+    :hover{
+        background-color: black;
+        color: white;
+    }
+`;
+
+export const Career = styled.div`
+    width: 100%;
+    height: 450px;
+    display: flex;
+    margin-top: 100px;
+    
+    
+`;
+
+export const CareerContent = styled.div`
+    background-color: black;
+    width: 60%;
+    
+    ::after{
+        width: 11%;
+    height: 450px;
+    content: '';
+
+    background: inherit;
+    transform-origin: right;
+    transform: skewX(-10deg);
+    background-color: black;
+    position: absolute;
+    margin-left: -90px;
+    margin-top: -294px;
+
+   
+    
+    z-index: 1;
+    @media screen and (max-width: 1000px){
+        display: none;
+    }
+    }
+`;
+
+export const ContentCareer = styled.div`
+display: flex;
+justify-content: space-evenly;
+color: rgba(255,200,1,255);
+align-items: center;
+
+margin-left: 20px;
+`;
+
+export const CareerButton = styled.button`
+background-color: rgba(255,200,1,255);
+width: 180px;
+height: 50px;
+font-size: 25px;
+border-radius: 10px;
+border-color: transparent;
+cursor: pointer;
+transition: 2s;
+color: gray;
+:hover{
+    margin-left: 25px;
+    transition: 2s;
+}
+`;
+export const ContentCareer2 = styled.div`
+display: flex;
+justify-content: space-evenly;
+color: white;
+align-items: center;
+`;
+
+export const CareerButton2 = styled.button`
+background-color: white;
+width: 180px;
+height: 50px;
+font-size: 25px;
+border-radius: 10px;
+border-color: transparent;
+cursor: pointer;
+transition: 2s;
+color: gray;
+:hover{
+    margin-right: 25px;
+    transition: 2s;
+}
+`;
+
+export const Download = styled.div`
+margin-top: 20px;
+height: 400px;
+width: 100%;
+display: flex;
+justify-content: space-around;
+
+`;
+
+export const DownloadWord = styled.div`
+margin-top: 100px;
+
+h1{
+    font-size: 40px;
+}
+h2{
+    font-weight: 400;
+}
+`;
+
+export const PhoneMock = styled.img`
+    width: 400px;
+    
 `;

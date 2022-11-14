@@ -3,14 +3,18 @@ import { Content, Icon, LockerContent, NumberContent, Option, Wrapper } from "./
 import Search from '../../assets/images/search.svg'
 import User from '../../assets/images/user.png'
 import Lock from '../../assets/images/lock.png'
+import { useLocation } from "react-router-dom";
 
 const Header = ()=>{
+    const location = useLocation()
     return(
         <Wrapper>
             <Content>
                 <h1>Blink</h1>
                 <Option>
-                    <h2>HOME</h2>
+                    <h2 style={{
+                        textDecoration: location.pathname === '/' ? 'underline': 'none'
+                    }}>HOME</h2>
                     <h2>ABOUT</h2>
                     <h2>CONTACT</h2>
                     <h2>LOG IN</h2>
