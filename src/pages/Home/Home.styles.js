@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-
+    
 `;
 
 export const Content = styled.div`
     padding: 20px;
+    overflow: hidden;
 `;
 
 export const Welcome = styled.div`
@@ -127,6 +128,10 @@ export const CategoryContent = styled.div`
     margin-right: auto;
     
     margin-left: 5.5%;
+    @media screen and (max-width: 1025px){
+        width: 100%;
+        margin-left: 8.5%;
+    }
 
 `;
 
@@ -240,7 +245,7 @@ export const MapContent = styled.div`
 
 export const MapImage = styled.img`
     width: 1000px;
-    @media screen and (max-width: 1000px){
+    @media screen and (max-width: 1025px){
         width: 500px;
     }
 `;
@@ -250,11 +255,12 @@ display: flex;
 align-items: baseline;
 font-size: 14px;
 position: absolute;
-margin-left: 715px;
+margin-left: 725px;
 margin-top: 380px;
 width: 350px;
+
 justify-content: space-between;
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1025px){
         margin-top: 160px;
         margin-left: 380px;
     }
@@ -338,6 +344,7 @@ margin-top: 100px;
 export const OrderWord = styled.div`
  
  width: 40%;
+ margin-left: 10%;
  h1{
     font-size: 40px;
  }
@@ -385,15 +392,17 @@ export const Ads = styled.div`
     background-size: cover;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     
 `;
 
 export const AdsContent = styled.div`
     width: 300px;
     height: fit-content;
+    margin-top: -20px;
     h3{
         font-weight: 400;
+        margin-top: -20px;
     }
     h1{
         font-size: 45px;
@@ -445,7 +454,7 @@ export const CareerContent = styled.div`
    
     
     z-index: 1;
-    @media screen and (max-width: 1000px){
+    @media screen and (max-width: 1025px){
         display: none;
     }
     }

@@ -270,8 +270,8 @@ const Home = () =>{
                         </MapContent>
                         <Open>
                             <div>
-                            <h1 style={{fontSize: 40}}>Let Us Know Where Blink Should Open Next</h1>
-                            <h1 style={{fontSize: 40}}>LET'S VOTE!</h1>
+                            <h1 style={{fontSize: 40}}>Your Area Not Listed?</h1>
+                            <h1 style={{fontSize: 40}}>Let us know where to find you.</h1>
                             </div>
                         <InputContent>
                         <OpenInput type="text" placeholder="First Name"/>
