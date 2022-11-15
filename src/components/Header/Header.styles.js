@@ -34,8 +34,8 @@ export const Option = styled.div`
 export const Icon = styled.div`
 display: flex;
 align-items: center;
-justify-content: space-around;
-width: 13%;
+justify-content: space-between;
+width: 20%;
 align-items: center;
 `;
 

@@ -6,7 +6,9 @@ import PopUp from "../components/PopUp";
 import ScrollToTop from "../components/ScrolltoTop";
 import Career from "../pages/Career";
 import Delivery from "../pages/Delivery";
+import Groceries from "../pages/Groceries";
 import Home from "../pages/Home";
+import Lpg from "../pages/LPG";
 import PharmApp from "../pages/PharmApp";
 import Supplier from "../pages/Supplier";
 const Routing = ()=>{
@@ -37,6 +39,8 @@ const Routing = ()=>{
                 <Route path="/suppliers" element={<Supplier/>}/>
                 <Route path="/delivery-agents" element={<Delivery/>}/>
                 <Route path="/pharm-App" element={<PharmApp/>}/>
+                <Route path="/LPG-gas" element={<Lpg/>}/>
+                <Route path="/Groceries" element={<Groceries/>}/>
             </Routes>
             <Footer/>
         </Router>

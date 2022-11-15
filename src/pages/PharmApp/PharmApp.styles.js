@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
 padding: 50px;
+overflow: hidden;
 `;
 
 export const WelcomeBanner = styled.div`
@@ -78,4 +79,64 @@ font-size: 20px;
 font-weight: 700;
 border-color: transparent;
 cursor: pointer;
+`;
+
+export const CategoriesContent = styled.div`
+width: 100%;
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+justify-content: flex-start;
+margin-left: 2%;
+
+@media screen and (max-width: 1025px){
+        width: 100%;
+        margin-left: 8.5%;
+    }
+
+`;
+
+export const Product = styled.div`
+    width: 200px;
+    height: 250px;
+    background-color: #FFC702;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px rgba(134,134,134,0.25);
+    margin-top: 40px;
+    margin-right: 6.6%;
+    overflow: hidden;
+    cursor: pointer;
+`;
+
+export const ProductWhite = styled.div`
+width: 200px;
+height: 100px;
+border-radius: 20px;
+background-color: white;
+margin-top: -20px;
+padding-top: 10px;
+h3{
+    text-align: center;
+    
+}
+`;
+
+export const ProductImage = styled.img`
+    width: 100%;
+    margin-top: 30px;
+    z-index: 99999;
+`;
+
+export const DiapperBanner = styled.div`
+height: 350px;
+width: 100%;
+border-radius: 20px;
+display: flex;
+justify-content: space-between;
+margin-left: auto;
+margin-right: auto;
+margin-top: 100px;
+align-items: center;
+background-color: #EFEFEF
+
 `;

@@ -123,7 +123,7 @@ const Home = () =>{
 <Categories>
     <h1 style={{textAlign: 'center', textDecoration: 'underline 5px rgba(255,200,1,255)'}}>Our Categories</h1>
     <CategoryContent>
-        <Product>
+        <Product onClick={()=>navigate("/Groceries")}>
             <ProductContent>
                 <WhiteContent>
                     <ImageCategory src={Groceries} alt="category"/>
@@ -155,7 +155,7 @@ const Home = () =>{
             </ProductContent>
             <h3>Cosmetics</h3>
         </Product>
-        <Product>
+        <Product onClick={()=>navigate('/LPG-gas')}>
             <ProductContent>
                 <WhiteContent>
                     <ImageCategory src={LPG} alt="category"/>
