@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import "@fontsource/montserrat"; 
 
 export const Wrapper = styled.div`
 width: 100%;
@@ -7,6 +8,7 @@ background-color: rgba(255,200,1,255);
 z-index: 997;
 position: sticky;
 top: 0;
+font-family: "Montserrat";
 `;
 
 export const Content = styled.div`

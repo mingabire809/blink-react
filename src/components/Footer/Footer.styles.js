@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import "@fontsource/montserrat"; 
 
 export const Wrapper = styled.div`
 width: 100%;
 height: 390px;
 background-color: rgba(255,200,1,255);
+font-family: "Montserrat";
 `;
 
 export const Content = styled.div`
@@ -60,7 +62,7 @@ export const Arrow2 = styled.img`
 
 export const Wrapper2 = styled.div`
 width: 100%;
-
+font-family: "Montserrat";
 background-color: rgba(223,176,0,225);
     height: 50px;
     display: flex;

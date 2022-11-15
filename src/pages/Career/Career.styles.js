@@ -1,7 +1,9 @@
 import styled from 'styled-components'
+import "@fontsource/montserrat"; 
 
 export const Wrapper = styled.div`
 min-height: 90vh;
+font-family: "Montserrat";
 `;
 
 export const Content = styled.div`

@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import "@fontsource/montserrat"; 
 
 export const Wrapper = styled.div`
-    
+   font-family: "Montserrat";
 `;
 
 export const Content = styled.div`
@@ -545,7 +546,7 @@ export const CareerContent = styled.div`
     background-color: black;
     position: absolute;
     margin-left: -90px;
-    margin-top: -294px;
+    margin-top: -299px;
 
    
     
