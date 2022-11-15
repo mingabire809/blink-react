@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Categories, CategoryContent, Content,CareerButton2, Data, FirstDot, Open,FreshContent, Hand,FreshCourt, FreshProduct, ImageCategory, Phone, PhoneContainer, PhoneContent, Play, Product, ProductContent, SecondDot, Welcome, WhiteContent, Word, Wrapper, FreshImage, Delivery, DeliveryTitle, ButtonMoving, MapContent, MapImage, MapDescription, InputContent, OpenInput, OpenButton, Advertisment, Advertise1, Advertise2, Order, OrderWord, Why, WhyContent, WhyImage, Ads, AdsContent, AdsButton, Career, CareerContent, ContentCareer, CareerButton, ContentCareer2, Download, DownloadWord, PhoneMock } from "./Home.styles";
+import { Categories, CategoryContent, Content,CareerButton2, Data, FirstDot,Offer, OfferContent, Open,FreshContent, Hand,FreshCourt, FreshProduct, ImageCategory, Phone, PhoneContainer, PhoneContent, Play, Product, ProductContent, SecondDot, Welcome, WhiteContent, Word, Wrapper, FreshImage, Delivery, DeliveryTitle, ButtonMoving, MapContent, MapImage, MapDescription, InputContent, OpenInput, OpenButton, Advertisment, Advertise1, Advertise2, Order, OrderWord, Why, WhyContent, WhyImage, Ads, AdsContent, AdsButton, Career, CareerContent, ContentCareer, CareerButton, ContentCareer2, Download, DownloadWord, PhoneMock, EveryDay, EveryDayItem, ItemContent, ItemButton, ItemImage, OfferImageContent, OfferButton, Badge, OfferImage } from "./Home.styles";
 import PhoneMockup from '../../assets/images/PhoneMockup.png'
 import AppStore from '../../assets/images/appstore.jpg'
 import PlayStore from '../../assets/images/google.jpg'
@@ -203,6 +203,213 @@ const Home = () =>{
         </Product>
     </CategoryContent>
 </Categories>
+
+<EveryDay>
+    <EveryDayItem>
+        <ItemContent>
+            <h3>Everyday Fresh & Clean with Our Products</h3>
+            
+            <ItemButton>Shop Now &#x2192;</ItemButton>
+        </ItemContent>
+        <ItemImage src={Groceries}/>
+        
+    </EveryDayItem>
+
+    <EveryDayItem>
+    <ItemContent>
+            <h3>Make your Breakfast Healthy and Easy</h3>
+            
+            <ItemButton>Shop Now &#x2192;</ItemButton>
+        </ItemContent>
+        <ItemImage src={Cafe}/>
+        </EveryDayItem>
+
+        <EveryDayItem>
+        <ItemContent>
+            <h3>The best Organic Products Online</h3>
+            
+            <ItemButton>Shop Now &#x2192;</ItemButton>
+        </ItemContent>
+        <ItemImage src={Catering}/>
+        </EveryDayItem>
+</EveryDay>
+<div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 70}}>
+<h1>Offer</h1>
+<div style={{display: 'flex'}}>
+    <h3 style={{color: 'rgba(255,200,1,255)', marginLeft: 5, marginRight: 5, fontWeight: '400'}}>All</h3>
+    <h3 style={{marginLeft: 5, marginRight: 5, fontWeight: '400'}}>BlinkCafe</h3>
+    <h3 style={{marginLeft: 5, marginRight: 5, fontWeight: '400'}}>Groceries</h3>
+    <h3 style={{marginLeft: 5, marginRight: 5, fontWeight: '400'}}>Electronics</h3>
+    <h3 style={{marginLeft: 5, marginRight: 5, fontWeight: '400'}}>Pharm App</h3>
+    <h3 style={{marginLeft: 5, marginRight: 5, fontWeight: '400'}}>Cosmetics</h3>
+</div>
+</div>
+
+<OfferContent>
+    <Offer>
+        <Badge>
+            Hot
+        </Badge>
+    <OfferImageContent>
+                <OfferImage src={Cafe}/>
+    </OfferImageContent>
+    <h6 style={{color: 'gray'}}>Snack</h6>
+    <h2 style={{marginTop: -15}}>Blink Cafe</h2>
+    <div style={{display: 'flex', marginTop: -35, color: 'rgba(255,200,1,255)'}}>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>(4.0)</h3>
+    </div>
+    <h4 style={{marginTop: -15}}>By <span style={{color: 'rgba(255,200,1,255)'}}>Blink</span></h4>
+    <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: -25}}>
+        <h3>Ksh 3,500</h3>
+        <OfferButton>
+        &#128722; Add
+        </OfferButton>
+    </div>
+    <h5 style={{marginTop: -20, color: 'gray', textDecoration: 'line-through'}}>Ksh 5,500</h5>
+    
+    </Offer>
+    <Offer>
+        <Badge>
+            Hot
+        </Badge>
+    <OfferImageContent>
+                <OfferImage src={Groceries}/>
+    </OfferImageContent>
+    <h6 style={{color: 'gray'}}>Snack</h6>
+    <h2 style={{marginTop: -15}}>Groceries</h2>
+    <div style={{display: 'flex', marginTop: -35, color: 'rgba(255,200,1,255)'}}>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>(4.0)</h3>
+    </div>
+    <h4 style={{marginTop: -15}}>By <span style={{color: 'rgba(255,200,1,255)'}}>Blink</span></h4>
+    <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: -25}}>
+        <h3>Ksh 3,500</h3>
+        <OfferButton>
+        &#128722; Add
+        </OfferButton>
+    </div>
+    <h5 style={{marginTop: -20, color: 'gray', textDecoration: 'line-through'}}>Ksh 5,500</h5>
+    
+    </Offer>
+    <Offer>
+        <Badge>
+            Hot
+        </Badge>
+    <OfferImageContent>
+                <OfferImage src={LPG}/>
+    </OfferImageContent>
+    <h6 style={{color: 'gray'}}>Snack</h6>
+    <h2 style={{marginTop: -15}}>LPG Gas</h2>
+    <div style={{display: 'flex', marginTop: -35, color: 'rgba(255,200,1,255)'}}>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>(4.0)</h3>
+    </div>
+    <h4 style={{marginTop: -15}}>By <span style={{color: 'rgba(255,200,1,255)'}}>Blink</span></h4>
+    <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: -25}}>
+        <h3>Ksh 3,500</h3>
+        <OfferButton>
+        &#128722; Add
+        </OfferButton>
+    </div>
+    <h5 style={{marginTop: -20, color: 'gray', textDecoration: 'line-through'}}>Ksh 5,500</h5>
+    
+    </Offer>
+    <Offer>
+        <Badge>
+            Hot
+        </Badge>
+    <OfferImageContent>
+                <OfferImage src={Electronics}/>
+    </OfferImageContent>
+    <h6 style={{color: 'gray'}}>Snack</h6>
+    <h2 style={{marginTop: -15}}>Electronics</h2>
+    <div style={{display: 'flex', marginTop: -35, color: 'rgba(255,200,1,255)'}}>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>(4.0)</h3>
+    </div>
+    <h4 style={{marginTop: -15}}>By <span style={{color: 'rgba(255,200,1,255)'}}>Blink</span></h4>
+    <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: -25}}>
+        <h3>Ksh 3,500</h3>
+        <OfferButton>
+        &#128722; Add
+        </OfferButton>
+    </div>
+    <h5 style={{marginTop: -20, color: 'gray', textDecoration: 'line-through'}}>Ksh 5,500</h5>
+    
+    </Offer>
+    <Offer>
+        <Badge>
+            Hot
+        </Badge>
+    <OfferImageContent>
+                <OfferImage src={Kitchen}/>
+    </OfferImageContent>
+    <h6 style={{color: 'gray'}}>Snack</h6>
+    <h2 style={{marginTop: -15}}>Kitchen</h2>
+    <div style={{display: 'flex', marginTop: -35, color: 'rgba(255,200,1,255)'}}>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>(4.0)</h3>
+    </div>
+    <h4 style={{marginTop: -15}}>By <span style={{color: 'rgba(255,200,1,255)'}}>Blink</span></h4>
+    <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: -25}}>
+        <h3>Ksh 3,500</h3>
+        <OfferButton>
+        &#128722; Add
+        </OfferButton>
+    </div>
+    <h5 style={{marginTop: -20, color: 'gray', textDecoration: 'line-through'}}>Ksh 5,500</h5>
+    
+    </Offer>
+    <Offer>
+        <Badge>
+            Hot
+        </Badge>
+    <OfferImageContent>
+                <OfferImage src={Catering}/>
+    </OfferImageContent>
+    <h6 style={{color: 'gray'}}>Snack</h6>
+    <h2 style={{marginTop: -15}}>Catering</h2>
+    <div style={{display: 'flex', marginTop: -35, color: 'rgba(255,200,1,255)'}}>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>&#10025;</h3>
+    <h3>(4.0)</h3>
+    </div>
+    <h4 style={{marginTop: -15}}>By <span style={{color: 'rgba(255,200,1,255)'}}>Blink</span></h4>
+    <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: -25}}>
+        <h3>Ksh 3,500</h3>
+        <OfferButton>
+        &#128722; Add
+        </OfferButton>
+    </div>
+    <h5 style={{marginTop: -20, color: 'gray', textDecoration: 'line-through'}}>Ksh 5,500</h5>
+    
+    </Offer>
+
+</OfferContent>
 
                 <FreshCourt>
                 <h1 style={{textAlign: 'center', textDecoration: 'underline 5px rgba(255,200,1,255)'}}>Fresh Court</h1>

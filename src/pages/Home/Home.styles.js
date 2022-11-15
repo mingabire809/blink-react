@@ -166,6 +166,102 @@ export const ImageCategory = styled.img`
     width: 170px;
 `;
 
+export const EveryDay = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+
+`;
+
+export const EveryDayItem = styled.div`
+    width: 30%;
+    height: 235px;
+    background-color: rgba(255,218,85,255);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+`;
+
+export const ItemContent = styled.div`
+    h3{
+        position: absolute;
+      
+        width: 23%;
+        margin-left: 1%;
+        
+    }
+`;
+
+export const ItemButton = styled.button`
+    width: 140px;
+    height: 40px;
+    font-size: 20px;
+    border-color: transparent;
+    color: white;
+    background-color: greenyellow;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 12%;
+    margin-top: 170px;
+`;
+
+export const ItemImage = styled.img`
+    width: 60%;
+`;
+
+
+export const OfferContent = styled.div`
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-start;
+`;
+
+export const Offer =styled.div`
+    width: 300px;
+    height: 450px;
+    border: 1px solid rgba(255,200,1,255);
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 3%;
+    margin-right: 1%;
+    margin-top: 20px;
+`;
+export const OfferImageContent = styled.div`
+width: 100%;
+height: 250px;
+`;
+
+export const OfferImage = styled.img`
+    margin-left: 10%;
+`;
+
+export const Badge = styled.div`
+    width: 70px;
+    height: 20px;
+    color: white;
+    background-color: blue;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    margin-left: -10px;
+    margin-top: -10px;
+
+`;
+export const OfferButton = styled.button`
+    background-color: rgba(255,200,1,255);
+    border-color: transparent;
+    font-size: 18px;
+    height: 30px;
+    width: 90px;
+    cursor: pointer;
+
+`;
+
 export const FreshCourt = styled.div`
     margin-top: 120px;
 `;
