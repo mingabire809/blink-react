@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import { Categories, CategoryContent, Content,CareerButton2, Data, FirstDot,Offer, OfferContent, Open,FreshContent, Hand,FreshCourt, FreshProduct, ImageCategory, Phone, PhoneContainer, PhoneContent, Play, Product, ProductContent, SecondDot, Welcome, WhiteContent, Word, Wrapper, FreshImage, Delivery, DeliveryTitle, ButtonMoving, MapContent, MapImage, MapDescription, InputContent, OpenInput, OpenButton, Advertisment, Advertise1, Advertise2, Order, OrderWord, Why, WhyContent, WhyImage, Ads, AdsContent, AdsButton, Career, CareerContent, ContentCareer, CareerButton, ContentCareer2, Download, DownloadWord, PhoneMock, EveryDay, EveryDayItem, ItemContent, ItemButton, ItemImage, OfferImageContent, OfferButton, Badge, OfferImage } from "./Home.styles";
 import PhoneMockup from '../../assets/images/PhoneMockup.png'
 import AppStore from '../../assets/images/appstore.jpg'
@@ -33,12 +33,28 @@ import DealBackground from '../../assets/images/dealbackground1.png'
 import DealBackground2 from '../../assets/images/dealbackground2.png'
 import DealBackground3 from '../../assets/images/dealbackground3.png'
 import CountdownTimer from "../../components/CountDownTimer/CountDownTimer";
-import { DealContent, Deal, DealButton, UnderDeal } from "../Groceries/Groceries.styles"
+import { DealContent, Deal, DealButton, UnderDeal, PopularLeft, PopularRight } from "../Groceries/Groceries.styles"
 
 import { useNavigate } from "react-router-dom";
 
 
 const Home = () =>{
+    const popularElement = useRef(null)
+    
+      const [right, setRight] = useState(0)
+     
+      
+    const scrollLeft = () => {
+      setRight(right + 400)
+      popularElement.current.scrollLeft = right
+      
+  }
+  
+  const scrollRight = () => {
+      setRight(right - 400)
+      popularElement.current.scrollLeft = right
+      
+  }
     const TEN_DAYS_IN_MS = 10 * 24 * 60 * 60 * 1000;
     const TEN_NOW_IN_MS = new Date().getTime();
   
@@ -154,7 +170,7 @@ const Home = () =>{
             </ProductContent>
             <h3>Groceries</h3>
         </Product>
-        <Product>
+        <Product onClick={()=>navigate('/Electronics')}>
             <ProductContent>
                 <WhiteContent>
                     <ImageCategory src={Electronics} alt="category"/>
@@ -228,7 +244,7 @@ const Home = () =>{
 </Categories>
 
 <EveryDay>
-    <EveryDayItem>
+    <EveryDayItem style={{backgroundColor: '#f0e8d4'}}>
         <ItemContent>
             <h3>Everyday Fresh & Clean with Our Products</h3>
             
@@ -238,7 +254,7 @@ const Home = () =>{
         
     </EveryDayItem>
 
-    <EveryDayItem>
+    <EveryDayItem style={{backgroundColor: '#f2e8e7'}}>
     <ItemContent>
             <h3>Make your Breakfast Healthy and Easy</h3>
             
@@ -247,7 +263,7 @@ const Home = () =>{
         <ItemImage src={Cafe}/>
         </EveryDayItem>
 
-        <EveryDayItem>
+        <EveryDayItem style={{backgroundColor: '#e7eaf3'}}>
         <ItemContent>
             <h3>The best Organic Products Online</h3>
             
@@ -268,7 +284,9 @@ const Home = () =>{
 </div>
 </div>
 
-<OfferContent>
+<OfferContent ref={popularElement}>
+<PopularLeft onClick={scrollRight}>&#x2190;</PopularLeft>
+<PopularRight onClick={scrollLeft} style={{marginLeft: '92%'}}>&#x2192;</PopularRight>
     <Offer>
         <Badge>
             Hot

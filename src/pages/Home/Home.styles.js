@@ -200,8 +200,8 @@ export const ItemButton = styled.button`
     height: 40px;
     font-size: 20px;
     border-color: transparent;
-    color: white;
-    background-color: greenyellow;
+    color: black;
+    background-color: yellow;
     font-weight: 700;
     border-radius: 10px;
     cursor: pointer;
@@ -219,16 +219,23 @@ width: 100%;
 display: flex;
 overflow-x: scroll;
 justify-content: flex-start;
+scroll-behavior: smooth;
+    ::-webkit-scrollbar{
+        display: none;
+    }
 `;
 
 export const Offer =styled.div`
     width: 300px;
     height: 450px;
-    border: 1px solid rgba(255,200,1,255);
+    border: 1px solid #50FFAB;
     border-radius: 10px;
     padding: 10px;
     margin-right: 5%;
     margin-top: 20px;
+    border-top-left-radius: 30px;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    margin-bottom: 10px;
 `;
 export const OfferImageContent = styled.div`
 width: 100%;
@@ -240,15 +247,18 @@ export const OfferImage = styled.img`
 `;
 
 export const Badge = styled.div`
-    width: 70px;
-    height: 20px;
+    width: 100px;
+    height: 30px;
     color: white;
     background-color: blue;
     text-align: center;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     margin-left: -10px;
     margin-top: -10px;
+    font-weight: 700;
+    padding-top: 10px;
+    font-size: 23px;
 
 `;
 export const OfferButton = styled.button`
@@ -258,6 +268,8 @@ export const OfferButton = styled.button`
     height: 30px;
     width: 90px;
     cursor: pointer;
+    background-color: #A6FFD4;
+    border-radius: 20px;
 
 `;
 
@@ -483,7 +495,7 @@ export const WhyImage = styled.img`
 
 export const Ads = styled.div`
     width: 100%;
-    height: 410px;
+    height: 430px;
     background-size: cover;
     display: flex;
     justify-content: space-between;

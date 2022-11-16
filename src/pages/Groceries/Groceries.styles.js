@@ -133,3 +133,139 @@ padding-left:5px;
 cursor: pointer;
 margin-left: 42px;
 `;
+
+export const PopularContent = styled.div`
+width: 100%;
+display: flex;
+overflow-x: scroll;
+justify-content: flex-start;
+scroll-behavior: smooth;
+    ::-webkit-scrollbar{
+        display: none;
+    }
+`;
+
+export const Popular = styled.div`
+    width: 300px;
+    height: 450px;
+    border: 1px solid #50FFAB;
+    border-radius: 20px;
+    padding: 10px;
+    margin-right: 5%;
+    margin-top: 20px;
+    border-top-left-radius: 30px;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    margin-bottom: 10px;
+`;
+
+export const PopularRight = styled.button`
+    font-size: 50px;
+    background-color: lightgray;
+    position: absolute;
+    border-color: transparent;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    cursor: pointer;
+    padding-bottom: 70px;
+    margin-left: 87%;
+    margin-top: 200px;
+
+`;
+
+export const PopularLeft = styled.button`
+    font-size: 50px;
+    background-color: lightgray;
+    position: absolute;
+    border-color: transparent;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    cursor: pointer;
+    padding-bottom: 70px;
+    
+    margin-top: 200px;
+
+`;
+
+export const BestSaleCover = styled.div`
+    background-color: #C0FFDD;
+    width: 26%;
+    height: 510px;
+    border-radius: 20px;
+    padding: 30px;
+    margin-right: 2%;
+    h1{
+       color: #5C2100;
+       font-weight: 700;
+        
+    }
+`;
+
+export const BestSaleCoverButton = styled.button`
+    width: 180px;
+    height: 50px;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    border-color: transparent;
+    background-color: #FF6D03;
+    font-weight: 700;
+    margin-top: 60%;
+    margin-left: 20%;
+    cursor: pointer;
+`;
+
+export const BestSaleContent = styled.div`
+    display: flex;
+    width: 70%;
+    overflow-x: scroll;
+justify-content: flex-start;
+scroll-behavior: smooth;
+    ::-webkit-scrollbar{
+        display: none;
+    }
+`;
+export const BestSale = styled.div`
+    width: 250px;
+    height: 510px;
+    border: 1px solid #50FFAB;
+    border-radius: 20px;
+    padding: 10px;
+    margin-right: 5%;
+    margin-top: 20px;
+    border-top-left-radius: 50px;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    margin-bottom: 10px;
+`;
+
+export const BestSaleBadge = styled.div`
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: red;
+    text-align: center;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-left: -10px;
+    margin-top: -10px;
+    font-weight: 700;
+    padding-top: 10px;
+    font-size: 23px;
+    box-shadow: 0px 4px 4px rgba(12, 3, 32, 0.39);
+    margin-bottom: 30px;
+
+`;
+
+export const GroceryButton = styled.div`
+width: 150px;
+height: 40px;
+background-color: #FF6D03;
+display: flex;
+align-items: center;
+border-radius: 20px;
+color: white;
+font-weight: 700;
+padding-left: 60px;
+margin-left: 7%;
+`;

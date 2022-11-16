@@ -31,20 +31,53 @@ import Pampers from '../../assets/images/Pampers.png'
 import Johnson from '../../assets/images/johnsons.png'
 import Dove from '../../assets/images/dove.png'
 
+import Slider from 'react-animated-slider';
+import 'react-animated-slider/build/horizontal.css';
+
 const PharmApp = ()=>{
+    
+    const freshArray = [
+        <WelcomeBanner>
+        <BannerContent>
+            <h1>Don't Miss out on Amazing Offers</h1>
+            <h2>Save up to 50% on Your first order</h2>
+        </BannerContent>
+        <BannerImage src={WelcomeImage} alt="banner"/>
+    </WelcomeBanner>,
+    <WelcomeBanner style={{backgroundColor: 'lightgray'}}>
+    <BannerContent>
+        <h1>Don't Miss out on Amazing Offers</h1>
+        <h2>Save up to 50% on Your first order</h2>
+    </BannerContent>
+    <BannerImage src={WelcomeImage} alt="banner"/>
+</WelcomeBanner>,
+<WelcomeBanner style={{backgroundColor: 'lightblue'}}>
+    <BannerContent>
+        <h1>Don't Miss out on Amazing Offers</h1>
+        <h2>Save up to 50% on Your first order</h2>
+    </BannerContent>
+    <BannerImage src={WelcomeImage} alt="banner"/>
+</WelcomeBanner>
+    
+    ]
+    const Form =()=>{
+        let offsetTop = document.getElementById('brands').offsetTop;
+        window.scrollTo({
+            top: offsetTop-100,
+            behavior: 'smooth'
+        })
+    }
     return(
         <Wrapper>
             <Content>
-                <WelcomeBanner>
-                    <BannerContent>
-                        <h1>Don't Miss out on Amazing Offers</h1>
-                        <h2>Save up to 50% on Your first order</h2>
-                    </BannerContent>
-                    <BannerImage src={WelcomeImage} alt="banner"/>
-                </WelcomeBanner>
+            <Slider autoplay={3000}>
+                {freshArray.map((slide, index) => <div>
+                    <div>{slide}</div>
+                </div>)}
+               </Slider>
                 <WelcomeButtonContent>
                     <Button1>Upload your Prescription</Button1>
-                    <Button2>Shop by Brands</Button2>
+                    <Button2 onClick={Form}>Shop by Brands</Button2>
                     <Button3>Shop by Condition</Button3>
                 </WelcomeButtonContent>
                 
@@ -149,7 +182,7 @@ const PharmApp = ()=>{
                        <img src={Rectangle12} style={{width: '100%', height: 350, borderRadius: 20}} alt="product"/>
 
                        <h1 style={{marginTop: 50}}>Brands</h1>
-                       <CategoriesContent style={{marginBottom: 40}}>
+                       <CategoriesContent style={{marginBottom: 40}} id="brands">
                        <Product style={{height: 190, marginTop: 20, backgroundColor: '#C7E7FF'}}>
                     <ProductImage src={Nestle} style={{width: '95%', marginTop: 0}} alt="product"/>
                 </Product>

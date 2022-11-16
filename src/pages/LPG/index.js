@@ -5,18 +5,42 @@ import Afrigas from '../../assets/images/afrigas.png'
 import Total from '../../assets/images/total.png'
 import Total50 from '../../assets/images/total50kg.png'
 import KGas from '../../assets/images/Kgas.png'
+import Slider from 'react-animated-slider';
+import 'react-animated-slider/build/horizontal.css';
 
 const Lpg = ()=>{
-    return(
-        <Wrapper>
-            <Content>
+    const freshArray = [
         <WelcomeBanner>
             <BannerContent>
                 <h2>Smart Kitchen</h2>
                 <BannerButton>Shop Now</BannerButton>
             </BannerContent>
             <BannerImage src={Welcome}/>
-        </WelcomeBanner>
+        </WelcomeBanner>,
+        <WelcomeBanner style={{backgroundColor: 'lightgray'}}>
+        <BannerContent>
+            <h2>Smart Kitchen</h2>
+            <BannerButton>Shop Now</BannerButton>
+        </BannerContent>
+        <BannerImage src={Welcome}/>
+    </WelcomeBanner>,
+    <WelcomeBanner style={{backgroundColor: 'lightblue'}}>
+    <BannerContent>
+        <h2>Smart Kitchen</h2>
+        <BannerButton>Shop Now</BannerButton>
+    </BannerContent>
+    <BannerImage src={Welcome}/>
+</WelcomeBanner>
+    
+    ]
+    return(
+        <Wrapper>
+            <Content>
+            <Slider autoplay={3000}>
+                {freshArray.map((slide, index) => <div>
+                    <div>{slide}</div>
+                </div>)}
+               </Slider>
         <Button>Shop by Category</Button>
 
         <GasContent>

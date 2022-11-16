@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import ScrollToTop from "../components/ScrolltoTop";
 import Career from "../pages/Career";
 import Delivery from "../pages/Delivery";
+import Electronics from "../pages/Electronics";
 import Groceries from "../pages/Groceries";
 import Home from "../pages/Home";
 import Lpg from "../pages/LPG";
@@ -41,6 +42,7 @@ const Routing = ()=>{
                 <Route path="/pharm-App" element={<PharmApp/>}/>
                 <Route path="/LPG-gas" element={<Lpg/>}/>
                 <Route path="/Groceries" element={<Groceries/>}/>
+                <Route path="/Electronics" element={<Electronics/>}/>
             </Routes>
             <Footer/>
         </Router>

@@ -1,6 +1,6 @@
-import React from "react";
-
-import { BannerContent, BannerImage, Content, GroceryContent,DealButton, WelcomeBanner, Grocery,Wrapper, WhiteContent, GroceryImage, DealContent, Deal, UnderDeal } from "./Groceries.styles";
+import React, {useRef, useState} from "react";
+import ProgressBar from "../../components/ProgressBar";
+import { BannerContent, BannerImage, Content, GroceryContent,DealButton, WelcomeBanner, Grocery,Wrapper, WhiteContent, GroceryImage, DealContent, Deal, UnderDeal, PopularContent, Popular, BestSaleCover, BestSaleCoverButton, PopularRight, PopularLeft, BestSaleContent, BestSale, BestSaleBadge, GroceryButton } from "./Groceries.styles";
 import Grocery0 from '../../assets/images/grocerybanner.png'
 import Grocery1 from '../../assets/images/grocery1.png'
 import Grocery2 from '../../assets/images/grocery2.png'
@@ -10,10 +10,19 @@ import Grocery5 from '../../assets/images/grocery5.png'
 import Grocery6 from '../../assets/images/grocery6.png'
 import Grocery7 from '../../assets/images/grocery7.png'
 import Cart from '../../assets/images/cart.png'
+import WhiteCart from '../../assets/images/whitecart.png'
 import DealBackground from '../../assets/images/dealbackground1.png'
 import DealBackground2 from '../../assets/images/dealbackground2.png'
 import DealBackground3 from '../../assets/images/dealbackground3.png'
+import Meat from '../../assets/images/meatgrocery.png'
+import Meat2 from '../../assets/images/meatgrocery2.png'
+import Vegie from '../../assets/images/vegiegrocery.png'
+import Green from '../../assets/images/greengrocery.png'
+import Snack from '../../assets/images/snacksgrocery.png'
 import CountdownTimer from "../../components/CountDownTimer/CountDownTimer";
+import { Badge, OfferImage, OfferImageContent } from "../Home/Home.styles";
+import Slider from 'react-animated-slider';
+import 'react-animated-slider/build/horizontal.css';
 
 const Groceries = ()=>{
     const TEN_DAYS_IN_MS = 10 * 24 * 60 * 60 * 1000;
@@ -30,16 +39,69 @@ const Groceries = ()=>{
   const HUNDRED_NOW_IN_MS = new Date().getTime();
 
   const dateTimeAfterHundredDays = HUNDRED_NOW_IN_MS + HUNDRED_DAYS_IN_MS;
-    return(
-        <Wrapper>
-            <Content>
-                <WelcomeBanner>
+
+  const popularElement = useRef(null)
+  const bestElement = useRef(null)
+    const [right, setRight] = useState(0)
+    const [bestRight, setBestRight] = useState(0)
+    
+  const scrollLeft = () => {
+    setRight(right + 400)
+    popularElement.current.scrollLeft = right
+    
+}
+
+const scrollRight = () => {
+    setRight(right - 400)
+    popularElement.current.scrollLeft = right
+    
+}
+
+const scrollLeft2 = () =>{
+    setBestRight(bestRight + 400)
+    bestElement.current.scrollLeft = bestRight
+}
+
+const scrollRight2 = () =>{
+    setBestRight(bestRight - 400)
+    bestElement.current.scrollLeft = bestRight
+}
+
+const freshArray = [
+    <WelcomeBanner>
+    <BannerContent>
+    <h1>Fresh Vegetables Big Discount</h1>
+        <h2>Save up to 50% on Your first order</h2>
+    </BannerContent>
+    <BannerImage src={Grocery0} alt="product"/>
+</WelcomeBanner>,
+<WelcomeBanner style={{backgroundColor: 'lightgray'}}>
                     <BannerContent>
                     <h1>Fresh Vegetables Big Discount</h1>
                         <h2>Save up to 50% on Your first order</h2>
                     </BannerContent>
                     <BannerImage src={Grocery0} alt="product"/>
-                </WelcomeBanner>
+                </WelcomeBanner>,
+
+<WelcomeBanner style={{backgroundColor: 'lightblue'}}>
+<BannerContent>
+<h1>Fresh Vegetables Big Discount</h1>
+    <h2>Save up to 50% on Your first order</h2>
+</BannerContent>
+<BannerImage src={Grocery0} alt="product"/>
+</WelcomeBanner>
+
+]
+  
+    return(
+        <Wrapper>
+            <Content>
+            <Slider autoplay={3000}>
+                {freshArray.map((slide, index) => <div>
+                    <div>{slide}</div>
+                </div>)}
+               </Slider>
+                
                 <h2 style={{
                     textDecoration: '3px solid underline red',
                     marginTop: 50
@@ -187,6 +249,329 @@ const Groceries = ()=>{
                     </Deal>      
                     
                 </DealContent>
+                <h2 style={{
+                    textDecoration: '3px solid underline #FFC801',
+                    marginTop: 150
+                }}>Most Popular Product</h2>
+                <PopularContent ref={popularElement}>
+                    <PopularLeft onClick={scrollRight}>&#x2190;</PopularLeft>
+                    <PopularRight onClick={scrollLeft}>&#x2192;</PopularRight>
+                    <Popular>
+                        <Badge>New</Badge>
+                        <OfferImageContent style={{height: 220}}>
+                            <OfferImage src={Meat}/>
+                            <OfferImage src={Meat2}/>
+                        </OfferImageContent>
+                        <h3>Meat</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div style={{
+                                display: 'flex',
+                                color: '#EA9414',
+                                marginTop: -30
+                            }}>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9734;</h3>
+                            </div>
+                            <h3 style={{marginTop: -20}}>By Nestle</h3>
+                            <div style={{display: 'flex', alignItems: 'center', marginTop: -15, width: 300}}>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: '#00FF85', marginRight: 10}}>KES 345</h3>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: 'gray', textDecoration: 'line-through'}}>KES 345</h3>
+                                <DealButton style={{height: 40, width: 80, fontSize: 20, borderRadius: 20, marginLeft: 70}}>
+                                    Add
+                                    <img src={Cart} style={{width: 23, height:23, marginLeft: 5}} alt="cart"/>
+                                </DealButton>
+                            </div>
+                    </Popular>
+
+                    <Popular>
+                        <Badge style={{backgroundColor: 'red'}}>Sale</Badge>
+                        <OfferImageContent style={{height: 220}}>
+                            <OfferImage src={Snack} style={{marginLeft: '22%', marginTop: 25}}/>
+                            
+                        </OfferImageContent>
+                        <h3>Snacks</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div style={{
+                                display: 'flex',
+                                color: '#EA9414',
+                                marginTop: -30
+                            }}>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9734;</h3>
+                            </div>
+                            <h3 style={{marginTop: -20}}>By Nestle</h3>
+                            <div style={{display: 'flex', alignItems: 'center', marginTop: -15, width: 300}}>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: '#00FF85', marginRight: 10}}>KES 345</h3>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: 'gray', textDecoration: 'line-through'}}>KES 345</h3>
+                                <DealButton style={{height: 40, width: 80, fontSize: 20, borderRadius: 20, marginLeft: 70}}>
+                                    Add
+                                    <img src={Cart} style={{width: 23, height:23, marginLeft: 5}} alt="cart"/>
+                                </DealButton>
+                            </div>
+                    </Popular>
+                    <Popular>
+                        
+                        <OfferImageContent style={{height: 220, marginTop: 30}}>
+                            <OfferImage src={Green} style={{marginTop: 20}}/>
+                            
+                        </OfferImageContent>
+                        <h3>Green</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div style={{
+                                display: 'flex',
+                                color: '#EA9414',
+                                marginTop: -30
+                            }}>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9734;</h3>
+                            </div>
+                            <h3 style={{marginTop: -20}}>By Nestle</h3>
+                            <div style={{display: 'flex', alignItems: 'center', marginTop: -15, width: 300}}>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: '#00FF85', marginRight: 10}}>KES 345</h3>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: 'gray', textDecoration: 'line-through'}}>KES 345</h3>
+                                <DealButton style={{height: 40, width: 80, fontSize: 20, borderRadius: 20, marginLeft: 70}}>
+                                    Add
+                                    <img src={Cart} style={{width: 23, height:23, marginLeft: 5}} alt="cart"/>
+                                </DealButton>
+                            </div>
+                    </Popular>
+
+                    <Popular>
+                        <Badge style={{backgroundColor: '#FFC801'}}>Hot</Badge>
+                        <OfferImageContent style={{height: 220}}>
+                            <OfferImage src={Vegie} style={{marginTop: 20}}/>
+                            
+                        </OfferImageContent>
+                        <h3>Vegie</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div style={{
+                                display: 'flex',
+                                color: '#EA9414',
+                                marginTop: -30
+                            }}>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9734;</h3>
+                            </div>
+                            <h3 style={{marginTop: -20}}>By Nestle</h3>
+                            <div style={{display: 'flex', alignItems: 'center', marginTop: -15, width: 300}}>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: '#00FF85', marginRight: 10}}>KES 345</h3>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: 'gray', textDecoration: 'line-through'}}>KES 345</h3>
+                                <DealButton style={{height: 40, width: 80, fontSize: 20, borderRadius: 20, marginLeft: 70}}>
+                                    Add
+                                    <img src={Cart} style={{width: 23, height:23, marginLeft: 5}} alt="cart"/>
+                                </DealButton>
+                            </div>
+                    </Popular>
+
+                    <Popular>
+                        <Badge style={{backgrooundColor: 'D11AFF'}}>-14%</Badge>
+                        <OfferImageContent style={{height: 220}}>
+                            <OfferImage src={Meat}/>
+                            <OfferImage src={Meat2}/>
+                        </OfferImageContent>
+                        <h3>Meat</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div style={{
+                                display: 'flex',
+                                color: '#EA9414',
+                                marginTop: -30
+                            }}>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9734;</h3>
+                            </div>
+                            <h3 style={{marginTop: -20}}>By Nestle</h3>
+                            <div style={{display: 'flex', alignItems: 'center', marginTop: -15, width: 300}}>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: '#00FF85', marginRight: 10}}>KES 345</h3>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: 'gray', textDecoration: 'line-through'}}>KES 345</h3>
+                                <DealButton style={{height: 40, width: 80, fontSize: 20, borderRadius: 20, marginLeft: 70}}>
+                                    Add
+                                    <img src={Cart} style={{width: 23, height:23, marginLeft: 5}} alt="cart"/>
+                                </DealButton>
+                            </div>
+                    </Popular>
+                </PopularContent>
+                <h2 style={{
+                    textDecoration: '3px solid underline #FFC801',
+                    marginTop: 100
+                }}>Daily Best Sales</h2>
+                <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                <BestSaleCover>
+                    <div style={{marginLeft: 'auto', marginRight: 'auto', width: '83%'}}>
+                    <h1>Bring Health</h1>
+                    <h1 style={{marginTop: -20}}>to</h1>
+                    <h1 style={{marginTop: -20}}>Your House</h1>
+                    </div>
+
+                    <BestSaleCoverButton>Shop Now</BestSaleCoverButton>
+                   
+                </BestSaleCover>
+                <BestSaleContent ref={bestElement}>
+                <PopularLeft onClick={scrollRight2}>&#x2190;</PopularLeft>
+                <PopularRight  style={{marginLeft: '60%'}} onClick={scrollLeft2}>&#x2192;</PopularRight>
+                    <BestSale>
+                    <BestSaleBadge>Sale</BestSaleBadge>
+                    <OfferImageContent style={{ height: 180, overflow: 'hidden', marginTop: -13}}>
+                        <OfferImage src={Snack}/>
+                    </OfferImageContent>
+                    <h3>Snack</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div style={{
+                                display: 'flex',
+                                color: '#EA9414',
+                                marginTop: -30
+                            }}>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9734;</h3>
+                            </div>
+                            <h3 style={{marginTop: -20}}>By Nestle</h3>
+                            <div style={{display: 'flex', alignItems: 'center', marginTop: -15, width: 250}}>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: '#00FF85', marginRight: 10}}>KES 345</h3>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: 'gray', textDecoration: 'line-through'}}>KES 345</h3>
+                                
+                            </div>
+                            <ProgressBar bgcolor="orange" progress='70' height={5}/>
+                            <h5 style={{marginTop: 0}}>Sold 57/120</h5>
+                            <GroceryButton>Add to cart <img src={WhiteCart} style={{marginLeft: 10}} alt="cart"/></GroceryButton>
+                    </BestSale>
+
+                    <BestSale>
+                    <BestSaleBadge>Sale</BestSaleBadge>
+                    <OfferImageContent style={{ height: 180, overflow: 'hidden', marginTop: -13}}>
+                        <OfferImage src={Snack}/>
+                    </OfferImageContent>
+                    <h3>Snack</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div style={{
+                                display: 'flex',
+                                color: '#EA9414',
+                                marginTop: -30
+                            }}>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9734;</h3>
+                            </div>
+                            <h3 style={{marginTop: -20}}>By Nestle</h3>
+                            <div style={{display: 'flex', alignItems: 'center', marginTop: -15, width: 250}}>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: '#00FF85', marginRight: 10}}>KES 345</h3>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: 'gray', textDecoration: 'line-through'}}>KES 345</h3>
+                                
+                            </div>
+                            <ProgressBar bgcolor="orange" progress='70' height={5}/>
+                            <h5 style={{marginTop: 0}}>Sold 57/120</h5>
+                            <GroceryButton>Add to cart <img src={WhiteCart} style={{marginLeft: 10}} alt="cart"/></GroceryButton>
+                    </BestSale>
+
+                    <BestSale>
+                    <BestSaleBadge>Sale</BestSaleBadge>
+                    <OfferImageContent style={{ height: 180, overflow: 'hidden', marginTop: -13}}>
+                        <OfferImage src={Snack}/>
+                    </OfferImageContent>
+                    <h3>Snack</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div style={{
+                                display: 'flex',
+                                color: '#EA9414',
+                                marginTop: -30
+                            }}>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9734;</h3>
+                            </div>
+                            <h3 style={{marginTop: -20}}>By Nestle</h3>
+                            <div style={{display: 'flex', alignItems: 'center', marginTop: -15, width: 250}}>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: '#00FF85', marginRight: 10}}>KES 345</h3>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: 'gray', textDecoration: 'line-through'}}>KES 345</h3>
+                                
+                            </div>
+                            <ProgressBar bgcolor="orange" progress='70' height={5}/>
+                            <h5 style={{marginTop: 0}}>Sold 57/120</h5>
+                            <GroceryButton>Add to cart <img src={WhiteCart} style={{marginLeft: 10}} alt="cart"/></GroceryButton>
+                    </BestSale>
+
+                    <BestSale>
+                    <BestSaleBadge>Sale</BestSaleBadge>
+                    <OfferImageContent style={{ height: 180, overflow: 'hidden', marginTop: -13}}>
+                        <OfferImage src={Snack}/>
+                    </OfferImageContent>
+                    <h3>Snack</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div style={{
+                                display: 'flex',
+                                color: '#EA9414',
+                                marginTop: -30
+                            }}>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9734;</h3>
+                            </div>
+                            <h3 style={{marginTop: -20}}>By Nestle</h3>
+                            <div style={{display: 'flex', alignItems: 'center', marginTop: -15, width: 250}}>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: '#00FF85', marginRight: 10}}>KES 345</h3>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: 'gray', textDecoration: 'line-through'}}>KES 345</h3>
+                                
+                            </div>
+                            <ProgressBar bgcolor="orange" progress='70' height={5}/>
+                            <h5 style={{marginTop: 0}}>Sold 57/120</h5>
+                            <GroceryButton>Add to cart <img src={WhiteCart} style={{marginLeft: 10}} alt="cart"/></GroceryButton>
+                    </BestSale>
+
+                    <BestSale>
+                    <BestSaleBadge>Sale</BestSaleBadge>
+                    <OfferImageContent style={{ height: 180, overflow: 'hidden', marginTop: -13}}>
+                        <OfferImage src={Snack}/>
+                    </OfferImageContent>
+                    <h3>Snack</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div style={{
+                                display: 'flex',
+                                color: '#EA9414',
+                                marginTop: -30
+                            }}>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9733;</h3>
+                                <h3>&#9734;</h3>
+                            </div>
+                            <h3 style={{marginTop: -20}}>By Nestle</h3>
+                            <div style={{display: 'flex', alignItems: 'center', marginTop: -15, width: 250}}>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: '#00FF85', marginRight: 10}}>KES 345</h3>
+                                <h3 style={{fontSize: 15, fontWeight: '700', color: 'gray', textDecoration: 'line-through'}}>KES 345</h3>
+                                
+                            </div>
+                            <ProgressBar bgcolor="orange" progress='70' height={5}/>
+                            <h5 style={{marginTop: 0}}>Sold 57/120</h5>
+                            <GroceryButton>Add to cart <img src={WhiteCart} style={{marginLeft: 10}} alt="cart"/></GroceryButton>
+                    </BestSale>
+                 
+                    
+                </BestSaleContent>
+                </div>
+                
             </Content>
         </Wrapper>
     )
