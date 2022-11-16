@@ -88,3 +88,48 @@ export const GroceryImage = styled.img`
     
     z-index: 99999;
 `;
+
+export const DealContent = styled.div`
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+`;
+
+export const Deal = styled.div`
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    border-radius: 20px;
+    margin-bottom: 50px;
+   
+`;
+
+export const UnderDeal = styled.div`
+    width: 200px;
+    height: 170px;
+    background-color: #FFFBD9;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 10px;
+
+    p{
+        margin-top: -10px;
+        font-size: 13px;
+    }
+`;
+
+export const DealButton = styled.div`
+background-color: #A6FFD4;
+width: 55px;
+display: flex;
+height: 20px;
+font-size: 13px;
+align-items: center;
+border-radius: 10px;
+padding-left:5px;
+cursor: pointer;
+margin-left: 42px;
+`;

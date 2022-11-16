@@ -28,10 +28,33 @@ import Icon3 from '../../assets/images/Icons-3.png'
 import Component48 from '../../assets/images/Component48.png'
 import DeliveryMan from '../../assets/images/delivery.jpg'
 import PhoneMockup2 from '../../assets/images/PhoneMockup2.png'
+import Cart from '../../assets/images/cart.png'
+import DealBackground from '../../assets/images/dealbackground1.png'
+import DealBackground2 from '../../assets/images/dealbackground2.png'
+import DealBackground3 from '../../assets/images/dealbackground3.png'
+import CountdownTimer from "../../components/CountDownTimer/CountDownTimer";
+import { DealContent, Deal, DealButton, UnderDeal } from "../Groceries/Groceries.styles"
+
 import { useNavigate } from "react-router-dom";
 
 
 const Home = () =>{
+    const TEN_DAYS_IN_MS = 10 * 24 * 60 * 60 * 1000;
+    const TEN_NOW_IN_MS = new Date().getTime();
+  
+    const dateTimeAfterTenDays = TEN_NOW_IN_MS + TEN_DAYS_IN_MS;
+  
+    const FOUR_DAYS_IN_MS = 4 * 24 * 60 * 60 * 1000;
+    const FOUR_NOW_IN_MS = new Date().getTime();
+  
+    const dateTimeAfterFourDays = FOUR_NOW_IN_MS + FOUR_DAYS_IN_MS;
+  
+    const HUNDRED_DAYS_IN_MS = 100 * 24 * 60 * 60 * 1000;
+    const HUNDRED_NOW_IN_MS = new Date().getTime();
+  
+    const dateTimeAfterHundredDays = HUNDRED_NOW_IN_MS + HUNDRED_DAYS_IN_MS;
+
+
 
     const navigate = useNavigate()
     const [delivery, setDelivery] = useState(true)
@@ -359,7 +382,7 @@ const Home = () =>{
             Hot
         </Badge>
     <OfferImageContent>
-                <OfferImage src={Kitchen}/>
+                <OfferImage src={Kitchen} style={{marginRight: 20}}/>
     </OfferImageContent>
     <h6 style={{color: 'gray'}}>Snack</h6>
     <h2 style={{marginTop: -15}}>Kitchen</h2>
@@ -410,6 +433,103 @@ const Home = () =>{
     </Offer>
 
 </OfferContent>
+<h2 style={{
+                    textDecoration: '3px solid underline #FFC801',
+                    marginTop: 50
+                }}>Deals of The Day</h2>
+<DealContent>
+                    <Deal style={{
+                        backgroundImage: `url(${DealBackground})`
+                    }}>
+                        <CountdownTimer targetDate={dateTimeAfterFourDays}/>
+                        <UnderDeal>
+                            <h4>Snack</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div style={{
+                                display: 'flex',
+                                color: '#EA9414',
+                                marginTop: -10
+                            }}>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9734;</h7>
+                            </div>
+                            <h5 style={{marginTop: 0}}>By Nestle</h5>
+                            <div style={{display: 'flex', alignItems: 'center'}}>
+                                <h7 style={{fontSize: 10, fontWeight: '700', color: '#00FF85', marginRight: 10}}>KES 345</h7>
+                                <h7 style={{fontSize: 10, fontWeight: '700', color: 'gray', textDecoration: 'line-through'}}>KES 345</h7>
+                                <DealButton>
+                                    Add
+                                    <img src={Cart} style={{width: 15, height:15, marginLeft: 5}} alt="cart"/>
+                                </DealButton>
+                            </div>
+                            
+                        </UnderDeal>
+                    </Deal>
+                    <Deal style={{
+                        backgroundImage: `url(${DealBackground2})`
+                    }}>
+                        <CountdownTimer targetDate={dateTimeAfterTenDays}/>
+                        <UnderDeal>
+                            <h4>Vegies</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div style={{
+                                display: 'flex',
+                                color: '#EA9414',
+                                marginTop: -10
+                            }}>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9734;</h7>
+                            </div>
+                            <h5 style={{marginTop: 0}}>By Nestle</h5>
+                            <div style={{display: 'flex', alignItems: 'center'}}>
+                                <h7 style={{fontSize: 10, fontWeight: '700', color: '#00FF85', marginRight: 10}}>KES 345</h7>
+                                <h7 style={{fontSize: 10, fontWeight: '700', color: 'gray', textDecoration: 'line-through'}}>KES 345</h7>
+                                <DealButton>
+                                    Add
+                                    <img src={Cart} style={{width: 15, height:15, marginLeft: 5}} alt="cart"/>
+                                </DealButton>
+                            </div>
+                            
+                        </UnderDeal>
+                    </Deal>
+                    <Deal style={{
+                        backgroundImage: `url(${DealBackground3})`
+                    }}>
+                        <CountdownTimer targetDate={dateTimeAfterHundredDays}/>
+                        <UnderDeal>
+                            <h4>Vegies</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div style={{
+                                display: 'flex',
+                                color: '#EA9414',
+                                marginTop: -10
+                            }}>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9734;</h7>
+                            </div>
+                            <h5 style={{marginTop: 0}}>By Nestle</h5>
+                            <div style={{display: 'flex', alignItems: 'center'}}>
+                                <h7 style={{fontSize: 10, fontWeight: '700', color: '#00FF85', marginRight: 10}}>KES 345</h7>
+                                <h7 style={{fontSize: 10, fontWeight: '700', color: 'gray', textDecoration: 'line-through'}}>KES 345</h7>
+                                <DealButton>
+                                    Add
+                                    <img src={Cart} style={{width: 15, height:15, marginLeft: 5}} alt="cart"/>
+                                </DealButton>
+                            </div>
+                            
+                        </UnderDeal>
+                    </Deal>      
+                    
+                </DealContent>
 
                 <FreshCourt>
                 <h1 style={{textAlign: 'center', textDecoration: 'underline 5px rgba(255,200,1,255)'}}>Fresh Court</h1>

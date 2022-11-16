@@ -217,7 +217,7 @@ export const ItemImage = styled.img`
 export const OfferContent = styled.div`
 width: 100%;
 display: flex;
-flex-wrap: wrap;
+overflow-x: scroll;
 justify-content: flex-start;
 `;
 
@@ -227,8 +227,7 @@ export const Offer =styled.div`
     border: 1px solid rgba(255,200,1,255);
     border-radius: 10px;
     padding: 10px;
-    margin-left: 3%;
-    margin-right: 1%;
+    margin-right: 5%;
     margin-top: 20px;
 `;
 export const OfferImageContent = styled.div`
@@ -248,7 +247,6 @@ export const Badge = styled.div`
     text-align: center;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    position: absolute;
     margin-left: -10px;
     margin-top: -10px;
 
