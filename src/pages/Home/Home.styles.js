@@ -432,13 +432,14 @@ export const RigthIndicator = styled.img`
 
 export const Delivery = styled.div`
  width: 100%;
- height: 200px;
+ height: 400px;
  background-color: black;
  margin-left: auto;
  margin-right: auto;
  margin-top: 100px;
  @media screen and (max-width: 515px){
         background-color: #D9D9D9;
+        height: 200px;
     }
 `;
 
