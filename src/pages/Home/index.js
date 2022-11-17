@@ -1,5 +1,5 @@
-import React, {useState, useRef} from "react";
-import { Categories, CategoryContent, Content,CareerButton2, Data, FirstDot,Offer, OfferContent, Open,FreshContent, Hand,FreshCourt, FreshProduct, ImageCategory, Phone, PhoneContainer, PhoneContent, Play, Product, ProductContent, SecondDot, Welcome, WhiteContent, Word, Wrapper, FreshImage, Delivery, DeliveryTitle, ButtonMoving, MapContent, MapImage, MapDescription, InputContent, OpenInput, OpenButton, Advertisment, Advertise1, Advertise2, Order, OrderWord, Why, WhyContent, WhyImage, Ads, AdsContent, AdsButton, Career, CareerContent, ContentCareer, CareerButton, ContentCareer2, Download, DownloadWord, PhoneMock, EveryDay, EveryDayItem, ItemContent, ItemButton, ItemImage, OfferImageContent, OfferButton, Badge, OfferImage } from "./Home.styles";
+import React, {useState, useRef, useEffect} from "react";
+import { Categories, CategoryContent, Content,CareerButton2, Data, PlayMobile,FirstDot,Offer, OfferContent, Open,FreshContent, Hand,FreshCourt, FreshProduct, ImageCategory, Phone, PhoneContainer, PhoneContent, Play, Product, ProductContent, SecondDot, Welcome, WhiteContent, Word, Wrapper, FreshImage, Delivery, DeliveryTitle, ButtonMoving, MapContent, MapImage, MapDescription, InputContent, OpenInput, OpenButton, Advertisment, Advertise1, Advertise2, Order, OrderWord, Why, WhyContent, WhyImage, Ads, AdsContent, AdsButton, Career, CareerContent, ContentCareer, CareerButton, ContentCareer2, Download, DownloadWord, PhoneMock, EveryDay, EveryDayItem, ItemContent, ItemButton, ItemImage, OfferImageContent, OfferButton, Badge, OfferImage, MobileBackground } from "./Home.styles";
 import PhoneMockup from '../../assets/images/PhoneMockup.png'
 import AppStore from '../../assets/images/appstore.jpg'
 import PlayStore from '../../assets/images/google.jpg'
@@ -39,6 +39,12 @@ import { useNavigate } from "react-router-dom";
 
 
 const Home = () =>{
+    const [screen, setScreen] = useState(
+        window.matchMedia("(max-width: 515px)").matches
+    )
+    useEffect(()=> {
+        window.matchMedia("(max-width: 515px)").addEventListener('change', e =>setScreen(e.screen));
+    }, []);
     const popularElement = useRef(null)
     
       const [right, setRight] = useState(0)
@@ -77,7 +83,7 @@ const Home = () =>{
     const freshArray = [
         <FreshContent>
                 
-                <h1 style={{fontSize: 50}}>Butchery & Fishery</h1>
+                <h1 style={{fontSize: screen ? 20:50}}>Butchery & Fishery</h1>
                 <FreshProduct>
                     <FreshImage src={Beef} alt="fresh"/>
                 </FreshProduct>
@@ -85,7 +91,7 @@ const Home = () =>{
                </FreshContent>,
                <FreshContent style={{backgroundColor: 'wheat'}}>
                
-               <h1 style={{fontSize: 50}}>Drinks & Beverage</h1>
+               <h1 style={{fontSize: screen ? 20:50}}>Drinks & Beverage</h1>
                <FreshProduct>
                    <FreshImage src={Drinks} alt="fresh"/>
                </FreshProduct>
@@ -93,7 +99,7 @@ const Home = () =>{
               </FreshContent>,
               <FreshContent>
               
-              <h1 style={{fontSize: 50}}>Snacks</h1>
+              <h1 style={{fontSize: screen ? 20:50}}>Snacks</h1>
               <FreshProduct>
                   <FreshImage src={Burger} alt="fresh"/>
               </FreshProduct>
@@ -131,15 +137,20 @@ const Home = () =>{
                         </Advertisment>,
 
     ]
+
+    
     return(
         <Wrapper>
             <Content>
                 <Welcome>
+                    <MobileBackground>
+
+                    </MobileBackground>
                 <Word>
-                <h1 style={{ marginLeft: 25}}><Data></Data></h1>
-                <h1 style={{marginTop: -70, marginLeft: 25}}>At Your Door</h1>
-                <h1 style={{marginTop: -70, marginLeft: 25}}>In <span style={{color: 'rgba(255,200,1,255)'}}>10 Minutes</span></h1>
-                <h2 style={{marginTop: -43, marginLeft: 25}}>The future of Supermarkets is here!</h2>
+                <h1 style={{ marginLeft: screen? 8: 25}}><Data></Data></h1>
+                <h1 style={{marginTop: screen ? 0: -70, marginLeft: screen ? 8: 25}}>At Your Door</h1>
+                <h1 style={{marginTop: screen ? 0: -70, marginLeft: screen? 8: 25}}>In <span style={{color: 'rgba(255,200,1,255)'}}>10 Minutes</span></h1>
+                <h2 style={{marginTop: screen ? 0:-43, marginLeft: screen? 8: 25}}>The future of Supermarkets is here!</h2>
                 <Play><img src={PlayStore} style={{
                     width: 200,
                     cursor: 'pointer'
@@ -157,6 +168,17 @@ const Home = () =>{
                 </PhoneContainer>
                 <SecondDot></SecondDot>
                </PhoneContent>
+               {screen ? <h3 style={{marginLeft: '10%'}}>The future of supermarket is here</h3>: null}
+               <PlayMobile>
+               <img src={PlayStore} style={{
+                    width: 150,
+                    cursor: 'pointer'
+                }} alt="app"/>
+                <img src={AppStore} style={{
+                    width: 150,
+                    cursor: 'pointer'
+                }} alt="app"/>
+               </PlayMobile>
                 </Welcome>
 
 <Categories>
@@ -455,9 +477,13 @@ const Home = () =>{
                     textDecoration: '3px solid underline #FFC801',
                     marginTop: 50
                 }}>Deals of The Day</h2>
-<DealContent>
+<DealContent style={{
+    flexWrap: screen ? 'nowrap': 'wrap',
+    overflowX: screen ? 'scroll': '-moz-initial'
+}}>
                     <Deal style={{
-                        backgroundImage: `url(${DealBackground})`
+                        backgroundImage: `url(${DealBackground})`,
+                        marginRight: screen ? 60:0
                     }}>
                         <CountdownTimer targetDate={dateTimeAfterFourDays}/>
                         <UnderDeal>
@@ -487,7 +513,8 @@ const Home = () =>{
                         </UnderDeal>
                     </Deal>
                     <Deal style={{
-                        backgroundImage: `url(${DealBackground2})`
+                        backgroundImage: `url(${DealBackground2})`,
+                        marginRight: screen ? 60:0
                     }}>
                         <CountdownTimer targetDate={dateTimeAfterTenDays}/>
                         <UnderDeal>
@@ -578,10 +605,10 @@ const Home = () =>{
                         </DeliveryTitle>
 
                        <Marquee gradient={false} speed={120} play={delivery}>
-                        <h1 style={{color: 'rgba(255,200,1,255)', fontSize: 85, marginRight: 70, marginLeft: 70}}>KILELESHWA</h1>
-                        <h1 style={{color: 'rgba(255,200,1,255)', fontSize: 85, marginRight: 70, marginLeft: 70}}>LAVINGTON</h1>
-                        <h1 style={{color: 'rgba(255,200,1,255)', fontSize: 85, marginRight: 70, marginLeft: 70}}>HURLINGHAM</h1>
-                        <h1 style={{color: 'rgba(255,200,1,255)', fontSize: 85, marginRight: 70, marginLeft: 70}}>KILIMANI</h1>
+                        <h1 style={{color: 'rgba(255,200,1,255)', fontSize: screen? 25: 85, marginRight: 70, marginLeft: 70}}>KILELESHWA</h1>
+                        <h1 style={{color: 'rgba(255,200,1,255)', fontSize: screen? 25: 85, marginRight: 70, marginLeft: 70}}>LAVINGTON</h1>
+                        <h1 style={{color: 'rgba(255,200,1,255)', fontSize: screen? 25: 85, marginRight: 70, marginLeft: 70}}>HURLINGHAM</h1>
+                        <h1 style={{color: 'rgba(255,200,1,255)', fontSize: screen? 25: 85, marginRight: 70, marginLeft: 70}}>KILIMANI</h1>
                        </Marquee>
                     </Delivery>
 
@@ -615,8 +642,8 @@ const Home = () =>{
                         </MapContent>
                         <Open>
                             <div>
-                            <h1 style={{fontSize: 40}}>Your Area Not Listed?</h1>
-                            <h1 style={{fontSize: 40}}>Let us know where to find you.</h1>
+                            <h1 style={{fontSize: screen ? 22: 40}}>Your Area Not Listed?</h1>
+                            <h1 style={{fontSize: screen ? 22: 40}}>Let us know where to find you.</h1>
                             </div>
                         <InputContent>
                         <OpenInput type="text" placeholder="First Name"/>
@@ -642,11 +669,11 @@ const Home = () =>{
                      <Order>
                             <OrderWord>
                                 <h1>1. ORDER</h1>
-                                <h2 style={{marginTop: -15}}>Buy what you need.</h2>
+                                <h2 style={{marginTop: screen ? 0: -15}}>Buy what you need.</h2>
                                 <h1>2. CHECKOUT</h1>
-                                <h2 style={{marginTop: -15}}>Complete your payment.</h2>
+                                <h2 style={{marginTop: screen ? 0: -15}}>Complete your payment.</h2>
                                 <h1>3. WAIT</h1>
-                                <h2 style={{marginTop: -15}}>Our legendary rides will be at your door step in 10 mins.</h2>
+                                <h2 style={{marginTop: screen ? 0: -15}}>Our legendary rides will be at your door step in 10 mins.</h2>
                             </OrderWord>
                             <Hand src={PhoneHand}/>
                     </Order>
@@ -656,18 +683,27 @@ const Home = () =>{
                     <Why>
                         <WhyContent>
                             <WhyImage src={Icon1}/>
+                            <div>
                             <h2>Supermarket Prices</h2>
                             <h3>Over 3,000 items direct to your doorstep at normal supermarket prices</h3>
+                            </div>
+                            
                         </WhyContent>
                         <WhyContent>
                             <WhyImage src={Icon2}/>
+                            <div>
                             <h2>Ultrafast Delivery</h2>
                             <h3>Timing is everything! We will be at our doorstep before you know it.</h3>
+                            </div>
+                            
                         </WhyContent>
                         <WhyContent>
                             <WhyImage src={Icon3}/>
+                            <div>
                             <h2>Environmental Friendly</h2>
                             <h3>Our decisions and goals towards becoming carbon negative</h3>
+                            </div>
+                            
                         </WhyContent>
                     </Why>
                     </Content>

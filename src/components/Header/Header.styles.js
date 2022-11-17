@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import "@fontsource/montserrat"; 
+import "@fontsource/montserrat";
+import MobileHeader from '../../assets/images/mobileheader.png' 
 
 export const Wrapper = styled.div`
 width: 100%;
@@ -9,6 +10,16 @@ z-index: 997;
 position: sticky;
 top: 0;
 font-family: "Montserrat";
+
+@media screen and (max-width: 515px){
+    width: 100%;
+    background-color: transparent;
+    height: 135px;
+    background-image: url(${MobileHeader});
+    background-size: cover;
+    
+}
+
 `;
 
 export const Content = styled.div`
@@ -17,6 +28,7 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 
 `;
 
@@ -29,6 +41,11 @@ export const Option = styled.div`
         font-size: 21.5px;
         cursor: pointer;
     }
+
+    @media screen and (max-width: 515px){
+    display: none;
+    
+}
 `;
 
 export const Icon = styled.div`

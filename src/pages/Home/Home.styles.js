@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import "@fontsource/montserrat"; 
+import Background from '../../assets/images/mobilebackground.png'
 
 export const Wrapper = styled.div`
    font-family: "Montserrat";
@@ -8,22 +9,51 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
     padding: 20px;
     overflow: hidden;
+    @media screen and (max-width: 515px){
+        padding: 5px;
+        overflow: hidden;
+    }
 `;
 
 export const Welcome = styled.div`
 display: flex;
 
+@media screen and (max-width: 515px){
+        flex-wrap: wrap;
+    }
+
+`;
+
+export const MobileBackground = styled.div`
+background-image: url(${Background});
+width: 76.5%;
+height: 441px;
+position: absolute;
+margin-left: 30%;
+margin-top: 80px;
+z-index: -1;
+
+@media screen and (min-width: 516px){
+  display: none;
+}
 `;
 export const Word = styled.div`
     width: 50%;
     
     h1{
         font-size: 80px;
+        @media screen and (max-width: 515px){
+        font-size: 20px;
+        
+    }
        
     }
     h2{
         font-weight: 400;
         font-size: 30px;
+        @media screen and (max-width: 515px){
+  display: none;
+}
     }
 `;
 export const Data = styled.span`
@@ -31,6 +61,9 @@ export const Data = styled.span`
         content: "Electronics";
     animation: animate infinite 10s;
     padding-left: 10px; 
+    @media screen and (max-width: 515px){
+        padding-left: 0px;
+    }
     }
     @keyframes animate {
   
@@ -59,6 +92,9 @@ export const Data = styled.span`
 export const PhoneContent = styled.div`
     width: 50%;
     margin-top: 120px;
+    @media screen and(max-width: 515px){
+        width: 100%;
+    }
     
 `;
 
@@ -68,6 +104,12 @@ width: 350px;
 height: 350px;
 border-radius: 100%;
 margin-left: 20%;
+@media screen and (max-width: 515px){
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 80%;
+    background-color: transparent;
+}
 `;
 
 export const Phone = styled.img`
@@ -75,6 +117,14 @@ width: 270px;
 margin-top: -50px;
 margin-left: 20px;
 animation: updown 9s ease infinite;
+
+@media screen and (max-width: 515px){
+    width: 50%;
+    margin-left: 0px;
+    margin-left: -20%;
+    margin-top: 20px;
+    position: absolute;
+}
 @keyframes updown {
  
 
@@ -95,6 +145,14 @@ height: 50px;
 border-radius: 100%;
 margin-left: 2%;
 margin-top: -3%;
+
+@media screen and (max-width: 515px){
+    width: 100px;
+height: 100px;
+margin-left: -33%;
+margin-top: 47%;
+}
+
 `;
 
 export const SecondDot = styled.div`
@@ -104,6 +162,14 @@ width: 30px;
 height: 30px;
 border-radius: 100%;
 margin-left: 35%;
+
+@media screen and (max-width: 515px){
+  margin-left: -45%;
+  margin-top: -70%;
+  width: 50px;
+height: 50px;
+background-color: #FFC801;
+}
 `;
 
 export const Play = styled.div`
@@ -112,6 +178,26 @@ export const Play = styled.div`
     justify-content: space-between;
     width: 80%;
     margin-left: 25px;
+
+    @media screen and (max-width: 515px){
+  display: none;
+}
+    
+`;
+
+export const PlayMobile = styled.div`
+    
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    
+    
+
+    @media screen and (min-width: 516px){
+  display: none;
+}
     
 `; 
 
@@ -172,6 +258,9 @@ export const EveryDay = styled.div`
     display: flex;
     justify-content: space-between;
     margin-top: 70px;
+    @media screen and (max-width: 515px){
+        display: none;
+    }
 
 `;
 
@@ -275,6 +364,10 @@ export const OfferButton = styled.button`
 
 export const FreshCourt = styled.div`
     margin-top: 120px;
+
+    @media screen and (max-width: 515px){
+        
+    }
 `;
 
 export const FreshContent = styled.div`
@@ -285,12 +378,22 @@ export const FreshContent = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    @media screen and (max-width: 515px){
+        height: 200px;
+        margin-top: 100px;
+    }
 `;
 export const FreshProduct = styled.div`
   background-color: rgba(255,218,85,255);
     border-radius: 100%;
     width: 300px;
     height: 300px;
+
+    @media screen and (max-width: 515px){
+        height: 100px;
+        width: 100px;
+    }
    
 `;
 export const LeftContent = styled.div`
@@ -311,6 +414,10 @@ cursor: pointer;
 `;
 export const FreshImage = styled.img`
     width: 350px;
+    @media screen and (max-width: 515px){
+        
+        width: 100px;
+    }
   
 `;
 export const LeftIndicator = styled.img`
@@ -325,11 +432,14 @@ export const RigthIndicator = styled.img`
 
 export const Delivery = styled.div`
  width: 100%;
- height: 400px;
+ height: 200px;
  background-color: black;
  margin-left: auto;
  margin-right: auto;
  margin-top: 100px;
+ @media screen and (max-width: 515px){
+        background-color: #D9D9D9;
+    }
 `;
 
 export const DeliveryTitle = styled.div`
@@ -341,6 +451,12 @@ margin-left: auto;
 margin-right: auto;
 color: white;
 font-size: 25px;
+@media screen and (max-width: 515px){
+        color: black;
+        font-size: 10px;
+        width: 75%;
+        margin-top: 50px
+    }
 `;
 export const ButtonMoving = styled.img`
     width: 60px;
@@ -355,6 +471,11 @@ export const MapImage = styled.img`
     @media screen and (max-width: 1025px){
         width: 500px;
     }
+
+    @media screen and (max-width: 515px){
+        display: none;
+    }
+    
 `;
 
 export const MapDescription = styled.div`
@@ -371,12 +492,20 @@ justify-content: space-between;
         margin-top: 160px;
         margin-left: 380px;
     }
+    @media screen and (max-width: 515px){
+        display: none;
+    }
 
 `;
 export const Open = styled.div`
     display: flex;
     padding-left: 3%;
     margin-top: 50px;
+
+    @media screen and (max-width: 515px){
+        flex-wrap: wrap;
+    }
+
 `;
 
 export const InputContent = styled.div`
@@ -385,6 +514,11 @@ flex-wrap: wrap;
 width: 70%;
 justify-content: space-between;
 margin-right: 5%;
+
+@media screen and (max-width: 515px){
+        width: 90%;
+        margin-right: 1%;
+    }
 `;
 
 export const OpenInput = styled.input`
@@ -395,6 +529,11 @@ export const OpenInput = styled.input`
     border-right-color: transparent;
     border-bottom-color: rgba(255,200,1,255);
     font-size: 18px;
+
+    @media screen and (max-width: 515px){
+        width: 150px;
+        
+    }
 `;
 export const OpenButton = styled.button`
 height: 45px;
@@ -403,6 +542,13 @@ border: 2px solid black;
 font-size: 20px;
 border-radius: 10px;
 cursor: pointer;
+background-color: #EA9414;
+border-color: transparent;
+color: white;
+
+@media screen and (max-width: 515px){
+        margin-top: 10px;
+    }
 
 `;
 
@@ -412,10 +558,15 @@ justify-content: space-between;
 width: 100%;
 height: 400px;
 
+@media screen and (max-width: 515px){
+        height: 200px;
+        margin-top: 100px;
+    }
+
 `;
 
 export const Advertise1 = styled.div`
-width: 400px;
+height: 400px;
 width: 35%;
 background-color: gray;
 border-bottom-left-radius: 30px;
@@ -424,10 +575,18 @@ h1{
     text-align: center;
     margin-top: 150px;
     font-size: 45px;
+    @media screen and (max-width: 515px){
+        font-size: 20px;
+        margin-top: 75px;
+    }
+    
 }
+@media screen and (max-width: 515px){
+       height: 200px;
+    }
 `;
 export const Advertise2 = styled.div`
-width: 400px;
+height: 400px;
 width: 55%;
 background-color: gray;
 border-bottom-right-radius: 30px;
@@ -436,7 +595,16 @@ h1{
     text-align: center;
     margin-top: 150px;
     font-size: 45px;
+
+    @media screen and (max-width: 515px){
+        font-size: 20px;
+        margin-top: 75px;
+    }
 }
+
+@media screen and (max-width: 515px){
+        height: 200px;
+    }
 `;
 
 export const Order = styled.div`
@@ -446,6 +614,10 @@ height: 550px;
 display: flex;
 justify-content: space-around;
 margin-top: 100px;
+@media screen and (max-width: 515px){
+        height: 300px;
+        margin-top: 30px;
+    }
 `;
 
 export const OrderWord = styled.div`
@@ -454,19 +626,28 @@ export const OrderWord = styled.div`
  margin-left: 10%;
  h1{
     font-size: 40px;
+    @media screen and (max-width: 515px){
+        font-size: 20px;
+    }
  }
  h2{
     font-size: 30px;
+    @media screen and (max-width: 515px){
+        font-size: 15px;
+    }
  }
 `;
 
 export const Hand = styled.img`
-
+ @media screen and (max-width: 515px) {
+    width: 50%;
+    height: 300px;
+ }
 `;
 export const Why = styled.div`
  width: 95%;
  
- height: 400px;
+ 
  margin-left: auto;
  margin-right: auto;
  transition: 2s;
@@ -476,6 +657,9 @@ export const Why = styled.div`
     width: 100%;
     transition: 2s;
  }
+ @media screen and (max-width: 515px){
+    flex-wrap: wrap;
+ }
 `;
 
 export const WhyContent = styled.div`
@@ -484,13 +668,37 @@ width: 350px;
 
 text-align: center;
 height: fit-content;
+
+h2{
+    @media screen and (max-width: 515px){
+        font-size: 17px;
+        text-align: left;
+    }
+}
 h3{
     font-weight: 400;
+    @media screen and (max-width: 515px){
+        font-size: 13px;
+        text-align: left;
+    }
+}
+@media screen and (max-width: 515px){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: red;
+    width: 100%;
+    
 }
 `;
 
 export const WhyImage = styled.img`
-
+@media screen and (max-width: 515px){
+    width: 80px;
+    height: 80px;
+    margin-right: 5%;
+    margin-left: 1%;
+ }
 `;
 
 export const Ads = styled.div`
