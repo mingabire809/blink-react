@@ -33,7 +33,7 @@ import DealBackground from '../../assets/images/dealbackground1.png'
 import DealBackground2 from '../../assets/images/dealbackground2.png'
 import DealBackground3 from '../../assets/images/dealbackground3.png'
 import CountdownTimer from "../../components/CountDownTimer/CountDownTimer";
-import { DealContent, Deal, DealButton, UnderDeal, PopularLeft, PopularRight } from "../Groceries/Groceries.styles"
+import { DealContent, Deal, DealButton, UnderDeal } from "../Groceries/Groceries.styles"
 
 import { useNavigate } from "react-router-dom";
 
@@ -47,10 +47,10 @@ const Home = () =>{
     }, []);
     const popularElement = useRef(null)
     
-      const [right, setRight] = useState(0)
+   //   const [right, setRight] = useState(0)
      
       
-    const scrollLeft = () => {
+  /*  const scrollLeft = () => {
       setRight(right + 400)
       popularElement.current.scrollLeft = right
       
@@ -60,7 +60,7 @@ const Home = () =>{
       setRight(right - 400)
       popularElement.current.scrollLeft = right
       
-  }
+  }*/
     const TEN_DAYS_IN_MS = 10 * 24 * 60 * 60 * 1000;
     const TEN_NOW_IN_MS = new Date().getTime();
   
@@ -307,8 +307,7 @@ const Home = () =>{
 </div>
 
 <OfferContent ref={popularElement}>
-<PopularLeft onClick={scrollRight}>&#x2190;</PopularLeft>
-<PopularRight onClick={scrollLeft} style={{marginLeft: '92%'}}>&#x2192;</PopularRight>
+
     <Offer>
         <Badge>
             Hot

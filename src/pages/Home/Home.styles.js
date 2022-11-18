@@ -4,6 +4,7 @@ import Background from '../../assets/images/mobilebackground.png'
 
 export const Wrapper = styled.div`
    font-family: "Montserrat";
+   overflow: hidden;
 `;
 
 export const Content = styled.div`
@@ -26,7 +27,7 @@ display: flex;
 
 export const MobileBackground = styled.div`
 background-image: url(${Background});
-width: 76.5%;
+width: 68%;
 height: 441px;
 position: absolute;
 margin-left: 30%;
@@ -474,7 +475,7 @@ export const MapImage = styled.img`
     }
 
     @media screen and (max-width: 515px){
-        display: none;
+        width: 300px;
     }
     
 `;
@@ -687,7 +688,7 @@ h3{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: red;
+   
     width: 100%;
     
 }
@@ -709,6 +710,10 @@ export const Ads = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+
+    @media screen and (max-width: 515px){
+        display: none;
+    }
     
 `;
 
@@ -746,6 +751,9 @@ export const Career = styled.div`
     height: 450px;
     display: flex;
     margin-top: 100px;
+    @media screen and (max-width: 515px){
+        display: none;
+    }
     
     
 `;
@@ -753,6 +761,7 @@ export const Career = styled.div`
 export const CareerContent = styled.div`
     background-color: black;
     width: 60%;
+    
     
     ::after{
         width: 11%;
@@ -829,6 +838,9 @@ height: 400px;
 width: 100%;
 display: flex;
 justify-content: space-around;
+@media screen and (max-width: 515px){
+        display: none;
+    }
 
 `;
 

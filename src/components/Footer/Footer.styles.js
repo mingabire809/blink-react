@@ -6,6 +6,9 @@ width: 100%;
 height: 390px;
 background-color: rgba(255,200,1,255);
 font-family: "Montserrat";
+@media screen and (max-width: 515px){
+      height: 200px;
+    }
 `;
 
 export const Content = styled.div`
@@ -13,6 +16,15 @@ export const Content = styled.div`
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
+
+    @media screen and (max-width: 515px){
+        h1{
+            font-size: 20px;
+        }
+        h3{
+            font-size: 15px;
+        }
+    }
 `;
 
 export const Content2 = styled.div`
