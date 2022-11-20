@@ -45,7 +45,19 @@ export const Brand = styled.div`
     width: 200px;
     height: 200px;
     border-radius: 20px;
+    margin-right: 6.5%;
+    margin-top: 20px;
     
+`;
+export const BrandImage = styled.img`
+width: 90%;
+height: auto;
+margin-top: 40px;
+margin-left: 5%;
+`;
+export const BrandImageContent = styled.div`
+width: 100%;
+height: 159.5px;
 `;
 
 export const YellowContent = styled.div`
@@ -58,7 +70,76 @@ export const YellowContent = styled.div`
     font-weight: 700;
     font-size: 20px;
     position: absolute;
-    margin-top: 159px;
+    
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 `;
+
+export const AdvertisementBanner = styled.div`
+width: 100%;
+height: 69px;
+border-radius: 20px;
+background-size: cover;
+padding-top: 300px;
+
+`;
+
+export const TextContent = styled.div`
+background-color: #FFD8D8;
+width: 100%;
+height: 40px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+
+h3{
+    margin-left: 10%;
+    font-size: 30px;
+}
+
+`;
+
+export const RecommendedContent = styled.div`
+    width: 100%;
+display: flex;
+overflow-x: scroll;
+justify-content: flex-start;
+scroll-behavior: smooth;
+    ::-webkit-scrollbar{
+        display: none;
+    }
+`;
+
+export const Recommended = styled.div`
+  width: 300px;
+    height: 450px;
+    border: 1px solid #50FFAB;
+    border-radius: 20px;
+    padding: 10px;
+    margin-right: 5%;
+    margin-top: 20px;
+    border-top-left-radius: 30px;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    margin-bottom: 10px;
+`;
+
+export const DealButton = styled.div`
+background-color: #A6FFD4;
+width: 55px;
+display: flex;
+height: 20px;
+font-size: 13px;
+align-items: center;
+border-radius: 10px;
+padding-left:5px;
+cursor: pointer;
+margin-left: 42px;
+`;
+
+export const Arrival = styled.img`
+width: 150px;
+height: 150px;
+border-radius: 5px;
+margin-left: 50px;
+margin-right: 50px;
+`;
+

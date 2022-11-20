@@ -1,6 +1,6 @@
-import React, {useRef, useState} from "react";
+import React, {useRef} from "react";
 import ProgressBar from "../../components/ProgressBar";
-import { BannerContent, BannerImage, Content, GroceryContent,DealButton, WelcomeBanner, Grocery,Wrapper, WhiteContent, GroceryImage, DealContent, Deal, UnderDeal, PopularContent, Popular, BestSaleCover, BestSaleCoverButton, PopularRight, PopularLeft, BestSaleContent, BestSale, BestSaleBadge, GroceryButton } from "./Groceries.styles";
+import { BannerContent, BannerImage, Content, GroceryContent,DealButton, WelcomeBanner, Grocery,Wrapper, WhiteContent, GroceryImage, DealContent, Deal, UnderDeal, PopularContent, Popular, BestSaleCover, BestSaleCoverButton,BestSaleContent, BestSale, BestSaleBadge, GroceryButton } from "./Groceries.styles";
 import Grocery0 from '../../assets/images/grocerybanner.png'
 import Grocery1 from '../../assets/images/grocery1.png'
 import Grocery2 from '../../assets/images/grocery2.png'
@@ -23,6 +23,7 @@ import CountdownTimer from "../../components/CountDownTimer/CountDownTimer";
 import { Badge, OfferImage, OfferImageContent } from "../Home/Home.styles";
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
+import Marquee from "react-fast-marquee";
 
 const Groceries = ()=>{
     const TEN_DAYS_IN_MS = 10 * 24 * 60 * 60 * 1000;
@@ -42,7 +43,7 @@ const Groceries = ()=>{
 
   const popularElement = useRef(null)
   const bestElement = useRef(null)
-    const [right, setRight] = useState(0)
+  /*  const [right, setRight] = useState(0)
     const [bestRight, setBestRight] = useState(0)
     
   const scrollLeft = () => {
@@ -65,7 +66,7 @@ const scrollLeft2 = () =>{
 const scrollRight2 = () =>{
     setBestRight(bestRight - 400)
     bestElement.current.scrollLeft = bestRight
-}
+}*/
 
 const freshArray = [
     <WelcomeBanner>
@@ -254,9 +255,8 @@ const freshArray = [
                     marginTop: 150
                 }}>Most Popular Product</h2>
                 <PopularContent ref={popularElement}>
-                    <PopularLeft onClick={scrollRight}>&#x2190;</PopularLeft>
-                    <PopularRight onClick={scrollLeft}>&#x2192;</PopularRight>
-                    <Popular>
+                <Marquee gradient={false} speed={40} play={true}>
+                <Popular>
                         <Badge>New</Badge>
                         <OfferImageContent style={{height: 220}}>
                             <OfferImage src={Meat}/>
@@ -404,6 +404,8 @@ const freshArray = [
                                 </DealButton>
                             </div>
                     </Popular>
+                </Marquee>
+                    
                 </PopularContent>
                 <h2 style={{
                     textDecoration: '3px solid underline #FFC801',
@@ -421,9 +423,8 @@ const freshArray = [
                    
                 </BestSaleCover>
                 <BestSaleContent ref={bestElement}>
-                <PopularLeft onClick={scrollRight2}>&#x2190;</PopularLeft>
-                <PopularRight  style={{marginLeft: '60%'}} onClick={scrollLeft2}>&#x2192;</PopularRight>
-                    <BestSale>
+                <Marquee gradient={false} speed={40} play={true}>
+                <BestSale>
                     <BestSaleBadge>Sale</BestSaleBadge>
                     <OfferImageContent style={{ height: 180, overflow: 'hidden', marginTop: -13}}>
                         <OfferImage src={Snack}/>
@@ -567,6 +568,8 @@ const freshArray = [
                             <h5 style={{marginTop: 0}}>Sold 57/120</h5>
                             <GroceryButton>Add to cart <img src={WhiteCart} style={{marginLeft: 10}} alt="cart"/></GroceryButton>
                     </BestSale>
+                </Marquee>
+                   
                  
                     
                 </BestSaleContent>

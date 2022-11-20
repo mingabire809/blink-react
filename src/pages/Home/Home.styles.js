@@ -291,7 +291,7 @@ export const ItemButton = styled.button`
     font-size: 20px;
     border-color: transparent;
     color: black;
-    background-color: yellow;
+    background-color: rgba(255,200,1,255);
     font-weight: 700;
     border-radius: 10px;
     cursor: pointer;
@@ -707,9 +707,8 @@ export const Ads = styled.div`
     width: 100%;
     height: 430px;
     background-size: cover;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    
+    
 
     @media screen and (max-width: 515px){
         display: none;

@@ -307,8 +307,8 @@ const Home = () =>{
 </div>
 
 <OfferContent ref={popularElement}>
-
-    <Offer>
+<Marquee gradient={false} speed={40} play={true}>
+<Offer>
         <Badge>
             Hot
         </Badge>
@@ -443,7 +443,7 @@ const Home = () =>{
     <h5 style={{marginTop: -20, color: 'gray', textDecoration: 'line-through'}}>Ksh 5,500</h5>
     
     </Offer>
-    <Offer>
+    <Offer style={{marginRight: 250}}>
         <Badge>
             Hot
         </Badge>
@@ -470,6 +470,9 @@ const Home = () =>{
     <h5 style={{marginTop: -20, color: 'gray', textDecoration: 'line-through'}}>Ksh 5,500</h5>
     
     </Offer>
+</Marquee>
+
+    
 
 </OfferContent>
 <h2 style={{
@@ -709,17 +712,37 @@ const Home = () =>{
                     <Ads style={{
                         backgroundImage: `url(${Component48})`
                     }}>
+                        <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-between'}}>
                         <AdsContent style={{marginLeft: 40}}>
                             <h1>Build your brand with us!</h1>
-                            <h3>Promote your products within the blink app, across our marketing channels, and through our store & rider network</h3>
-                            <AdsButton>More Info</AdsButton>
+                           
                         </AdsContent>
-
                         <AdsContent style={{marginRight: 40}}>
                             <h1>Advertise with us!</h1>
-                            <h3>Advertise on our website and app</h3>
-                            <AdsButton>More Info</AdsButton>
                         </AdsContent>
+                        </div>
+                        <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-between'}}>
+                        <AdsContent style={{marginLeft: 40}}>
+                        <h3>Promote your products within the blink app, across our marketing channels, and through our store & rider network</h3>
+                           
+                        </AdsContent>
+                        <AdsContent style={{marginRight: 40}}>
+                        <h3>Advertise on our website and app</h3>
+                        </AdsContent>
+                        </div>
+
+                        <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginTop: 20}}>
+                        <AdsContent style={{marginLeft: 40}}>
+                        <AdsButton>More Info</AdsButton>
+                           
+                        </AdsContent>
+                        <AdsContent style={{marginRight: 40}}>
+                        <AdsButton>More Info</AdsButton>
+                        </AdsContent>
+                        </div>
+                        
+
+                       
                     </Ads>
 
                     <Career>
