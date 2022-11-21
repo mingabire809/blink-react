@@ -11,6 +11,7 @@ import Delivery from "../pages/Delivery";
 import Electronics from "../pages/Electronics";
 import Groceries from "../pages/Groceries";
 import Home from "../pages/Home";
+import Kitchen from "../pages/Kitchen";
 import Lpg from "../pages/LPG";
 import PharmApp from "../pages/PharmApp";
 import Supplier from "../pages/Supplier";
@@ -47,6 +48,7 @@ const Routing = ()=>{
                 <Route path="/Electronics" element={<Electronics/>}/>
                 <Route path="/Cosmetics" element={<Cosmetics/>}/>
                 <Route path="/Blink-Cafe" element={<BlinkCafe/>}/>
+                <Route path="/Kitchen" element={<Kitchen/>}/>
             </Routes>
             <Footer/>
         </Router>

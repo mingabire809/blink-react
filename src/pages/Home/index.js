@@ -241,7 +241,7 @@ const Home = () =>{
             </ProductContent>
             <h3>Last Mile Delivery</h3>
         </Product>
-        <Product>
+        <Product onClick={()=>navigate('/Kitchen')}>
             <ProductContent>
                 <WhiteContent>
                     <ImageCategory src={Kitchen} alt="category"/>
