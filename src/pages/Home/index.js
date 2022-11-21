@@ -233,7 +233,7 @@ const Home = () =>{
             </ProductContent>
             <h3>BlinkCafe</h3>
         </Product>
-        <Product>
+        <Product onClick={()=>navigate("/Last-Mile")}>
             <ProductContent>
                 <WhiteContent>
                     <ImageCategory src={Last} alt="category"/>
@@ -249,7 +249,7 @@ const Home = () =>{
             </ProductContent>
             <h3>Kitchen</h3>
         </Product>
-        <Product>
+        <Product onClick={()=>navigate("/Catering")}>
             <ProductContent>
                 <WhiteContent>
                     <ImageCategory src={Catering} alt="category"/>

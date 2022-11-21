@@ -6,14 +6,17 @@ import Header from "../components/Header";
 import ScrollToTop from "../components/ScrolltoTop";
 import BlinkCafe from "../pages/BlinkCafe";
 import Career from "../pages/Career";
+import Catering from "../pages/Catering";
 import Cosmetics from "../pages/Cosmetics";
 import Delivery from "../pages/Delivery";
 import Electronics from "../pages/Electronics";
 import Groceries from "../pages/Groceries";
 import Home from "../pages/Home";
 import Kitchen from "../pages/Kitchen";
+import LastMile from "../pages/LastMile";
 import Lpg from "../pages/LPG";
 import PharmApp from "../pages/PharmApp";
+import Prescription from "../pages/Prescription";
 import Supplier from "../pages/Supplier";
 const Routing = ()=>{
 
@@ -49,6 +52,9 @@ const Routing = ()=>{
                 <Route path="/Cosmetics" element={<Cosmetics/>}/>
                 <Route path="/Blink-Cafe" element={<BlinkCafe/>}/>
                 <Route path="/Kitchen" element={<Kitchen/>}/>
+                <Route path="/Catering" element={<Catering/>}/>
+                <Route path="/Last-Mile" element={<LastMile/>}/>
+                <Route path="/Prescription" element={<Prescription/>}/>
             </Routes>
             <Footer/>
         </Router>

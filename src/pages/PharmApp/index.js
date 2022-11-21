@@ -33,8 +33,11 @@ import Dove from '../../assets/images/dove.png'
 
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
+import { useNavigate } from "react-router-dom";
 
 const PharmApp = ()=>{
+
+    const navigate = useNavigate()
     
     const freshArray = [
         <WelcomeBanner>
@@ -76,7 +79,7 @@ const PharmApp = ()=>{
                 </div>)}
                </Slider>
                 <WelcomeButtonContent>
-                    <Button1>Upload your Prescription</Button1>
+                    <Button1 onClick={()=>navigate("/Prescription")}>Upload your Prescription</Button1>
                     <Button2 onClick={Form}>Shop by Brands</Button2>
                     <Button3>Shop by Condition</Button3>
                 </WelcomeButtonContent>

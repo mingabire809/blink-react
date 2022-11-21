@@ -110,11 +110,27 @@ margin-bottom: 100px;
 export const Restaurant = styled.div`
     width: 280px;
     height: 350px;
-    background-color: red;
+    margin-top: 40px;
+    margin-right: 6.6%;
+    overflow: hidden;
+    cursor: pointer;
+    
 `;
 export const RestaurantImage = styled.div`
 width: 280px;
 height: 280px;
-background-color: white;
+background-size: cover;
 border-radius: 20px;
+`;
+
+export const Timing = styled.div`
+    background-color: white;
+    width: 95px;
+    height: 30px;
+    position: absolute;
+    margin-top: 249.5px;
+    margin-left: 174.7px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding-left: 10px;
 `;

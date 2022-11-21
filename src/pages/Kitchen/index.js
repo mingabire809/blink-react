@@ -1,5 +1,5 @@
 import React from "react";
-import { BannerContent, Content, WelcomeBanner, Wrapper, BannerButton, BannerImage, CategoriesContent, Product, ProductWhite, ProductImage, RestaurantContent, Restaurant, RestaurantImage } from "./Kitchen.styles";
+import { BannerContent, Content, WelcomeBanner, Wrapper, BannerButton, BannerImage, CategoriesContent, Product, ProductWhite, ProductImage, RestaurantContent, Restaurant, RestaurantImage, Timing } from "./Kitchen.styles";
 import Coffee from '../../assets/images/coffee1.png'
 import Pastry from '../../assets/images/pastry1.png'
 import { Button } from "../LPG/LPG.styles";
@@ -10,12 +10,39 @@ import NorthIndian from '../../assets/images/northindiancuisine.png'
 import Italian from '../../assets/images/italian.png'
 import Korean from '../../assets/images/korean.png'
 import Grid from '../../assets/images/grid.png'
+import Kilimani from '../../assets/images/kilimani.png'
+import Teriyaki from '../../assets/images/teriyaki.png'
+import Cj from '../../assets/images/cj.png'
+import Bao from '../../assets/images/bao.png'
+import Highlands from '../../assets/images/highlands.png'
+import Pizza from '../../assets/images/pizza.png'
+import Slider from 'react-animated-slider';
+import 'react-animated-slider/build/horizontal.css';
 
 const Kitchen = ()=>{
-    return(
-        <Wrapper>
-            <Content>
-                <WelcomeBanner>
+
+    const welcome = [
+        <WelcomeBanner>
+                    <BannerContent>
+                    <h1>Don't Miss out on Amazing Offers</h1>
+                    <h2>Save up to 50% on Your first order</h2>
+                    <BannerButton>Shop Now</BannerButton>
+                    </BannerContent>
+                    <BannerImage src={Pastry} style={{width: 250, height: 200}}/>
+                    <BannerImage src={Coffee} style={{width: 230, height: 180}}/>
+                </WelcomeBanner>,
+
+<WelcomeBanner style={{backgroundColor: 'lightgray'}}>
+<BannerContent>
+<h1>Don't Miss out on Amazing Offers</h1>
+<h2>Save up to 50% on Your first order</h2>
+<BannerButton>Shop Now</BannerButton>
+</BannerContent>
+<BannerImage src={Pastry} style={{width: 250, height: 200}}/>
+<BannerImage src={Coffee} style={{width: 230, height: 180}}/>
+</WelcomeBanner>,
+
+<WelcomeBanner style={{backgroundColor: 'pink'}}>
                     <BannerContent>
                     <h1>Don't Miss out on Amazing Offers</h1>
                     <h2>Save up to 50% on Your first order</h2>
@@ -24,6 +51,15 @@ const Kitchen = ()=>{
                     <BannerImage src={Pastry} style={{width: 250, height: 200}}/>
                     <BannerImage src={Coffee} style={{width: 230, height: 180}}/>
                 </WelcomeBanner>
+    ]
+    return(
+        <Wrapper>
+            <Content>
+            <Slider autoplay={3000}>
+                {welcome.map((slide, index) => <div>
+                    <div>{slide}</div>
+                </div>)}
+               </Slider>
 
                 <Button>Shop By Cuisine</Button>
 
@@ -77,12 +113,185 @@ const Kitchen = ()=>{
                 <Button style={{width: 230, backgroundColor: '#FFE99A'}}>Shop By Restaurant</Button>
                 <RestaurantContent>
                     <Restaurant>
-                        <RestaurantImage>
-
+                        <RestaurantImage style={{
+                            backgroundImage: `url(${Kilimani})`
+                        }}>
+                            <Timing>35-65 MINS</Timing>
                         </RestaurantImage>
                         <div style={{display: 'flex', justifyContent: 'space-between',
                          marginLeft: 'auto', marginRight: 'auto', width: 260, alignItems: 'center', marginTop: -13}}>
                             <h4>Kfc Kilimani</h4>
+                            <div style={{
+                                display: 'flex',
+                                color: '#EA9414'
+                                
+                            }}>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9734;</h7>
+                            </div>
+                         </div>
+
+                         <div style={{display: 'flex', justifyContent: 'space-between',
+                         marginLeft: 'auto', marginRight: 'auto', width: 260, alignItems: 'center', marginTop: -40}}>
+                            <h5>Kfc killimani - Denis Prit Rd</h5>
+                            
+                         </div>
+                         <div style={{display: 'flex', justifyContent: 'space-between',
+                         marginLeft: 'auto', marginRight: 'auto', width: 260, alignItems: 'center', marginTop: -40}}>
+                            <h5>Delivery Kes 75</h5>
+                            <h5>$$$</h5>
+                         </div>
+                        
+                    </Restaurant>
+                    <Restaurant>
+                        <RestaurantImage style={{
+                            backgroundImage: `url(${Teriyaki})`
+                        }}>
+                            <Timing>35-65 MINS</Timing>
+                        </RestaurantImage>
+                        <div style={{display: 'flex', justifyContent: 'space-between',
+                         marginLeft: 'auto', marginRight: 'auto', width: 260, alignItems: 'center', marginTop: -13}}>
+                            <h4>Teriyaki</h4>
+                            <div style={{
+                                display: 'flex',
+                                color: '#EA9414'
+                                
+                            }}>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9734;</h7>
+                            </div>
+                         </div>
+
+                         <div style={{display: 'flex', justifyContent: 'space-between',
+                         marginLeft: 'auto', marginRight: 'auto', width: 260, alignItems: 'center', marginTop: -40}}>
+                            <h5>Kfc killimani - Denis Prit Rd</h5>
+                            
+                         </div>
+                         <div style={{display: 'flex', justifyContent: 'space-between',
+                         marginLeft: 'auto', marginRight: 'auto', width: 260, alignItems: 'center', marginTop: -40}}>
+                            <h5>Delivery Kes 75</h5>
+                            <h5>$$$</h5>
+                         </div>
+                        
+                    </Restaurant>
+                    <Restaurant>
+                        <RestaurantImage style={{
+                            backgroundImage: `url(${Cj})`
+                        }}>
+                            <Timing>35-65 MINS</Timing>
+                        </RestaurantImage>
+                        <div style={{display: 'flex', justifyContent: 'space-between',
+                         marginLeft: 'auto', marginRight: 'auto', width: 260, alignItems: 'center', marginTop: -13}}>
+                            <h4>CJ's Kitchen</h4>
+                            <div style={{
+                                display: 'flex',
+                                color: '#EA9414'
+                                
+                            }}>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9734;</h7>
+                            </div>
+                         </div>
+
+                         <div style={{display: 'flex', justifyContent: 'space-between',
+                         marginLeft: 'auto', marginRight: 'auto', width: 260, alignItems: 'center', marginTop: -40}}>
+                            <h5>Kfc killimani - Denis Prit Rd</h5>
+                            
+                         </div>
+                         <div style={{display: 'flex', justifyContent: 'space-between',
+                         marginLeft: 'auto', marginRight: 'auto', width: 260, alignItems: 'center', marginTop: -40}}>
+                            <h5>Delivery Kes 75</h5>
+                            <h5>$$$</h5>
+                         </div>
+                        
+                    </Restaurant>
+                    <Restaurant>
+                        <RestaurantImage style={{
+                            backgroundImage: `url(${Bao})`
+                        }}>
+                            <Timing>35-65 MINS</Timing>
+                        </RestaurantImage>
+                        <div style={{display: 'flex', justifyContent: 'space-between',
+                         marginLeft: 'auto', marginRight: 'auto', width: 260, alignItems: 'center', marginTop: -13}}>
+                            <h4>Bao Box</h4>
+                            <div style={{
+                                display: 'flex',
+                                color: '#EA9414'
+                                
+                            }}>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9734;</h7>
+                            </div>
+                         </div>
+
+                         <div style={{display: 'flex', justifyContent: 'space-between',
+                         marginLeft: 'auto', marginRight: 'auto', width: 260, alignItems: 'center', marginTop: -40}}>
+                            <h5>Kfc killimani - Denis Prit Rd</h5>
+                            
+                         </div>
+                         <div style={{display: 'flex', justifyContent: 'space-between',
+                         marginLeft: 'auto', marginRight: 'auto', width: 260, alignItems: 'center', marginTop: -40}}>
+                            <h5>Delivery Kes 75</h5>
+                            <h5>$$$</h5>
+                         </div>
+                        
+                    </Restaurant>
+
+                    <Restaurant>
+                        <RestaurantImage style={{
+                            backgroundImage: `url(${Highlands})`
+                        }}>
+                            <Timing>35-65 MINS</Timing>
+                        </RestaurantImage>
+                        <div style={{display: 'flex', justifyContent: 'space-between',
+                         marginLeft: 'auto', marginRight: 'auto', width: 260, alignItems: 'center', marginTop: -13}}>
+                            <h4>Highlands</h4>
+                            <div style={{
+                                display: 'flex',
+                                color: '#EA9414'
+                                
+                            }}>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9733;</h7>
+                                <h7>&#9734;</h7>
+                            </div>
+                         </div>
+
+                         <div style={{display: 'flex', justifyContent: 'space-between',
+                         marginLeft: 'auto', marginRight: 'auto', width: 260, alignItems: 'center', marginTop: -40}}>
+                            <h5>Kfc killimani - Denis Prit Rd</h5>
+                            
+                         </div>
+                         <div style={{display: 'flex', justifyContent: 'space-between',
+                         marginLeft: 'auto', marginRight: 'auto', width: 260, alignItems: 'center', marginTop: -40}}>
+                            <h5>Delivery Kes 75</h5>
+                            <h5>$$$</h5>
+                         </div>
+                        
+                    </Restaurant>
+                    <Restaurant>
+                        <RestaurantImage style={{
+                            backgroundImage: `url(${Pizza})`
+                        }}>
+                            <Timing>35-65 MINS</Timing>
+                        </RestaurantImage>
+                        <div style={{display: 'flex', justifyContent: 'space-between',
+                         marginLeft: 'auto', marginRight: 'auto', width: 260, alignItems: 'center', marginTop: -13}}>
+                            <h4>Pizza Inn</h4>
                             <div style={{
                                 display: 'flex',
                                 color: '#EA9414'
