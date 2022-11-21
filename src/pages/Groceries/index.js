@@ -24,6 +24,7 @@ import { Badge, OfferImage, OfferImageContent } from "../Home/Home.styles";
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 import Marquee from "react-fast-marquee";
+import Heart from '../../assets/images/heart.png'
 
 const Groceries = ()=>{
     const TEN_DAYS_IN_MS = 10 * 24 * 60 * 60 * 1000;
@@ -161,6 +162,7 @@ const freshArray = [
                     <Deal style={{
                         backgroundImage: `url(${DealBackground})`
                     }}>
+                        <img src={Heart} style={{width: 40, height: 40, marginTop: 20, marginBottom: -50, marginLeft: '80%'}} alt="heart"/>
                         <CountdownTimer targetDate={dateTimeAfterFourDays}/>
                         <UnderDeal>
                             <h4>Snack</h4>
@@ -191,6 +193,7 @@ const freshArray = [
                     <Deal style={{
                         backgroundImage: `url(${DealBackground2})`
                     }}>
+                        <img src={Heart} style={{width: 40, height: 40, marginTop: 20, marginBottom: -50, marginLeft: '80%'}} alt="heart"/>
                         <CountdownTimer targetDate={dateTimeAfterTenDays}/>
                         <UnderDeal>
                             <h4>Vegies</h4>
@@ -221,6 +224,7 @@ const freshArray = [
                     <Deal style={{
                         backgroundImage: `url(${DealBackground3})`
                     }}>
+                        <img src={Heart} style={{width: 40, height: 40, marginTop: 20, marginBottom: -50, marginLeft: '80%'}} alt="heart"/>
                         <CountdownTimer targetDate={dateTimeAfterHundredDays}/>
                         <UnderDeal>
                             <h4>Vegies</h4>

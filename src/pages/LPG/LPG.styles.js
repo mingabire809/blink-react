@@ -63,7 +63,7 @@ display: flex;
 align-items: center;
 flex-wrap: wrap;
 justify-content: flex-start;
-margin-left: 2%;
+margin-left: 5%;
 margin-top: 40px;
 margin-bottom: 40px;
 

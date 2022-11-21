@@ -36,6 +36,7 @@ import CountdownTimer from "../../components/CountDownTimer/CountDownTimer";
 import { DealContent, Deal, DealButton, UnderDeal } from "../Groceries/Groceries.styles"
 
 import { useNavigate } from "react-router-dom";
+import Heart from '../../assets/images/heart.png'
 
 
 const Home = () =>{
@@ -208,7 +209,7 @@ const Home = () =>{
             </ProductContent>
             <h3>PharmApp</h3>
         </Product>
-        <Product>
+        <Product onClick={()=>navigate('/Cosmetics')}>
             <ProductContent>
                 <WhiteContent>
                     <ImageCategory src={Cosmetics} alt="category"/>
@@ -224,7 +225,7 @@ const Home = () =>{
             </ProductContent>
             <h3>LPG Gas</h3>
         </Product>
-        <Product>
+        <Product onClick={()=>navigate("/Blink-Cafe")}>
             <ProductContent>
                 <WhiteContent>
                     <ImageCategory src={Cafe} alt="category"/>
@@ -487,6 +488,7 @@ const Home = () =>{
                         backgroundImage: `url(${DealBackground})`,
                         marginRight: screen ? 60:0
                     }}>
+                        <img src={Heart} style={{width: 40, height: 40, marginTop: 20, marginBottom: -50, marginLeft: '80%'}} alt="heart"/>
                         <CountdownTimer targetDate={dateTimeAfterFourDays}/>
                         <UnderDeal>
                             <h4>Snack</h4>
@@ -518,6 +520,7 @@ const Home = () =>{
                         backgroundImage: `url(${DealBackground2})`,
                         marginRight: screen ? 60:0
                     }}>
+                        <img src={Heart} style={{width: 40, height: 40, marginTop: 20, marginBottom: -50, marginLeft: '80%'}} alt="heart"/>
                         <CountdownTimer targetDate={dateTimeAfterTenDays}/>
                         <UnderDeal>
                             <h4>Vegies</h4>
@@ -548,6 +551,7 @@ const Home = () =>{
                     <Deal style={{
                         backgroundImage: `url(${DealBackground3})`
                     }}>
+                        <img src={Heart} style={{width: 40, height: 40, marginTop: 20, marginBottom: -50, marginLeft: '80%'}} alt="heart"/>
                         <CountdownTimer targetDate={dateTimeAfterHundredDays}/>
                         <UnderDeal>
                             <h4>Vegies</h4>

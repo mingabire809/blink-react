@@ -4,7 +4,9 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 //import PopUp from "../components/PopUp";
 import ScrollToTop from "../components/ScrolltoTop";
+import BlinkCafe from "../pages/BlinkCafe";
 import Career from "../pages/Career";
+import Cosmetics from "../pages/Cosmetics";
 import Delivery from "../pages/Delivery";
 import Electronics from "../pages/Electronics";
 import Groceries from "../pages/Groceries";
@@ -43,6 +45,8 @@ const Routing = ()=>{
                 <Route path="/LPG-gas" element={<Lpg/>}/>
                 <Route path="/Groceries" element={<Groceries/>}/>
                 <Route path="/Electronics" element={<Electronics/>}/>
+                <Route path="/Cosmetics" element={<Cosmetics/>}/>
+                <Route path="/Blink-Cafe" element={<BlinkCafe/>}/>
             </Routes>
             <Footer/>
         </Router>

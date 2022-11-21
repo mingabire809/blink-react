@@ -87,7 +87,7 @@ display: flex;
 align-items: center;
 flex-wrap: wrap;
 justify-content: flex-start;
-margin-left: 2%;
+margin-left: 5%;
 
 @media screen and (max-width: 1025px){
         width: 100%;
