@@ -47,12 +47,72 @@ const Catering = ()=>{
                     </WelcomeBanner>
         ]
 
+        const eventPlanner = [
+            <EventPlannerContent>
+                    <EventPlanner>
+                        <EventPlannerImage src={Ellipse6}/>
+                        <h3 style={{textAlign: 'center'}}>John Doe</h3>
+                        <h4 style={{marginTop: -15, width: '100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+                    </EventPlanner>
+
+                    <EventPlanner>
+                        <EventPlannerImage src={EventPlannerPerson}/>
+                        <h3 style={{textAlign: 'center'}}>Jane Smitch</h3>
+                        <h4 style={{marginTop: -15, width: '100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+                    </EventPlanner>
+
+                    <EventPlanner>
+                        <EventPlannerImage src={Ellipse7}/>
+                        <h3 style={{textAlign: 'center'}}>Katyln Chan</h3>
+                        <h4 style={{marginTop: -15, width: '100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+                    </EventPlanner>
+                </EventPlannerContent>,
+                <EventPlannerContent>
+                <EventPlanner>
+                    <EventPlannerImage src={Ellipse6}/>
+                    <h3 style={{textAlign: 'center'}}>James</h3>
+                    <h4 style={{marginTop: -15, width: '100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+                </EventPlanner>
+
+                <EventPlanner>
+                    <EventPlannerImage src={EventPlannerPerson}/>
+                    <h3 style={{textAlign: 'center'}}>Michelle</h3>
+                    <h4 style={{marginTop: -15, width: '100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+                </EventPlanner>
+
+                <EventPlanner>
+                    <EventPlannerImage src={Ellipse7}/>
+                    <h3 style={{textAlign: 'center'}}>Lorraine</h3>
+                    <h4 style={{marginTop: -15, width: '100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+                </EventPlanner>
+            </EventPlannerContent>,
+            <EventPlannerContent>
+            <EventPlanner>
+                <EventPlannerImage src={Ellipse6}/>
+                <h3 style={{textAlign: 'center'}}>Dave Doe</h3>
+                <h4 style={{marginTop: -15, width: '100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+            </EventPlanner>
+
+            <EventPlanner>
+                <EventPlannerImage src={EventPlannerPerson}/>
+                <h3 style={{textAlign: 'center'}}>Daisy Smitch</h3>
+                <h4 style={{marginTop: -15, width: '100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+            </EventPlanner>
+
+            <EventPlanner>
+                <EventPlannerImage src={Ellipse7}/>
+                <h3 style={{textAlign: 'center'}}>Love Chan</h3>
+                <h4 style={{marginTop: -15, width: '100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+            </EventPlanner>
+        </EventPlannerContent>
+        ]
+
             
 
     return(
         <Wrapper>
             <Content>
-            <Slider autoplay={3000}>
+           <Slider autoplay={3000} previousButton={false} nextButton={false}>
                 {welcome.map((slide, index) => <div>
                     <div>{slide}</div>
                 </div>)}
@@ -81,25 +141,11 @@ const Catering = ()=>{
 
             <Content>
                 <h2>Choose Your Event Planner</h2>
-                <EventPlannerContent>
-                    <EventPlanner>
-                        <EventPlannerImage src={Ellipse6}/>
-                        <h3 style={{textAlign: 'center'}}>John Doe</h3>
-                        <h4 style={{marginTop: -15, width: '100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-                    </EventPlanner>
-
-                    <EventPlanner>
-                        <EventPlannerImage src={EventPlannerPerson}/>
-                        <h3 style={{textAlign: 'center'}}>Jane Smitch</h3>
-                        <h4 style={{marginTop: -15, width: '100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-                    </EventPlanner>
-
-                    <EventPlanner>
-                        <EventPlannerImage src={Ellipse7}/>
-                        <h3 style={{textAlign: 'center'}}>Katyln Chan</h3>
-                        <h4 style={{marginTop: -15, width: '100%'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-                    </EventPlanner>
-                </EventPlannerContent>
+                <Slider autoplay={3000} previousButton={false} nextButton={false}>
+                {eventPlanner.map((slide, index) => <div>
+                    <div>{slide}</div>
+                </div>)}
+               </Slider>
             </Content>
         </Wrapper>
     )

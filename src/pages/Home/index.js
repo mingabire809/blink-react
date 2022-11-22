@@ -297,13 +297,13 @@ const Home = () =>{
 </EveryDay>
 <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 70}}>
 <h1>Offer</h1>
-<div style={{display: 'flex'}}>
-    <h3 style={{color: 'rgba(255,200,1,255)', marginLeft: 5, marginRight: 5, fontWeight: '400'}}>All</h3>
-    <h3 style={{marginLeft: 5, marginRight: 5, fontWeight: '400'}}>BlinkCafe</h3>
-    <h3 style={{marginLeft: 5, marginRight: 5, fontWeight: '400'}}>Groceries</h3>
-    <h3 style={{marginLeft: 5, marginRight: 5, fontWeight: '400'}}>Electronics</h3>
-    <h3 style={{marginLeft: 5, marginRight: 5, fontWeight: '400'}}>Pharm App</h3>
-    <h3 style={{marginLeft: 5, marginRight: 5, fontWeight: '400'}}>Cosmetics</h3>
+<div style={{display: screen ?'none':'flex'}}>
+    <h3 style={{color: 'rgba(255,200,1,255)', marginLeft: 5, marginRight: 5, fontWeight: '400', textDecoration: 'underline', cursor: 'pointer'}}>All</h3>
+    <h3 style={{marginLeft: 15, marginRight: 5, fontWeight: '400', cursor: 'pointer'}}>BlinkCafe</h3>
+    <h3 style={{marginLeft: 15, marginRight: 5, fontWeight: '400', cursor: 'pointer'}}>Groceries</h3>
+    <h3 style={{marginLeft: 15, marginRight: 5, fontWeight: '400', cursor: 'pointer'}}>Electronics</h3>
+    <h3 style={{marginLeft: 15, marginRight: 5, fontWeight: '400', cursor: 'pointer'}}>Pharm App</h3>
+    <h3 style={{marginLeft: 15, marginRight: 5, fontWeight: '400', cursor: 'pointer'}}>Cosmetics</h3>
 </div>
 </div>
 
@@ -583,7 +583,7 @@ const Home = () =>{
                 </DealContent>
 
                 <FreshCourt>
-                <h1 style={{textAlign: 'center', textDecoration: 'underline 5px rgba(255,200,1,255)'}}>Fresh Court</h1>
+                <h1 style={{textAlign: 'center', textDecoration: 'underline 5px rgba(255,200,1,255)', marginTop: screen ? -100: 0, marginBottom: screen ? -50: 20}}>Fresh Court</h1>
                 
 
               
@@ -661,7 +661,7 @@ const Home = () =>{
                         </InputContent>
                         </Open>
 
-                        <div style={{marginTop: 100}}>
+                        <div style={{marginTop: screen ? 0:100}}>
                         <Slider autoplay={3000}>
                 {advertiseArray.map((slides, index) => <div style={{height: 400}}>
                     {slides}

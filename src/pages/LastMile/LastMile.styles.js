@@ -8,6 +8,10 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
     padding: 50px;
     overflow: hidden;
+
+    @media screen and (max-width: 515px) {
+        padding: 10px;
+    }
 `;
 
 export const DetailsContent = styled.div`
@@ -20,6 +24,12 @@ margin-top: 10px;
 h3{
     color: gray;
 }
+
+@media screen and (max-width: 515px) {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 `;
 
 export const DetailsInput = styled.input`
@@ -40,5 +50,10 @@ export const Button = styled.button`
     font-size: 22px;
     font-weight: 700;
     cursor: pointer;
+
+    @media screen and (max-width: 515px) {
+       font-size: 17px;
+       width: 140px;
+    }
 `;
 

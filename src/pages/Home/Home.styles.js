@@ -367,7 +367,7 @@ export const FreshCourt = styled.div`
     margin-top: 120px;
 
     @media screen and (max-width: 515px){
-        
+        margin-bottom: -100px;
     }
 `;
 

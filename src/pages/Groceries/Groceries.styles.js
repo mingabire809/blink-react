@@ -8,7 +8,42 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
 padding: 50px;
 overflow: hidden;
+
+@media screen and (max-width: 515px){
+    padding: 2px;
+}
 `;
+
+export const SearchContent = styled.div`
+@media screen and (min-width: 516px){
+    display: none;
+}
+
+display: flex;
+justify-content: space-between;
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 50px;
+margin-bottom: -70px;
+`;
+
+export const SearchInput = styled.input`
+    width: 75%;
+    height: 35px;
+    background-color: #EBEBEB;
+    border-color: transparent;
+    border-radius: 10px;
+`;
+
+export const SearchButton = styled.button`
+    background-color: #FFC801;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.25), inset 2px 4px 4px rgba(73, 73, 73, 0.25);
+    border-color: transparent;
+    height: 40px;
+    border-radius: 10px;
+    width: 50px;
+`
 
 export const WelcomeBanner = styled.div`
 height: 350px;
@@ -22,14 +57,25 @@ margin-right: auto;
 margin-top: 10px;
 align-items: center;
 
+@media screen and (max-width: 515px){
+   height: 200px;
+   margin-top: 80px;
+}
+
 `;
 
 export const BannerContent = styled.div`
 h1{
         width: 60%;
+        @media screen and (max-width: 515px){
+            font-size: 17px;
+}
     }
     h2{
         font-weight: 400;
+        @media screen and (max-width: 515px){
+            font-size: 15px;
+}
     }
     
 `;
@@ -37,6 +83,10 @@ export const BannerImage = styled.img`
     
     height: 350px;
     width: auto;
+
+    @media screen and (max-width: 515px){
+   height: 100px;
+}
 `;
 
 export const GroceryContent = styled.div`
@@ -54,6 +104,10 @@ margin-bottom: 40px;
         margin-left: 8.5%;
     }
 
+    @media screen and (max-width: 515px){
+           
+}
+
 `;
 
 export const Grocery = styled.div`
@@ -66,6 +120,12 @@ export const Grocery = styled.div`
     margin-right: 6.6%;
     overflow: hidden;
     cursor: pointer;
+
+    @media screen and (max-width: 515px){
+            
+            width: 150px;
+            height: 200px;
+}
 `;
 
 export const WhiteContent = styled.div`
@@ -80,6 +140,12 @@ h3{
     font-weight: 700;
     
 }
+
+@media screen and (max-width: 515px){
+            
+            width: 150px;
+            
+}
 `;
 
 export const GroceryImage = styled.img`
@@ -93,6 +159,18 @@ export const DealContent = styled.div`
 display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
+
+@media screen and (max-width: 515px){
+            
+            flex-wrap: nowrap;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+            height: 410px;
+    ::-webkit-scrollbar{
+        display: none;
+    }
+            
+}
 `;
 
 export const Deal = styled.div`
@@ -101,6 +179,13 @@ export const Deal = styled.div`
     background-size: cover;
     border-radius: 20px;
     margin-bottom: 50px;
+
+    @media screen and (max-width: 515px){
+            
+            height: 230px;
+            margin-right: 30px;
+            
+}
    
 `;
 
@@ -119,6 +204,13 @@ export const UnderDeal = styled.div`
         margin-top: -10px;
         font-size: 13px;
     }
+
+    @media screen and (max-width: 515px){
+            
+            height: 160px;
+            margin-top: 10px;
+            
+}
 `;
 
 export const DealButton = styled.div`
@@ -200,6 +292,11 @@ export const BestSaleCover = styled.div`
        font-weight: 700;
         
     }
+    @media screen and (max-width: 515px){
+            
+            display: none;
+            
+}
 `;
 
 export const BestSaleCoverButton = styled.button`
@@ -225,6 +322,12 @@ scroll-behavior: smooth;
     ::-webkit-scrollbar{
         display: none;
     }
+
+    @media screen and (max-width: 515px){
+            
+            display: none;
+            
+}
 `;
 export const BestSale = styled.div`
     width: 250px;

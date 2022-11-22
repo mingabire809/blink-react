@@ -8,6 +8,10 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
     padding: 50px;
     overflow: hidden;
+
+    @media screen and (max-width: 515px) {
+        padding: 10px;  
+    }
 `;
 
 export const Upload = styled.button`
@@ -28,4 +32,8 @@ export const Background = styled.div`
     background-color: #FED7FF;
     height: 350px;
     margin-top: 20px;
+
+    @media screen and (max-width: 515px) {
+        height: 250px;
+    }
 `;

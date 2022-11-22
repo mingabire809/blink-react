@@ -1,6 +1,6 @@
-import React, {useRef} from "react";
+import React, {useRef, useState, useEffect} from "react";
 import ProgressBar from "../../components/ProgressBar";
-import { BannerContent, BannerImage, Content, GroceryContent,DealButton, WelcomeBanner, Grocery,Wrapper, WhiteContent, GroceryImage, DealContent, Deal, UnderDeal, PopularContent, Popular, BestSaleCover, BestSaleCoverButton,BestSaleContent, BestSale, BestSaleBadge, GroceryButton } from "./Groceries.styles";
+import { BannerContent, BannerImage, Content, GroceryContent,DealButton, WelcomeBanner, Grocery,Wrapper, WhiteContent, GroceryImage, DealContent, Deal, UnderDeal, PopularContent, Popular, BestSaleCover, BestSaleCoverButton,BestSaleContent, BestSale, BestSaleBadge, GroceryButton, SearchContent, SearchInput, SearchButton } from "./Groceries.styles";
 import Grocery0 from '../../assets/images/grocerybanner.png'
 import Grocery1 from '../../assets/images/grocery1.png'
 import Grocery2 from '../../assets/images/grocery2.png'
@@ -25,8 +25,15 @@ import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 import Marquee from "react-fast-marquee";
 import Heart from '../../assets/images/heart.png'
+import SearchButtonContent from '../../assets/images/searchbutton.png'
 
 const Groceries = ()=>{
+    const [screen, setScreen] = useState(
+        window.matchMedia("(max-width: 515px)").matches
+    )
+    useEffect(()=> {
+        window.matchMedia("(max-width: 515px)").addEventListener('change', e =>setScreen(e.screen));
+    }, []);
     const TEN_DAYS_IN_MS = 10 * 24 * 60 * 60 * 1000;
   const TEN_NOW_IN_MS = new Date().getTime();
 
@@ -98,6 +105,12 @@ const freshArray = [
     return(
         <Wrapper>
             <Content>
+                <SearchContent>
+                    <SearchInput placeholder=" &#x1F50D; Search item..."/>
+                    <SearchButton>
+                        <img src={SearchButtonContent} alt="search"/>
+                    </SearchButton>
+                </SearchContent>
             <Slider autoplay={3000}>
                 {freshArray.map((slide, index) => <div>
                     <div>{slide}</div>
@@ -106,7 +119,7 @@ const freshArray = [
                 
                 <h2 style={{
                     textDecoration: '3px solid underline red',
-                    marginTop: 50
+                    marginTop: screen ? -30:50
                 }}>Top Sub Categories</h2>
 
                 <GroceryContent>
@@ -256,7 +269,7 @@ const freshArray = [
                 </DealContent>
                 <h2 style={{
                     textDecoration: '3px solid underline #FFC801',
-                    marginTop: 150
+                    marginTop: screen ? 10:150
                 }}>Most Popular Product</h2>
                 <PopularContent ref={popularElement}>
                 <Marquee gradient={false} speed={40} play={true}>
@@ -411,10 +424,11 @@ const freshArray = [
                 </Marquee>
                     
                 </PopularContent>
-                <h2 style={{
+                {screen ? null:<h2 style={{
                     textDecoration: '3px solid underline #FFC801',
-                    marginTop: 100
-                }}>Daily Best Sales</h2>
+                    marginTop: 100,
+                }}>Daily Best Sales</h2>}
+                
                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
                 <BestSaleCover>
                     <div style={{marginLeft: 'auto', marginRight: 'auto', width: '83%'}}>
