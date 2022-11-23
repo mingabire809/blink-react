@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Content, EventContent, Wrapper, Event, EventTitle, AllEvent, EventPlannerContent, EventPlanner, EventPlannerImage } from "./Catering.styles";
 import { WelcomeBanner, BannerContent, BannerImage, BannerButton } from "../Kitchen/Kitchen.styles";
 import { Button } from "../LPG/LPG.styles";
@@ -16,7 +16,12 @@ import Ellipse7 from '../../assets/images/Ellipse7.png'
 
 
 const Catering = ()=>{
-
+    const [screen, setScreen] = useState(
+        window.matchMedia("(max-width: 515px)").matches
+    )
+    useEffect(()=> {
+        window.matchMedia("(max-width: 515px)").addEventListener('change', e =>setScreen(e.screen));
+    }, []);
         const welcome = [
             <WelcomeBanner style={{backgroundColor: '#FED7FF'}}>
                         <BannerContent>
@@ -117,7 +122,7 @@ const Catering = ()=>{
                     <div>{slide}</div>
                 </div>)}
                </Slider>
-               <Button>Events</Button>
+               <Button style={{marginTop: screen ?-80:0}}>Events</Button>
                <EventContent>
                 <Event style={{backgroundImage: `url(${Birthday})`}}>
                     <EventTitle>BIRTHDAYS EVENT</EventTitle>

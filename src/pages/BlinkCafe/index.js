@@ -10,10 +10,17 @@ import Caffe2 from '../../assets/images/Caffe2.png'
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 import WhiteCart from '../../assets/images/whitecart.png'
+import { useEffect, useState } from "react";
 
 
 
 const BlinkCafe = ()=>{
+    const [screen, setScreen] = useState(
+        window.matchMedia("(max-width: 515px)").matches
+    )
+    useEffect(()=> {
+        window.matchMedia("(max-width: 515px)").addEventListener('change', e =>setScreen(e.screen));
+    }, []);
     const cafe = [
         <CaffeImage src={Caffe1}/>,
         <CaffeImage src={Caffe2}/>
@@ -73,7 +80,7 @@ const BlinkCafe = ()=>{
                     </ProductWhite>
                 </Product>
 
-                <Product style={{height: 190, marginTop: 20, backgroundColor: '#C7E7FF'}}>
+                <Product style={{height: screen ? 150: 190, marginTop: 20, backgroundColor: '#C7E7FF'}}>
                     <ProductImage src={Grid} style={{width: '60%', marginLeft: '18%'}} alt="product"/>
                     <h2 style={{textAlign: 'center', marginTop: 0, fontWeight: '800'}}>All</h2>
                 </Product>
@@ -83,7 +90,7 @@ const BlinkCafe = ()=>{
                     <div>{slide}</div>
                 </div>)}
                </Slider>
-               <PopularButton>Popular</PopularButton>
+               <PopularButton style={{marginTop: screen ? -130:50}}>Popular</PopularButton>
                <PopularContent>
                 <Popular>
                     <ImageContent>
@@ -206,7 +213,7 @@ const BlinkCafe = ()=>{
                     </div>
                 </Popular>
                </PopularContent>
-               <h2 style={{marginTop: 100}}>Top Recommended</h2>
+               <h2 style={{marginTop: 100, marginBottom: screen ? -70: 0}}>Top Recommended</h2>
                <Slider autoplay={3000}>
                 {recommended.map((slide, index) => <div>
                     <div>{slide}</div>

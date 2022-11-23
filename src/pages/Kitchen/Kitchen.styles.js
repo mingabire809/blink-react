@@ -8,6 +8,9 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
 padding: 50px;
 overflow: hidden;
+@media screen and (max-width: 515px){
+    padding: 2px;
+}
 `;
 
 export const WelcomeBanner = styled.div`
@@ -21,16 +24,35 @@ margin-left: auto;
 margin-right: auto;
 margin-top: 10px;
 align-items: center;
+@media screen and (max-width: 515px){
+   height: 200px;
+   margin-top: 80px;
+}
 
 `;
 
 export const BannerContent = styled.div`
-    
+    h1{
+        width: 60%;
+        @media screen and (max-width: 515px){
+            width: 100%;
+            font-size: 17px;
+}
+    }
+    h2{
+        font-weight: 400;
+        @media screen and (max-width: 515px){
+            font-size: 15px;
+}
+    }
 `;
 export const BannerImage = styled.img`
     
     height: 350px;
     width: auto;
+    @media screen and (max-width: 515px){
+   height: 100px;
+}
 `;
 
 export const BannerButton = styled.button`
@@ -42,6 +64,9 @@ background-color: #EA9414;
 cursor: pointer;
 color: white;
 font-weight: 700;
+@media screen and (max-width: 515px) {
+    margin-left: 20px;
+}
 `;
 
 export const CategoriesContent = styled.div`
@@ -70,6 +95,11 @@ export const Product = styled.div`
     margin-right: 6.6%;
     overflow: hidden;
     cursor: pointer;
+    @media screen and (max-width: 515px){
+            
+            width: 150px;
+            height: 200px;
+}
 `;
 
 export const ProductWhite = styled.div`
@@ -82,6 +112,11 @@ padding-top: 10px;
 h3{
     text-align: center;
     
+}
+@media screen and (max-width: 515px){
+            
+            width: 150px;
+            
 }
 `;
 

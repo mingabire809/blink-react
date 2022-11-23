@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { BannerContent, Content, WelcomeBanner, Wrapper, BannerButton, BannerImage, CategoriesContent, Product, ProductWhite, ProductImage, RestaurantContent, Restaurant, RestaurantImage, Timing } from "./Kitchen.styles";
 import Coffee from '../../assets/images/coffee1.png'
 import Pastry from '../../assets/images/pastry1.png'
@@ -21,6 +21,13 @@ import 'react-animated-slider/build/horizontal.css';
 
 const Kitchen = ()=>{
 
+    const [screen, setScreen] = useState(
+        window.matchMedia("(max-width: 515px)").matches
+    )
+    useEffect(()=> {
+        window.matchMedia("(max-width: 515px)").addEventListener('change', e =>setScreen(e.screen));
+    }, []);
+
     const welcome = [
         <WelcomeBanner>
                     <BannerContent>
@@ -28,8 +35,8 @@ const Kitchen = ()=>{
                     <h2>Save up to 50% on Your first order</h2>
                     <BannerButton>Shop Now</BannerButton>
                     </BannerContent>
-                    <BannerImage src={Pastry} style={{width: 250, height: 200}}/>
-                    <BannerImage src={Coffee} style={{width: 230, height: 180}}/>
+                    <BannerImage src={Pastry} style={{width: screen ? 150:250, height: screen ? 100:200}}/>
+                    <BannerImage src={Coffee} style={{width: screen ? 130:230, height: screen? 80:180}}/>
                 </WelcomeBanner>,
 
 <WelcomeBanner style={{backgroundColor: 'lightgray'}}>
@@ -38,8 +45,8 @@ const Kitchen = ()=>{
 <h2>Save up to 50% on Your first order</h2>
 <BannerButton>Shop Now</BannerButton>
 </BannerContent>
-<BannerImage src={Pastry} style={{width: 250, height: 200}}/>
-<BannerImage src={Coffee} style={{width: 230, height: 180}}/>
+<BannerImage src={Pastry} style={{width: screen ? 150:250, height: screen ? 100:200}}/>
+                    <BannerImage src={Coffee} style={{width: screen ? 130:230, height: screen? 80:180}}/>
 </WelcomeBanner>,
 
 <WelcomeBanner style={{backgroundColor: 'pink'}}>
@@ -48,8 +55,8 @@ const Kitchen = ()=>{
                     <h2>Save up to 50% on Your first order</h2>
                     <BannerButton>Shop Now</BannerButton>
                     </BannerContent>
-                    <BannerImage src={Pastry} style={{width: 250, height: 200}}/>
-                    <BannerImage src={Coffee} style={{width: 230, height: 180}}/>
+                    <BannerImage src={Pastry} style={{width: screen ? 150:250, height: screen ? 100:200}}/>
+                    <BannerImage src={Coffee} style={{width: screen ? 130:230, height: screen? 80:180}}/>
                 </WelcomeBanner>
     ]
     return(

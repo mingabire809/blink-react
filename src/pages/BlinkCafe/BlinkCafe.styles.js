@@ -9,6 +9,10 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
 padding: 50px;
 overflow: hidden;
+
+@media screen and (max-width: 515px){
+    padding: 2px;
+}
 `;
 
 export const CategoriesContent = styled.div`
@@ -37,6 +41,12 @@ export const Product = styled.div`
     margin-right: 6.6%;
     overflow: hidden;
     cursor: pointer;
+
+    @media screen and (max-width: 515px){
+            
+            width: 150px;
+            height: 200px;
+}
 `;
 
 export const ProductWhite = styled.div`
@@ -50,6 +60,12 @@ h3{
     text-align: center;
     
 }
+
+@media screen and (max-width: 515px){
+            
+            width: 150px;
+            
+}
 `;
 
 export const ProductImage = styled.img`
@@ -61,6 +77,12 @@ export const ProductImage = styled.img`
 export const CaffeImage = styled.img`
 width: 100%;
 height: 400px;
+
+@media screen and (max-width: 515px){
+   height: 200px;
+   margin-top: 80px;
+  
+}
 `;
 
 export const PopularButton = styled.button`
@@ -100,6 +122,9 @@ export const Popular = styled.div`
     padding: 10px;
     margin-right: 4.6%;
     margin-top: 30px;
+    @media screen and (max-width: 515px) {
+        
+    }
 `;
 
 export const ImageContent = styled.div`
@@ -126,5 +151,11 @@ height: 380px;
 background-size: cover;
 border-radius: 20px;
 padding-top: 20px;
+
+@media screen and (max-width: 515px){
+   height: 200px;
+   margin-top: 80px;
+  
+}
 
 `;

@@ -9,6 +9,9 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
 padding: 50px;
 overflow: hidden;
+@media screen and (max-width: 515px){
+    padding: 2px;
+}
 `;
 
 export const EventContent = styled.div`
@@ -24,6 +27,10 @@ height: 350px;
 border-radius: 20px;
 background-size: cover;
 margin-top: 30px;
+
+@media screen and (max-width: 515px) {
+    width: 100%
+}
 `;
 
 export const EventTitle = styled.div`
@@ -54,6 +61,9 @@ export const EventPlannerContent = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 515px) {
+   
+}
 `;
 
 export const EventPlanner = styled.div`
@@ -61,9 +71,18 @@ width: 30%;
 height: 280px;
 border-radius: 20px;
 background-color: #D7E9FF;
+
+@media screen and (max-width: 515px) {
+  
+}
 `;
 
 export const EventPlannerImage = styled.img`
     margin-left: 30%;
     margin-top: 30px;
+    @media screen and (max-width: 515px) {
+   width: 100px;
+   margin-left: 10%;
+   
+}
 `;

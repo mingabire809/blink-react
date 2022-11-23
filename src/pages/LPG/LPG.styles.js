@@ -9,6 +9,9 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
 padding: 50px;
 overflow: hidden;
+@media screen and (max-width: 515px){
+    padding: 2px;
+}
 `;
 
 export const WelcomeBanner = styled.div`
@@ -23,6 +26,11 @@ margin-right: auto;
 margin-top: 10px;
 align-items: center;
 
+@media screen and (max-width: 515px){
+   height: 200px;
+   margin-top: 80px;
+}
+
 `;
 
 export const BannerContent = styled.div`
@@ -32,6 +40,9 @@ export const BannerImage = styled.img`
     
     height: 350px;
     width: auto;
+    @media screen and (max-width: 515px){
+   height: 100px;
+}
 `;
 
 export const BannerButton = styled.button`
@@ -41,6 +52,8 @@ border-color: transparent;
 font-size: 20px;
 background-color: #FFC702;
 cursor: pointer;
+
+
 
 `;
 
@@ -84,6 +97,12 @@ export const Gas = styled.div`
     margin-right: 6.6%;
     overflow: hidden;
     cursor: pointer;
+
+    @media screen and (max-width: 515px){
+            
+            width: 150px;
+            height: 200px;
+}
 `;
 
 export const WhiteContent = styled.div`
@@ -97,6 +116,12 @@ h3{
     text-align: center;
     font-weight: 700;
     
+}
+
+@media screen and (max-width: 515px){
+            
+            width: 150px;
+            
 }
 `;
 

@@ -9,6 +9,9 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
 padding: 50px;
 overflow: hidden;
+@media screen and (max-width: 515px){
+    padding: 2px;
+}
 `;
 
 export const BrandButton = styled.button`
@@ -47,6 +50,12 @@ export const Brand = styled.div`
     border-radius: 20px;
     margin-right: 6.5%;
     margin-top: 20px;
+
+    @media screen and (max-width: 515px){
+            
+            width: 150px;
+            height: 150px;
+}
     
 `;
 export const BrandImage = styled.img`
@@ -73,6 +82,13 @@ export const YellowContent = styled.div`
     
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+
+    @media screen and (max-width: 515px){
+            
+            width: 150px;
+            padding-top: 0px;
+            margin-top: -40px;
+}
 `;
 
 export const AdvertisementBanner = styled.div`
@@ -81,6 +97,12 @@ height: 69px;
 border-radius: 20px;
 background-size: cover;
 padding-top: 300px;
+@media screen and (max-width: 515px){
+            
+           padding-top: 100px;
+           margin-top: 100px;
+           
+}
 
 `;
 
@@ -141,5 +163,12 @@ height: 150px;
 border-radius: 5px;
 margin-left: 50px;
 margin-right: 50px;
+
+@media screen and (max-width: 515px){
+           width: 80px;
+           height: 80px;
+           margin-left: 20px;
+           margin-right: 20px;
+ }
 `;
 

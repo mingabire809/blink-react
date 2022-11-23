@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { BannerButton, BannerContent, BannerImage, Button, Content, GasContent, Gas, GasImage, WelcomeBanner, Wrapper, WhiteContent } from "./LPG.styles";
 import Welcome from '../../assets/images/lpgbanner.png'
 import Afrigas from '../../assets/images/afrigas.png'
@@ -9,6 +9,12 @@ import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 
 const Lpg = ()=>{
+    const [screen, setScreen] = useState(
+        window.matchMedia("(max-width: 515px)").matches
+    )
+    useEffect(()=> {
+        window.matchMedia("(max-width: 515px)").addEventListener('change', e =>setScreen(e.screen));
+    }, []);
     const freshArray = [
         <WelcomeBanner>
             <BannerContent>
@@ -41,7 +47,7 @@ const Lpg = ()=>{
                     <div>{slide}</div>
                 </div>)}
                </Slider>
-        <Button>Shop by Category</Button>
+        <Button style={{marginTop: screen ? -140: 0}}>Shop by Category</Button>
 
         <GasContent>
             <Gas style={{backgroundColor: '#FF8383'}}>

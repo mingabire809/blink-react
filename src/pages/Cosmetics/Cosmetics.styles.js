@@ -9,6 +9,10 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
 padding: 50px;
 overflow: hidden;
+
+@media screen and (max-width: 515px){
+    padding: 2px;
+}
 `;
 
 export const WelcomeBanner = styled.div`
@@ -24,19 +28,33 @@ margin-top: 10px;
 align-items: center;
 overflow: hidden;
 
+@media screen and (max-width: 515px){
+   height: 200px;
+   margin-top: 80px;
+}
+
 `;
 
 export const BannerContent = styled.div`
     h1{
         width: 60%;
+        @media screen and (max-width: 515px){
+            font-size: 17px;
+}
     }
     h2{
         font-weight: 400;
+        @media screen and (max-width: 515px){
+            font-size: 15px;
+}
     }
 `;
 export const BannerImage = styled.img`
     width: 340px;
     height: auto;
+    @media screen and (max-width: 515px){
+   width: 100px;
+}
 `;
 
 export const CategoriesContent = styled.div`
@@ -66,6 +84,12 @@ export const Product = styled.div`
     margin-right: 6.6%;
     overflow: hidden;
     cursor: pointer;
+
+    @media screen and (max-width: 515px){
+            
+            width: 150px;
+            height: 200px;
+}
 `;
 
 export const ProductWhite = styled.div`
@@ -78,6 +102,12 @@ padding-top: 10px;
 h3{
     text-align: center;
     
+}
+
+@media screen and (max-width: 515px){
+            
+            width: 150px;
+            
 }
 `;
 
@@ -111,6 +141,11 @@ export const Brand = styled.div`
     border-radius: 20px;
     margin-right: 6.5%;
     margin-top: 20px;
+    @media screen and (max-width: 515px){
+            
+            width: 150px;
+            height: 150px;
+}
     
 `;
 export const BrandImage = styled.img`
@@ -130,6 +165,14 @@ height: 300px;
 border-radius: 10px;
 margin-left: 50px;
 margin-right: 50px;
+
+@media screen and (max-width: 515px){
+            
+            width: 200px;
+            height: 200px;
+            margin-left: 30px;
+            margin-right: 30px;
+}
 `;
 
 export const FaceContent = styled.div`
@@ -155,6 +198,13 @@ height: 300px;
 background-size: cover;
 border-radius: 20px;
 margin-right: 100px;
+
+@media screen and (max-width: 515px){
+        width: 300px;
+        height: 200px;
+        margin-top: 20px;
+    }
+
 `;
 
 export const Badge = styled.div`
@@ -184,6 +234,10 @@ margin-top: 30px;
         margin-left: 8.5%;
     }
 
+    @media screen and (max-width: 515px){
+       margin-bottom: 30px;
+    }
+
 `;
 
 export const Image = styled.img`
@@ -196,4 +250,8 @@ export const Image = styled.img`
     margin-right: 6.6%;
     overflow: hidden;
     cursor: pointer;
+    @media screen and (max-width: 515px){
+       width: 100px;
+       height: 100px;
+    }
 `;

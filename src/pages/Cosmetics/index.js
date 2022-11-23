@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { BannerContent, BannerImage, Content, WelcomeBanner, Wrapper, Face,CategoriesContent, ProductImage, ProductWhite, Product, BrandContent, Brand, BrandImageContent, BrandImage, HairImage, FaceContent, Badge, ProductContent, Image } from "./Cosmetics.styles";
 import { Button } from "../LPG/LPG.styles";
 import { Button2 } from "../PharmApp/PharmApp.styles";
@@ -33,6 +33,12 @@ import Rectangle10 from '../../assets/images/Rectangle72.png'
 import Rectangle11 from '../../assets/images/Rectangle73.png'
 
 const Cosmetics = ()=>{
+    const [screen, setScreen] = useState(
+        window.matchMedia("(max-width: 515px)").matches
+    )
+    useEffect(()=> {
+        window.matchMedia("(max-width: 515px)").addEventListener('change', e =>setScreen(e.screen));
+    }, []);
     const welcome = [
         <WelcomeBanner>
                     <BannerContent>
@@ -75,7 +81,7 @@ const Cosmetics = ()=>{
                     <div>{slide}</div>
                 </div>)}
                </Slider>
-               <Button>Shop by Category</Button>
+               <Button style={{marginTop: screen ? -40: 0}}>Shop by Category</Button>
                <CategoriesContent>
                 <Product style={{backgroundColor: '#FF64CA'}}>
                     <ProductImage src={Nivea} style={{width: '30%', marginLeft: '30%'}}/>
@@ -125,7 +131,7 @@ const Cosmetics = ()=>{
                         <h3>accessories</h3>
                     </ProductWhite>
                 </Product>
-                <Product style={{height: 190, marginTop: 0, backgroundColor: '#C7E7FF'}}>
+                <Product style={{height: screen ? 150:190, marginTop: 0, backgroundColor: '#C7E7FF'}}>
                     <ProductImage src={Grid} style={{width: '60%', marginLeft: '18%'}} alt="product"/>
                     <h2 style={{textAlign: 'center', marginTop: 0, fontWeight: '800'}}>All</h2>
                 </Product>
@@ -158,20 +164,20 @@ const Cosmetics = ()=>{
                </BrandImageContent>
                </Brand>
 
-               <Product style={{height: 190, marginTop: 20, backgroundColor: '#C7E7FF'}}>
+               <Product style={{height: screen ? 150:190, marginTop: 20, backgroundColor: '#C7E7FF'}}>
                     <ProductImage src={Grid} style={{width: '60%', marginLeft: '18%'}} alt="product"/>
                     <h2 style={{textAlign: 'center', marginTop: 0, fontWeight: '800'}}>All</h2>
                 </Product>
                </BrandContent>
 
-               <h2 style={{marginTop: 100}}>Best Sellers</h2> 
+               <h2 style={{marginTop: screen ? 40:100, marginBottom: screen ? -100:0}}>Best Sellers</h2> 
                <Slider autoplay={3000}>
                 {bestSeller.map((slide, index) => <div>
                     <div>{slide}</div>
                 </div>)}
                </Slider>
 
-               <h2 style={{marginTop: 100}}>Hair Care</h2> 
+               <h2 style={{marginTop: screen ? 20:100}}>Hair Care</h2> 
                <Marquee gradient={false} speed={40} play={true}>
                <HairImage src={HairCare}/>
                <HairImage src={HairCare2}/>

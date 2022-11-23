@@ -9,6 +9,9 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
 padding: 50px;
 overflow: hidden;
+@media screen and (max-width: 515px){
+    padding: 2px;
+}
 `;
 
 export const WelcomeBanner = styled.div`
@@ -23,19 +26,33 @@ margin-right: auto;
 margin-top: 10px;
 align-items: center;
 
+@media screen and (max-width: 515px){
+   height: 200px;
+   margin-top: 80px;
+}
+
 `;
 
 export const BannerContent = styled.div`
     h1{
-        width: 60%;
+        width: 100%;
+        @media screen and (max-width: 515px){
+            font-size: 15px;
+}
     }
     h2{
         font-weight: 400;
+        @media screen and (max-width: 515px){
+            font-size: 15px;
+}
     }
 `;
 export const BannerImage = styled.img`
     width: 480px;
     height: auto;
+    @media screen and (max-width: 515px){
+   height: 100px;
+}
 `;
 
 export const WelcomeButtonContent = styled.div`
@@ -46,6 +63,11 @@ export const WelcomeButtonContent = styled.div`
 margin-top: 30px;
 margin-left: auto;
 margin-right: auto;
+@media screen and (max-width: 515px){
+            margin-top: 0px;
+            flex-wrap: wrap;
+            margin-top: -80px;
+}
 `;
 
 export const Button1 = styled.button`
@@ -57,6 +79,11 @@ font-size: 20px;
 font-weight: 700;
 border-color: transparent;
 cursor: pointer;
+@media screen and (max-width: 515px){
+            width: 200px;
+            font-size: 15px;
+            margin-top: 10px;
+}
 `;
 
 export const Button2 = styled.button`
@@ -68,6 +95,11 @@ font-size: 20px;
 font-weight: 700;
 border-color: transparent;
 cursor: pointer;
+@media screen and (max-width: 515px){
+            width: 160px;
+            font-size: 15px;
+            margin-top: 10px;
+}
 `;
 
 export const Button3 = styled.button`
@@ -79,6 +111,11 @@ font-size: 20px;
 font-weight: 700;
 border-color: transparent;
 cursor: pointer;
+@media screen and (max-width: 515px){
+            width: 160px;
+            font-size: 15px;
+            margin-top: 10px;
+}
 `;
 
 export const CategoriesContent = styled.div`
@@ -106,6 +143,11 @@ export const Product = styled.div`
     margin-right: 6.6%;
     overflow: hidden;
     cursor: pointer;
+    @media screen and (max-width: 515px){
+            
+            width: 150px;
+            height: 200px;
+}
 `;
 
 export const ProductWhite = styled.div`
@@ -118,6 +160,12 @@ padding-top: 10px;
 h3{
     text-align: center;
     
+}
+
+@media screen and (max-width: 515px){
+            
+            width: 150px;
+            
 }
 `;
 
@@ -137,6 +185,11 @@ margin-left: auto;
 margin-right: auto;
 margin-top: 100px;
 align-items: center;
-background-color: #EFEFEF
+background-color: #EFEFEF;
+
+@media screen and (max-width: 515px){
+   height: 200px;
+   
+}
 
 `;

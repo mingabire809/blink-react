@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { BannerContent, BannerImage, Button1, Button2, Button3, CategoriesContent, Content, DiapperBanner, Product, ProductImage, ProductWhite, WelcomeBanner, WelcomeButtonContent, Wrapper } from "./PharmApp.styles";
 import WelcomeImage from '../../assets/images/welcomeimage.png'
 import BabyCare from '../../assets/images/baby-care.png'
@@ -36,6 +36,12 @@ import 'react-animated-slider/build/horizontal.css';
 import { useNavigate } from "react-router-dom";
 
 const PharmApp = ()=>{
+    const [screen, setScreen] = useState(
+        window.matchMedia("(max-width: 515px)").matches
+    )
+    useEffect(()=> {
+        window.matchMedia("(max-width: 515px)").addEventListener('change', e =>setScreen(e.screen));
+    }, []);
 
     const navigate = useNavigate()
     
@@ -108,7 +114,7 @@ const PharmApp = ()=>{
                     </ProductWhite>
                 </Product>
                 <Product style={{backgroundColor: 'black'}}>
-                <ProductImage src={Toiletries} style={{marginTop: -115}} alt="product"/>
+                <ProductImage src={Toiletries} style={{marginTop: screen ? -80:-115}} alt="product"/>
                     <ProductWhite>
                         <h3>Toiletries</h3>
                     </ProductWhite>
@@ -131,58 +137,59 @@ const PharmApp = ()=>{
                         <h3>Baby Care</h3>
                     </ProductWhite>
                 </Product>
-                <Product style={{height: 190, marginTop: 0, backgroundColor: '#C7E7FF'}}>
+                <Product style={{height: screen ? 155:190, marginTop: 0, backgroundColor: '#C7E7FF'}}>
                     <ProductImage src={Grid} style={{width: '60%', marginLeft: '18%'}} alt="product"/>
                     <h2 style={{textAlign: 'center', marginTop: 0, fontWeight: '800'}}>All</h2>
                 </Product>
             </CategoriesContent>
             <DiapperBanner>
-                <img src={Diaper1} style={{height: 350, width: '59%'}} alt="product"/>
+                <img src={Diaper1} style={{height: screen ? 200:350, width: '59%'}} alt="product"/>
                 <div style={{
                     width: '41%',  
                 }}>
-                    <img src={Diaper2} style={{marginLeft: '10%'}} alt="product"/>
+                    {screen ? <img src={Diaper2} style={{marginLeft: '3%', width: 150}} alt="product"/>:<img src={Diaper2} style={{marginLeft: '10%'}} alt="product"/>}
+                    
                 </div>
                 
             </DiapperBanner>
             
             </Content>
             <Marquee gradient={false} speed={50} play={true} style={{marginTop: 40, marginBottom: 20}}>
-                       <img src={Rectangle1} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
-                       <img src={Rectangle2} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
-                       <img src={Rectangle3} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
-                       <img src={Rectangle4} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
-                       <img src={Rectangle5} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
-                       <img src={Rectangle1} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
-                       <img src={Rectangle2} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
-                       <img src={Rectangle3} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
-                       <img src={Rectangle4} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
-                       <img src={Rectangle5} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
+                       <img src={Rectangle1} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
+                       <img src={Rectangle2} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
+                       <img src={Rectangle3} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
+                       <img src={Rectangle4} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
+                       <img src={Rectangle5} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
+                       <img src={Rectangle1} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
+                       <img src={Rectangle2} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
+                       <img src={Rectangle3} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
+                       <img src={Rectangle4} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
+                       <img src={Rectangle5} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
                        </Marquee>
 
                        <Content>
                        <h1>Best Sellers</h1>
-                       <img src={Rectangle6} style={{width: '100%', height: 350, borderRadius: 20}} alt="product"/>
+                       <img src={Rectangle6} style={{width: '100%', height: screen ? 200:350, borderRadius: 20}} alt="product"/>
                        </Content>
 
                        <Marquee gradient={false} speed={50} play={true} style={{marginTop: 40, marginBottom: 20}}>
-                       <img src={Rectangle7} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
-                       <img src={Rectangle8} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
-                       <img src={Rectangle9} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
-                       <img src={Rectangle10} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
-                       <img src={Rectangle11} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
+                       <img src={Rectangle7} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
+                       <img src={Rectangle8} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
+                       <img src={Rectangle9} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
+                       <img src={Rectangle10} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
+                       <img src={Rectangle11} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
 
-                       <img src={Rectangle7} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
-                       <img src={Rectangle8} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
-                       <img src={Rectangle9} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
-                       <img src={Rectangle10} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
-                       <img src={Rectangle11} style={{width: 150, height: 150, marginRight: 45}} alt="product"/>
+                       <img src={Rectangle7} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
+                       <img src={Rectangle8} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
+                       <img src={Rectangle9} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
+                       <img src={Rectangle10} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
+                       <img src={Rectangle11} style={{width: screen ? 80:150, height: screen ? 80:150, marginRight: screen ? 25:45}} alt="product"/>
                       
                        </Marquee>
 
                        <Content>
                        <h1>Top Selling Medical Conditions</h1>
-                       <img src={Rectangle12} style={{width: '100%', height: 350, borderRadius: 20}} alt="product"/>
+                       <img src={Rectangle12} style={{width: '100%', height: screen ? 200:350, borderRadius: 20}} alt="product"/>
 
                        <h1 style={{marginTop: 50}}>Brands</h1>
                        <CategoriesContent style={{marginBottom: 40}} id="brands">

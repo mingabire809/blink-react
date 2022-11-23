@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { BrandButton, BrandContent, Brand, Content, Wrapper, YellowContent, BrandImage, BrandImageContent, AdvertisementBanner, TextContent, RecommendedContent, Recommended, DealButton, Arrival } from "./Electronics.styles";
 import { WelcomeBanner, Button, BannerButton, BannerImage } from "../LPG/LPG.styles";
 import Welcome from '../../assets/images/lpgbanner.png'
@@ -29,6 +29,12 @@ import Kettle from '../../assets/images/kettle.png'
 
 
 const Electronics = () =>{
+    const [screen, setScreen] = useState(
+        window.matchMedia("(max-width: 515px)").matches
+    )
+    useEffect(()=> {
+        window.matchMedia("(max-width: 515px)").addEventListener('change', e =>setScreen(e.screen));
+    }, []);
     const freshArray = [
         <WelcomeBanner style={{backgroundColor: '#EBD8FF'}}>
             
@@ -85,7 +91,7 @@ const Electronics = () =>{
                     <div>{slide}</div>
                 </div>)}
                </Slider>
-        <Button>Shop by Category</Button>
+        <Button style={{marginTop: screen ? -150: 0}}>Shop by Category</Button>
 
         <CategoriesContent>
                 <Product style={{backgroundColor: '#FF02B8'}}>
@@ -115,17 +121,17 @@ const Electronics = () =>{
                 <Product>
                 <ProductImage src={Screen} style={{width: '60%', marginLeft: '19%'}} alt="product"/>
                     <ProductWhite>
-                        <h3>Screen Protectors</h3>
+                        <h3 style={{marginTop: screen ? 0:0}}>Screen Protectors</h3>
                     </ProductWhite>
                 </Product>
                 <Product style={{backgroundColor: '#02FF86'}}>
                 <ProductImage src={Welcome}  alt="product"/>
                     <ProductWhite>
-                        <h3>Kitchen Appliances</h3>
+                        <h3 style={{marginTop: screen ? -1:0}}>Kitchen Appliances</h3>
                     </ProductWhite>
                 </Product>
                
-                <Product style={{height: 190, marginTop: 0, backgroundColor: '#C7E7FF'}}>
+                <Product style={{height: screen? 150:190, marginTop: screen ? 15:0, backgroundColor: '#C7E7FF'}}>
                     <ProductImage src={Grid} style={{width: '60%', marginLeft: '18%'}} alt="product"/>
                     <h2 style={{textAlign: 'center', marginTop: 0, fontWeight: '800'}}>All</h2>
                 </Product>
@@ -174,21 +180,21 @@ const Electronics = () =>{
                 </YellowContent>
                 </Brand>
 
-                <Product style={{height: 190, marginTop: 20, backgroundColor: '#C7E7FF'}}>
+                <Product style={{height: screen ? 150:190, marginTop: 20, backgroundColor: '#C7E7FF'}}>
                     <ProductImage src={Grid} style={{width: '60%', marginLeft: '18%'}} alt="product"/>
                     <h2 style={{textAlign: 'center', marginTop: 0, fontWeight: '800'}}>All</h2>
                 </Product>
                 
             </BrandContent>
 
-            <h2 style={{marginTop: 100}}>Advertise Here</h2>
+            <h2 style={{marginTop: 100, marginBottom: screen ? -80:0}}>Advertise Here</h2>
             <Slider autoplay={3000}>
                 {AdvertiseArray.map((slide, index) => <div>
                     <div>{slide}</div>
                 </div>)}
                </Slider>
                     
-               <h2 style={{marginTop: 100}}>Top Recommended</h2>  
+               <h2 style={{marginTop: screen ? 10:100}}>Top Recommended</h2>  
                    
             <RecommendedContent>
             <Marquee gradient={false} speed={40} play={true}>
