@@ -26,6 +26,7 @@ import 'react-animated-slider/build/horizontal.css';
 import Marquee from "react-fast-marquee";
 import Heart from '../../assets/images/heart.png'
 import SearchButtonContent from '../../assets/images/searchbutton.png'
+import Grid from '../../assets/images/grid.png'
 
 const Groceries = ()=>{
     const [screen, setScreen] = useState(
@@ -166,6 +167,10 @@ const freshArray = [
                             <h3>Egg & Poutry</h3>
                         </WhiteContent>
                     </Grocery>
+                    <Grocery style={{height: screen? 170:190, marginTop: 20}}>
+                    <GroceryImage src={Grid} style={{width: '60%', marginLeft: '18%'}} alt="product"/>
+                    <h2 style={{textAlign: 'center', marginTop: 0, fontWeight: '800'}}>All</h2>
+                </Grocery>
                 </GroceryContent>
                 <h2 style={{
                     textDecoration: '3px solid underline #FFC801',
