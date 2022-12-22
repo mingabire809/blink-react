@@ -350,6 +350,8 @@ export const Badge = styled.div`
     padding-top: 10px;
     font-size: 23px;
 
+    box-shadow: 0px 4px 4px rgba(12, 3, 32, 0.39);
+
 `;
 export const OfferButton = styled.button`
     background-color: rgba(255,200,1,255);

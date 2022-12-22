@@ -31,6 +31,7 @@ import Rectangle8 from '../../assets/images/Rectangle70.png'
 import Rectangle9 from '../../assets/images/Rectangle71.png'
 import Rectangle10 from '../../assets/images/Rectangle72.png'
 import Rectangle11 from '../../assets/images/Rectangle73.png'
+import { useNavigate } from "react-router-dom";
 
 const Cosmetics = ()=>{
     const [screen, setScreen] = useState(
@@ -39,6 +40,8 @@ const Cosmetics = ()=>{
     useEffect(()=> {
         window.matchMedia("(max-width: 515px)").addEventListener('change', e =>setScreen(e.screen));
     }, []);
+
+    const navigate = useNavigate()
     const welcome = [
         <WelcomeBanner>
                     <BannerContent>
@@ -104,7 +107,7 @@ const Cosmetics = ()=>{
                     </ProductWhite>
                 </Product>
 
-                <Product>
+                <Product onClick={()=>navigate('/single-product')}>
                     <ProductImage src={Hair} style={{width:'37%', marginLeft: '30%'}}/>
                     <ProductWhite>
                         <h3>Hair Care</h3>

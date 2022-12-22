@@ -17,6 +17,7 @@ import LastMile from "../pages/LastMile";
 import Lpg from "../pages/LPG";
 import PharmApp from "../pages/PharmApp";
 import Prescription from "../pages/Prescription";
+import SingleProduct from "../pages/SingleProduct";
 import Supplier from "../pages/Supplier";
 const Routing = ()=>{
 
@@ -55,6 +56,7 @@ const Routing = ()=>{
                 <Route path="/Catering" element={<Catering/>}/>
                 <Route path="/Last-Mile" element={<LastMile/>}/>
                 <Route path="/Prescription" element={<Prescription/>}/>
+                <Route path="/single-product" element={<SingleProduct/>}/>
             </Routes>
             <Footer/>
         </Router>
