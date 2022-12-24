@@ -103,6 +103,10 @@ export const Gas = styled.div`
             width: 150px;
             height: 200px;
 }
+
+@media only screen and (max-width: 780px) and (min-width: 516px){
+        margin-right: 3%;
+    }
 `;
 
 export const WhiteContent = styled.div`

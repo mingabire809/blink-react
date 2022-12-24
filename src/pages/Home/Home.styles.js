@@ -105,12 +105,20 @@ width: 350px;
 height: 350px;
 border-radius: 100%;
 margin-left: 20%;
+
+@media only screen and (max-width: 780px) and (min-width: 516px){
+  width: 240px;
+  height: 240px;
+  margin-left: 36%;
+}
 @media screen and (max-width: 515px){
     width: 100%;
     margin-left: 0%;
     margin-right: 80%;
     background-color: transparent;
 }
+
+
 `;
 
 export const Phone = styled.img`
@@ -125,6 +133,10 @@ animation: updown 9s ease infinite;
     margin-left: -20%;
     margin-top: 20px;
     position: absolute;
+}
+
+@media only screen and (max-width: 780px) and (min-width: 516px){
+  width: 230px;
 }
 @keyframes updown {
  
@@ -146,6 +158,10 @@ height: 50px;
 border-radius: 100%;
 margin-left: 2%;
 margin-top: -3%;
+
+@media only screen and (max-width: 780px) and (min-width: 516px){
+  margin-left: 16%;
+}
 
 @media screen and (max-width: 515px){
     width: 100px;
@@ -170,6 +186,11 @@ margin-left: 35%;
   width: 50px;
 height: 50px;
 background-color: #FFC801;
+}
+
+@media only screen and (max-width: 780px) and (min-width: 516px){
+ 
+  margin-left: 43%;
 }
 `;
 
@@ -204,6 +225,10 @@ export const PlayMobile = styled.div`
 
 export const Categories = styled.div`
     margin-top: 100px;
+
+    @media only screen and (max-width: 780px) and (min-width: 516px){
+        margin-left: 50px;
+}
 `;
 
 export const CategoryContent = styled.div`
@@ -263,6 +288,11 @@ export const EveryDay = styled.div`
         display: none;
     }
 
+    @media screen and (max-width: 780px){
+        flex-wrap: wrap;
+        
+}
+
 `;
 
 export const EveryDayItem = styled.div`
@@ -273,6 +303,11 @@ export const EveryDayItem = styled.div`
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+
+    @media only screen and (max-width: 780px) and (min-width: 516px){
+ width: 45%;
+ margin-top: 20px;
+}
 `;
 
 export const ItemContent = styled.div`
@@ -386,6 +421,10 @@ export const FreshContent = styled.div`
         height: 200px;
         margin-top: 100px;
     }
+
+    @media screen and (max-width: 780px){
+  height: 300px;
+}
 `;
 export const FreshProduct = styled.div`
   background-color: rgba(255,218,85,255);
@@ -444,6 +483,10 @@ export const Delivery = styled.div`
         background-color: #D9D9D9;
         height: 200px;
     }
+
+    @media only screen and (max-width: 780px) and (min-width: 516px){
+        height: 300px;
+}
 `;
 
 export const DeliveryTitle = styled.div`
@@ -461,6 +504,11 @@ font-size: 25px;
         width: 75%;
         margin-top: 50px
     }
+
+    @media only screen and (max-width: 780px) and (min-width: 516px){
+        font-size: 18px;
+        width: 60%;
+}
 `;
 export const ButtonMoving = styled.img`
     width: 60px;
@@ -509,6 +557,10 @@ export const Open = styled.div`
     @media screen and (max-width: 515px){
         flex-wrap: wrap;
     }
+
+    @media only screen and (max-width: 780px) and (min-width: 516px){
+ margin-top: 90px;
+}
 
 `;
 
@@ -622,6 +674,9 @@ margin-top: 100px;
         height: 300px;
         margin-top: 30px;
     }
+    @media screen and (max-width: 780px){
+        align-items: center;
+}
 `;
 
 export const OrderWord = styled.div`
@@ -633,12 +688,20 @@ export const OrderWord = styled.div`
     @media screen and (max-width: 515px){
         font-size: 20px;
     }
+
+    @media only screen and (max-width: 780px) and (min-width: 516px){
+ font-size: 35px;
+}
  }
  h2{
     font-size: 30px;
     @media screen and (max-width: 515px){
         font-size: 15px;
     }
+
+    @media only screen and (max-width: 780px) and (min-width: 516px){
+ font-size: 27px;
+}
  }
 `;
 
@@ -647,6 +710,11 @@ export const Hand = styled.img`
     width: 50%;
     height: 300px;
  }
+
+ @media screen and (max-width: 780px){
+    width: 47%;
+    height: 300px;
+}
 `;
 export const Why = styled.div`
  width: 95%;
@@ -678,6 +746,10 @@ h2{
         font-size: 17px;
         text-align: left;
     }
+
+    @media only screen and (max-width: 780px) and (min-width: 516px){
+        font-size: 19px;
+}
 }
 h3{
     font-weight: 400;
@@ -685,6 +757,10 @@ h3{
         font-size: 13px;
         text-align: left;
     }
+
+    @media only screen and (max-width: 780px) and (min-width: 516px){
+        font-size: 12px;
+}
 }
 @media screen and (max-width: 515px){
     display: flex;
@@ -715,6 +791,10 @@ export const Ads = styled.div`
     @media screen and (max-width: 515px){
         display: none;
     }
+
+    @media only screen and (max-width: 780px) and (min-width: 516px){
+        height: 280px;
+}
     
 `;
 
@@ -725,9 +805,16 @@ export const AdsContent = styled.div`
     h3{
         font-weight: 400;
         margin-top: -20px;
+        @media only screen and (max-width: 780px) and (min-width: 516px){
+            margin-top: 10px;
+            font-size: 17px;
+}
     }
     h1{
         font-size: 45px;
+        @media only screen and (max-width: 780px) and (min-width: 516px){
+            font-size: 35px;
+}
     }
 `;
 
@@ -805,6 +892,10 @@ border-color: transparent;
 cursor: pointer;
 transition: 2s;
 color: gray;
+@media screen and (max-width: 780px){
+ margin-right: 10px;
+}
+
 :hover{
     margin-left: 25px;
     transition: 2s;
@@ -827,6 +918,9 @@ border-color: transparent;
 cursor: pointer;
 transition: 2s;
 color: gray;
+@media only screen and (max-width: 780px) and (min-width: 516px){
+ margin-right: 10px;
+}
 :hover{
     margin-right: 25px;
     transition: 2s;
@@ -843,6 +937,10 @@ justify-content: space-around;
         display: none;
     }
 
+    @media only screen and (max-width: 780px) and (min-width: 516px){
+        height: 300px;
+}
+
 `;
 
 export const DownloadWord = styled.div`
@@ -850,13 +948,22 @@ margin-top: 100px;
 
 h1{
     font-size: 40px;
+    @media only screen and (max-width: 780px) and (min-width: 516px){
+ font-size: 25px;
+}
 }
 h2{
     font-weight: 400;
+    @media only screen and (max-width: 780px) and (min-width: 516px){
+        font-size: 20px;
+}
 }
 `;
 
 export const PhoneMock = styled.img`
     width: 400px;
-    
+    @media only screen and (max-width: 780px) and (min-width: 516px){
+        width: 300px;
+        height: 330px;
+}
 `;

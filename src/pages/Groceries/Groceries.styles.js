@@ -62,6 +62,10 @@ align-items: center;
    margin-top: 80px;
 }
 
+@media only screen and (max-width: 780px) and (min-width: 516px){
+        height: 300px;
+    }
+
 `;
 
 export const BannerContent = styled.div`
@@ -70,12 +74,19 @@ h1{
         @media screen and (max-width: 515px){
             font-size: 17px;
 }
+
+@media only screen and (max-width: 780px) and (min-width: 516px){
+        font-size: 25px;
+    }
     }
     h2{
         font-weight: 400;
         @media screen and (max-width: 515px){
             font-size: 15px;
 }
+@media only screen and (max-width: 780px) and (min-width: 516px){
+        font-size: 20px;
+    }
     }
     
 `;
@@ -87,6 +98,10 @@ export const BannerImage = styled.img`
     @media screen and (max-width: 515px){
    height: 100px;
 }
+
+@media only screen and (max-width: 780px) and (min-width: 516px){
+        height: 200px;
+    }
 `;
 
 export const GroceryContent = styled.div`
@@ -98,6 +113,8 @@ justify-content: flex-start;
 margin-left: 5%;
 margin-top: 40px;
 margin-bottom: 40px;
+
+
 
 @media screen and (max-width: 1025px){
         width: 100%;
@@ -120,6 +137,10 @@ export const Grocery = styled.div`
     margin-right: 6.6%;
     overflow: hidden;
     cursor: pointer;
+
+    @media only screen and (max-width: 780px) and (min-width: 516px){
+        margin-right: 3%;
+    }
 
     @media screen and (max-width: 515px){
             
@@ -186,6 +207,10 @@ export const Deal = styled.div`
             margin-right: 30px;
             
 }
+
+@media only screen and (max-width: 780px) and (min-width: 516px){
+        margin-top: 70px;
+    }
    
 `;
 

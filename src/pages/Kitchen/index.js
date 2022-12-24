@@ -55,14 +55,14 @@ const Kitchen = ()=>{
                     <h2>Save up to 50% on Your first order</h2>
                     <BannerButton>Shop Now</BannerButton>
                     </BannerContent>
-                    <BannerImage src={Pastry} style={{width: screen ? 150:250, height: screen ? 100:200}}/>
-                    <BannerImage src={Coffee} style={{width: screen ? 130:230, height: screen? 80:180}}/>
+                    <BannerImage src={Pastry} style={{width: screen ? 150:240, height: screen ? 100:200}}/>
+                    <BannerImage src={Coffee} style={{width: screen ? 130:220, height: screen? 80:180}}/>
                 </WelcomeBanner>
     ]
     return(
         <Wrapper>
             <Content>
-            <Slider autoplay={3000}>
+            <Slider autoplay={3000} previousButton={false} nextButton={false}>
                 {welcome.map((slide, index) => <div>
                     <div>{slide}</div>
                 </div>)}

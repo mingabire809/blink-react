@@ -79,7 +79,7 @@ const Cosmetics = ()=>{
     return(
         <Wrapper>
             <Content>
-            <Slider autoplay={3000}>
+            <Slider autoplay={3000} previousButton={false} nextButton={false}>
                 {welcome.map((slide, index) => <div>
                     <div>{slide}</div>
                 </div>)}

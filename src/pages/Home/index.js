@@ -590,7 +590,7 @@ const Home = () =>{
 
                
 
-               <Slider autoplay={3000}>
+               <Slider autoplay={3000} previousButton={false} nextButton={false}>
                 {freshArray.map((slide, index) => <div>
                     <div>{slide}</div>
                 </div>)}
@@ -662,7 +662,7 @@ const Home = () =>{
                         </Open>
 
                         <div style={{marginTop: screen ? 0:100}}>
-                        <Slider autoplay={3000}>
+                        <Slider autoplay={3000} nextButton={false} previousButton={false}>
                 {advertiseArray.map((slides, index) => <div style={{height: 400}}>
                     {slides}
                 </div>)}

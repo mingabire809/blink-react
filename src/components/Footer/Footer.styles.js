@@ -35,6 +35,12 @@ width: 77%;
 margin-left: auto;
 padding-right: 20px;
 padding-left: 20px;
+
+h1{
+    @media only screen and (max-width: 780px) and (min-width: 516px){
+        font-size: 28px;
+    }
+}
 `;
 
 export const Input = styled.input`
@@ -44,12 +50,20 @@ background: #ffffff;
 font-size: 22px;
 border-color: transparent;
 
+@media only screen and (max-width: 780px) and (min-width: 516px){
+    margin-top: 10px;
+}
+
 `;
 
 export const FooterButton = styled.button`
     width: 50px;
     border-color: transparent;
     background-color: black;
+
+    @media only screen and (max-width: 780px) and (min-width: 516px){
+        margin-top: 10px;
+    }
 `;
 
 export const Arrow = styled.img`
@@ -79,5 +93,9 @@ background-color: rgba(223,176,0,225);
     height: 50px;
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: 780px) and (min-width: 516px){
+        
+    }
  
 `;

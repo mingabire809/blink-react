@@ -29,6 +29,10 @@ align-items: center;
    margin-top: 80px;
 }
 
+@media only screen and (max-width: 780px) and (min-width: 516px){
+        height: 300px;
+    }
+
 `;
 
 export const BannerContent = styled.div`
@@ -38,12 +42,18 @@ export const BannerContent = styled.div`
             width: 100%;
             font-size: 17px;
 }
+@media only screen and (max-width: 780px) and (min-width: 516px){
+        font-size: 25px;
+    }
     }
     h2{
         font-weight: 400;
         @media screen and (max-width: 515px){
             font-size: 15px;
 }
+@media only screen and (max-width: 780px) and (min-width: 516px){
+     font-size: 20px;   
+    }
     }
 `;
 export const BannerImage = styled.img`
@@ -53,6 +63,9 @@ export const BannerImage = styled.img`
     @media screen and (max-width: 515px){
    height: 100px;
 }
+@media only screen and (max-width: 780px) and (min-width: 516px){
+     height: 280px;   
+    }
 `;
 
 export const BannerButton = styled.button`
@@ -100,6 +113,9 @@ export const Product = styled.div`
             width: 150px;
             height: 200px;
 }
+@media only screen and (max-width: 780px) and (min-width: 516px){
+        margin-right: 3%;
+    }
 `;
 
 export const ProductWhite = styled.div`

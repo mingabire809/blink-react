@@ -31,6 +31,10 @@ align-items: center;
    margin-top: 80px;
 }
 
+@media only screen and (max-width: 780px) and (min-width: 516px){
+        height: 300px;
+    }
+
 `;
 
 export const BannerContent = styled.div`
@@ -39,12 +43,19 @@ export const BannerContent = styled.div`
         @media screen and (max-width: 515px){
             font-size: 15px;
 }
+
+@media only screen and (max-width: 780px) and (min-width: 516px){
+        font-size: 25px;
+    }
     }
     h2{
         font-weight: 400;
         @media screen and (max-width: 515px){
             font-size: 15px;
 }
+@media only screen and (max-width: 780px) and (min-width: 516px){
+        font-size: 20px;
+    }
     }
 `;
 export const BannerImage = styled.img`
@@ -53,6 +64,9 @@ export const BannerImage = styled.img`
     @media screen and (max-width: 515px){
    height: 100px;
 }
+@media only screen and (max-width: 780px) and (min-width: 516px){
+        width: 280px;
+    }
 `;
 
 export const WelcomeButtonContent = styled.div`
@@ -84,6 +98,10 @@ cursor: pointer;
             font-size: 15px;
             margin-top: 10px;
 }
+
+@media only screen and (max-width: 780px) and (min-width: 516px){
+        width: 250px;
+    }
 `;
 
 export const Button2 = styled.button`
@@ -100,6 +118,10 @@ cursor: pointer;
             font-size: 15px;
             margin-top: 10px;
 }
+
+@media only screen and (max-width: 780px) and (min-width: 516px){
+     width: 180px   
+    }
 `;
 
 export const Button3 = styled.button`
@@ -116,6 +138,10 @@ cursor: pointer;
             font-size: 15px;
             margin-top: 10px;
 }
+
+@media only screen and (max-width: 780px) and (min-width: 516px){
+     width: 190px   
+    }
 `;
 
 export const CategoriesContent = styled.div`
@@ -148,6 +174,10 @@ export const Product = styled.div`
             width: 150px;
             height: 200px;
 }
+
+@media only screen and (max-width: 780px) and (min-width: 516px){
+        margin-right: 3%;
+    }
 `;
 
 export const ProductWhite = styled.div`
