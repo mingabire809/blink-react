@@ -4,10 +4,11 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 //import PopUp from "../components/PopUp";
 import ScrollToTop from "../components/ScrolltoTop";
-import SemiOval from "../components/SemiOval";
 import BlinkCafe from "../pages/BlinkCafe";
 import Career from "../pages/Career";
+import Cart from "../pages/Cart";
 import Catering from "../pages/Catering";
+import ConfirmLocation from "../pages/Confirm";
 import Cosmetics from "../pages/Cosmetics";
 import Delivery from "../pages/Delivery";
 import EarCondition from "../pages/EarCondition";
@@ -18,12 +19,16 @@ import GroceryDetails from "../pages/GroceryDetails.js";
 import Home from "../pages/Home";
 import Kitchen from "../pages/Kitchen";
 import LastMile from "../pages/LastMile";
+import Location from "../pages/Location";
 import Lpg from "../pages/LPG";
+import Payment from "../pages/Payment";
+import PaymentConfirm from "../pages/PaymentConfirm";
 import PharmApp from "../pages/PharmApp";
 import Prescribed from "../pages/Prescribed";
 import Prescription from "../pages/Prescription";
 import SingleProduct from "../pages/SingleProduct";
 import Supplier from "../pages/Supplier";
+import Track from "../pages/Track";
 import Vitamins from "../pages/Vitamins";
 const Routing = ()=>{
 
@@ -69,6 +74,13 @@ const Routing = ()=>{
                 <Route path="/Last-Mile" element={<LastMile/>}/>
                 <Route path="/Prescription" element={<Prescription/>}/>
                 <Route path="/single-product" element={<SingleProduct/>}/>
+                <Route path="/cart" element={<Cart/>}/>
+                <Route path="/location" element={<Location/>}/>
+                <Route path="/confirm-location" element={<ConfirmLocation/>}/>
+                <Route path="/payment" element={<Payment/>}/>
+                <Route path="/payment-confirmation" element={<PaymentConfirm/>}/>
+                <Route path="/track" element={<Track/>}/>
+
             </Routes>
             <Footer/>
         </Router>

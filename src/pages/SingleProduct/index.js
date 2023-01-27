@@ -1,5 +1,5 @@
 import React from "react";
-import { AddToCart, ArrowContainer, Color1, Color2, ColorContent, Content, Feedback, FeedbackImage, ProductContent, ProductDetails, ProductImageContent, Review, Table, TableContent, Word, Wrapper } from "./SingleProduct.styles";
+import { AddToCart, ArrowContainer, Color1, Color2, ColorContent, Content, Feedback, FeedbackImage, ProductContent, ProductDetails, ProductImageContent, QuantityContent, Review, Table, TableContent, Word, Wrapper } from "./SingleProduct.styles";
 import ArrowForward from '../../assets/images/arrowforward.png'
 import Hair from '../../assets/images/hairsingle.png'
 import Shadow from '../../assets/images/shadow.png'
@@ -15,8 +15,13 @@ import Perfume from '../../assets/images/perfumesingle.png'
 import Nivea from '../../assets/images/niveasingle.png'
 import Customer from '../../assets/images/singleImage.png'
 import ArrowDown from '../../assets/images/arrowsingle.png'
+import Add from '../../assets/images/add.png'
+import Reduce from '../../assets/images/reduce.png'
+import { useNavigate } from "react-router-dom";
 
 const SingleProduct = ()=>{
+
+    const navigate = useNavigate()
     return(
         <Wrapper>
             <Content>
@@ -73,19 +78,24 @@ const SingleProduct = ()=>{
 
                     <h6 style={{fontWeight: '400', marginTop: -5}}>In Stock</h6>
                     <h5 style={{fontWeight: '400', marginTop: -5, fontSize: 13}}>+ kes 75 delivery around CBD- Koja/ Globe/River Road</h5>
-                    <AddToCart>
+                    
+                    <h4 style={{marginTop: 0}}>Quantity</h4>
+                    <QuantityContent>
+                        <img src={Reduce} alt="reduce" style={{marginLeft: 5, cursor: 'pointer'}}/>
+                        <h5>50</h5>
+                        <img src={Add} alt="add" style={{marginRight: 5, cursor: 'pointer'}}/>
+                    </QuantityContent>
+                    
+                    <AddToCart onClick={()=>navigate('/cart')}>
                         <img src={Cart} alt="cart" style={{height: 20}}/>
                         Add to cart
                         </AddToCart>
-                        <hr/>
-                        <h4 style={{fontWeight: '500'}}>PROMOTIONS</h4>
-                        <h5 style={{fontWeight: '400', marginLeft: 10, color: 'gray', fontSize: 12}}>+ kes 75 delivery around CBD- Koja/ Globe/River Road</h5>
-                        <h5 style={{fontWeight: '400', marginLeft: 10, color: 'gray', marginTop: -10, fontSize: 12}}>+ kes 75 delivery around CBD- Koja/ Globe/River Road</h5>
+                       
 
                 </ProductContent>
 
                 
-                <ProductContent>
+                <ProductContent style={{backgroundColor: 'white', padding: 10}}>
                 <h4 style={{fontWeight: '500', textAlign: 'center'}}>DELIVERY & RETURNS</h4>
                 <hr/>
                 <h5 style={{fontWeight: '400', fontSize: 17, marginTop: -5}}>Blink <span style={{color: '#EA9414'}}>Express</span></h5>

@@ -46,7 +46,7 @@ export const AddToCart = styled.button`
 width: 100%;
 height: 70px;
 border-radius: 10px;
-background-color: #FFC903;
+background-color: red;
 border-color: transparent;
 display: flex;
 align-items: center;
@@ -69,7 +69,7 @@ export const ColorContent = styled.div`
 export const Color1 = styled.div`
 width: 50%;
 height: 100%;
-background-color: #00AAAA;
+background-color: #D9D9D9;
 border-bottom-left-radius: 10px;
 border-top-left-radius: 10px;
 `;
@@ -77,7 +77,7 @@ border-top-left-radius: 10px;
 export const Color2 = styled.div`
 width: 50%;
 height: 100%;
-background-color: #FF00B8;
+background-color: #B7ACFF;
 border-bottom-right-radius: 10px;
 border-top-right-radius: 10px;
 `;
@@ -143,6 +143,18 @@ export const Review = styled.div`
     margin-top: 20px;
     text-align: center;
     cursor: pointer;
+`;
+
+export const QuantityContent = styled.div`
+background-color: #FFC0C0;
+width: 70px;
+height: 30px;
+border-radius: 10px;
+margin-top: -14px;
+margin-bottom: 10px;
+display: flex;
+justify-content: space-between;
+align-items: center;
 `;
 
 

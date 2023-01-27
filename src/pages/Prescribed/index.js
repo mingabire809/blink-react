@@ -106,7 +106,7 @@ const Prescribed = ()=>{
     <h4 style={{marginTop: -15}}>By Kemsa</h4>
     <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: -25}}>
         <h3 style={{color: '#00FF85'}}>KES 345 <span style={{color: 'gray', fontSize: 14, textDecoration: 'line-through' }}>KES 678</span></h3>
-        <OfferButton>
+        <OfferButton onClick={()=>navigate('/single-product')}>
         &#128722; Add
         </OfferButton>
     </div>
@@ -457,7 +457,7 @@ const Prescribed = ()=>{
         <h4 style={{marginTop: -15}}>By Cerevit</h4>
         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: -25}}>
             <h3 style={{color: '#00FF85'}}>KES 345 <span style={{color: 'gray', fontSize: 14, textDecoration: 'line-through' }}>KES 678</span></h3>
-            <OfferButton>
+            <OfferButton onClick={()=>navigate('/single-product')}>
             &#128722; Add
             </OfferButton>
         </div>

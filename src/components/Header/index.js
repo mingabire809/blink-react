@@ -30,14 +30,17 @@ const Header = ()=>{
                 </Option>
                 <Icon>
                     {screen? null: <img src={Cart} style={{
-                        width: 25
-                    }} alt="cart"/>}
+                        width: 25,
+                        cursor: 'pointer'
+                    }} onClick={()=>navigate('/cart')} alt="cart"/>}
                
                     <img src={Search} alt="search" style={{
-                        width: 25
+                        width: 25,
+                        cursor: 'pointer'
                     }}/>
                     <img src={User} style={{
-                        width: 25
+                        width: 25,
+                        cursor: 'pointer'
                     }} alt="user"/>
                     
                     
