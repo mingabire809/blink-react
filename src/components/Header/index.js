@@ -19,7 +19,7 @@ const Header = ()=>{
         <Wrapper>
             <Content>
                 {screen ? <img src={Hamburger} alt="menu"/>:null}
-                <h1>Blink</h1>
+                <h1 onClick={()=>navigate('/')} style={{cursor: 'pointer'}}>Blink</h1>
                 <Option>
                     <h2 style={{
                         textDecoration: location.pathname === '/' ? 'underline': 'none'
@@ -45,6 +45,7 @@ const Header = ()=>{
                     
                     
                 </Icon>
+                
             </Content>
         </Wrapper>
     )

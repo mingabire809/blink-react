@@ -106,7 +106,7 @@ height: 350px;
 border-radius: 100%;
 margin-left: 20%;
 
-@media only screen and (max-width: 780px) and (min-width: 516px){
+@media only screen and (max-width: 1023px) and (min-width: 516px){
   width: 240px;
   height: 240px;
   margin-left: 36%;
@@ -135,7 +135,7 @@ animation: updown 9s ease infinite;
     position: absolute;
 }
 
-@media only screen and (max-width: 780px) and (min-width: 516px){
+@media only screen and (max-width: 1023px) and (min-width: 516px){
   width: 230px;
 }
 @keyframes updown {
@@ -159,7 +159,7 @@ border-radius: 100%;
 margin-left: 2%;
 margin-top: -3%;
 
-@media only screen and (max-width: 780px) and (min-width: 516px){
+@media only screen and (max-width: 1023px) and (min-width: 516px){
   margin-left: 16%;
 }
 
@@ -188,7 +188,7 @@ height: 50px;
 background-color: #FFC801;
 }
 
-@media only screen and (max-width: 780px) and (min-width: 516px){
+@media only screen and (max-width: 1023px) and (min-width: 516px){
  
   margin-left: 43%;
 }
@@ -226,7 +226,7 @@ export const PlayMobile = styled.div`
 export const Categories = styled.div`
     margin-top: 100px;
 
-    @media only screen and (max-width: 780px) and (min-width: 516px){
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
         margin-left: 50px;
 }
 `;
@@ -288,7 +288,7 @@ export const EveryDay = styled.div`
         display: none;
     }
 
-    @media screen and (max-width: 780px){
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
         flex-wrap: wrap;
         
 }
@@ -304,7 +304,7 @@ export const EveryDayItem = styled.div`
     justify-content: space-between;
     overflow: hidden;
 
-    @media only screen and (max-width: 780px) and (min-width: 516px){
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
  width: 45%;
  margin-top: 20px;
 }
@@ -419,7 +419,7 @@ export const FreshContent = styled.div`
 
     @media screen and (max-width: 515px){
         height: 200px;
-        margin-top: 100px;
+        margin-top: 60px;
     }
 
     @media screen and (max-width: 780px){
@@ -484,7 +484,7 @@ export const Delivery = styled.div`
         height: 200px;
     }
 
-    @media only screen and (max-width: 780px) and (min-width: 516px){
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
         height: 300px;
 }
 `;
@@ -505,7 +505,7 @@ font-size: 25px;
         margin-top: 50px
     }
 
-    @media only screen and (max-width: 780px) and (min-width: 516px){
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
         font-size: 18px;
         width: 60%;
 }
@@ -558,7 +558,7 @@ export const Open = styled.div`
         flex-wrap: wrap;
     }
 
-    @media only screen and (max-width: 780px) and (min-width: 516px){
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
  margin-top: 90px;
 }
 
@@ -689,7 +689,7 @@ export const OrderWord = styled.div`
         font-size: 20px;
     }
 
-    @media only screen and (max-width: 780px) and (min-width: 516px){
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
  font-size: 35px;
 }
  }
@@ -699,7 +699,7 @@ export const OrderWord = styled.div`
         font-size: 15px;
     }
 
-    @media only screen and (max-width: 780px) and (min-width: 516px){
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
  font-size: 27px;
 }
  }
@@ -747,7 +747,7 @@ h2{
         text-align: left;
     }
 
-    @media only screen and (max-width: 780px) and (min-width: 516px){
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
         font-size: 19px;
 }
 }
@@ -758,7 +758,7 @@ h3{
         text-align: left;
     }
 
-    @media only screen and (max-width: 780px) and (min-width: 516px){
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
         font-size: 12px;
 }
 }
@@ -792,8 +792,9 @@ export const Ads = styled.div`
         display: none;
     }
 
-    @media only screen and (max-width: 780px) and (min-width: 516px){
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
         height: 280px;
+        margin-top: 40px;
 }
     
 `;
@@ -805,14 +806,14 @@ export const AdsContent = styled.div`
     h3{
         font-weight: 400;
         margin-top: -20px;
-        @media only screen and (max-width: 780px) and (min-width: 516px){
-            margin-top: 10px;
-            font-size: 17px;
+        @media only screen and (max-width: 1023px) and (min-width: 516px){
+            margin-top: 20px;
+            font-size: 16px;
 }
     }
     h1{
         font-size: 45px;
-        @media only screen and (max-width: 780px) and (min-width: 516px){
+        @media only screen and (max-width: 1023px) and (min-width: 516px){
             font-size: 35px;
 }
     }
@@ -842,7 +843,9 @@ export const Career = styled.div`
     @media screen and (max-width: 515px){
         display: none;
     }
-    
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
+        height: 400px;
+    }
     
 `;
 
@@ -918,7 +921,7 @@ border-color: transparent;
 cursor: pointer;
 transition: 2s;
 color: gray;
-@media only screen and (max-width: 780px) and (min-width: 516px){
+@media only screen and (max-width: 1023px) and (min-width: 516px){
  margin-right: 10px;
 }
 :hover{
@@ -937,7 +940,7 @@ justify-content: space-around;
         display: none;
     }
 
-    @media only screen and (max-width: 780px) and (min-width: 516px){
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
         height: 300px;
 }
 
@@ -948,13 +951,13 @@ margin-top: 100px;
 
 h1{
     font-size: 40px;
-    @media only screen and (max-width: 780px) and (min-width: 516px){
+   @media only screen and (max-width: 1023px) and (min-width: 516px){
  font-size: 25px;
 }
 }
 h2{
     font-weight: 400;
-    @media only screen and (max-width: 780px) and (min-width: 516px){
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
         font-size: 20px;
 }
 }
@@ -962,7 +965,7 @@ h2{
 
 export const PhoneMock = styled.img`
     width: 400px;
-    @media only screen and (max-width: 780px) and (min-width: 516px){
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
         width: 300px;
         height: 330px;
 }

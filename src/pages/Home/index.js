@@ -481,12 +481,11 @@ const Home = () =>{
                     marginTop: 50
                 }}>Deals of The Day</h2>
 <DealContent style={{
-    flexWrap: screen ? 'nowrap': 'wrap',
-    overflowX: screen ? 'scroll': '-moz-initial'
+    
 }}>
                     <Deal style={{
                         backgroundImage: `url(${DealBackground})`,
-                        marginRight: screen ? 60:0
+                        
                     }}>
                         <img src={Heart} style={{width: 40, height: 40, marginTop: 20, marginBottom: -50, marginLeft: '80%'}} alt="heart"/>
                         <CountdownTimer targetDate={dateTimeAfterFourDays}/>
@@ -518,7 +517,7 @@ const Home = () =>{
                     </Deal>
                     <Deal style={{
                         backgroundImage: `url(${DealBackground2})`,
-                        marginRight: screen ? 60:0
+                       
                     }}>
                         <img src={Heart} style={{width: 40, height: 40, marginTop: 20, marginBottom: -50, marginLeft: '80%'}} alt="heart"/>
                         <CountdownTimer targetDate={dateTimeAfterTenDays}/>

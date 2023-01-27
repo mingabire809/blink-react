@@ -192,6 +192,15 @@ justify-content: space-between;
     }
             
 }
+
+@media only screen and (max-width: 780px) and (min-width: 516px){
+        flex-wrap: nowrap;
+       
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+       
+        height: 410px;
+    }
 `;
 
 export const Deal = styled.div`
@@ -207,10 +216,13 @@ export const Deal = styled.div`
             margin-right: 30px;
             
 }
-
 @media only screen and (max-width: 780px) and (min-width: 516px){
-        margin-top: 70px;
-    }
+    margin-right: 80px;
+}
+
+
+
+
    
 `;
 

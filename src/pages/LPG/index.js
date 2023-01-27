@@ -7,6 +7,7 @@ import Total50 from '../../assets/images/total50kg.png'
 import KGas from '../../assets/images/Kgas.png'
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
+import { useNavigate } from "react-router-dom";
 
 const Lpg = ()=>{
     const [screen, setScreen] = useState(
@@ -15,6 +16,8 @@ const Lpg = ()=>{
     useEffect(()=> {
         window.matchMedia("(max-width: 515px)").addEventListener('change', e =>setScreen(e.screen));
     }, []);
+
+    const navigate = useNavigate()
     const freshArray = [
         <WelcomeBanner>
             <BannerContent>
@@ -47,7 +50,7 @@ const Lpg = ()=>{
                     <div>{slide}</div>
                 </div>)}
                </Slider>
-        <Button style={{marginTop: screen ? -140: 0}}>Shop by Category</Button>
+        <Button style={{marginTop: screen ? -140: 0}} onClick={()=>navigate('/LPG-gas/product')}>Shop by Category</Button>
 
         <GasContent>
             <Gas style={{backgroundColor: '#FF8383'}}>

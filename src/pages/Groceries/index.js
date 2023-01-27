@@ -27,8 +27,10 @@ import Marquee from "react-fast-marquee";
 import Heart from '../../assets/images/heart.png'
 import SearchButtonContent from '../../assets/images/searchbutton.png'
 import Grid from '../../assets/images/grid.png'
+import { useNavigate } from "react-router-dom";
 
 const Groceries = ()=>{
+    const navigate = useNavigate()
     const [screen, setScreen] = useState(
         window.matchMedia("(max-width: 515px)").matches
     )
@@ -124,7 +126,7 @@ const freshArray = [
                 }}>Top Sub Categories</h2>
 
                 <GroceryContent>
-                    <Grocery>
+                    <Grocery onClick={()=>navigate('/Groceries/details')}>
                         <GroceryImage src={Grocery1} alt="product"/>
                         <WhiteContent>
                             <h3>Fruits & Vegie</h3>

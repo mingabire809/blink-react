@@ -30,14 +30,14 @@ export const Content = styled.div`
 export const Content2 = styled.div`
 display: flex;
 justify-content: space-between;
-align-items: center;
+align-items: baseline;
 width: 77%;
 margin-left: auto;
 padding-right: 20px;
 padding-left: 20px;
 
 h1{
-    @media only screen and (max-width: 780px) and (min-width: 516px){
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
         font-size: 28px;
     }
 }
@@ -50,7 +50,7 @@ background: #ffffff;
 font-size: 22px;
 border-color: transparent;
 
-@media only screen and (max-width: 780px) and (min-width: 516px){
+@media only screen and (max-width: 1023px) and (min-width: 516px){
     margin-top: 10px;
 }
 
@@ -61,7 +61,7 @@ export const FooterButton = styled.button`
     border-color: transparent;
     background-color: black;
 
-    @media only screen and (max-width: 780px) and (min-width: 516px){
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
         margin-top: 10px;
     }
 `;
@@ -94,7 +94,7 @@ background-color: rgba(223,176,0,225);
     display: flex;
     justify-content: space-between;
 
-    @media only screen and (max-width: 780px) and (min-width: 516px){
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
         
     }
  

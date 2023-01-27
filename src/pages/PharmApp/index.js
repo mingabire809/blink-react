@@ -25,7 +25,7 @@ import Rectangle9 from '../../assets/images/Rectangle71.png'
 import Rectangle10 from '../../assets/images/Rectangle72.png'
 import Rectangle11 from '../../assets/images/Rectangle73.png'
 import Rectangle12 from '../../assets/images/Rectangle74.png'
-
+import { useGlobalState, setGlobalState } from "../../store/state";
 import Nestle from '../../assets/images/Nestle.png'
 import Pampers from '../../assets/images/Pampers.png'
 import Johnson from '../../assets/images/johnsons.png'
@@ -34,6 +34,7 @@ import Dove from '../../assets/images/dove.png'
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 import { useNavigate } from "react-router-dom";
+import Condition from "../../components/Condition";
 
 const PharmApp = ()=>{
     const [screen, setScreen] = useState(
@@ -45,6 +46,8 @@ const PharmApp = ()=>{
 
     const navigate = useNavigate()
     
+    const [condition] = useGlobalState('condition')
+
     const freshArray = [
         <WelcomeBanner>
         <BannerContent>
@@ -78,6 +81,7 @@ const PharmApp = ()=>{
     }
     return(
         <Wrapper>
+            {condition ? <Condition/>: null}
             <Content>
             <Slider autoplay={3000} previousButton={false} nextButton={false}>
                 {freshArray.map((slide, index) => <div>
@@ -87,7 +91,7 @@ const PharmApp = ()=>{
                 <WelcomeButtonContent>
                     <Button1 onClick={()=>navigate("/Prescription")}>Upload your Prescription</Button1>
                     <Button2 onClick={Form}>Shop by Brands</Button2>
-                    <Button3>Shop by Condition</Button3>
+                    <Button3 onClick={()=>setGlobalState('condition', true)}>Shop by Condition</Button3>
                 </WelcomeButtonContent>
                 
             </Content>
@@ -95,7 +99,7 @@ const PharmApp = ()=>{
             <Content>
             <h1>Categories</h1>
             <CategoriesContent>
-                <Product>
+                <Product onClick={()=>navigate('/pharm-App/prescribed')}>
                     <ProductImage src={WelcomeImage} alt="product"/>
                     <ProductWhite>
                         <h3>Prescribed</h3>
