@@ -33,6 +33,12 @@ margin-left: auto;
 margin-right: auto;
 margin-top: 50px;
 padding: 50px;
+
+@media screen and (max-width: 515px){
+     height: fit-content;
+     width: 65%;
+      
+    }
 `;
 
 export const Green = styled.div`
@@ -58,6 +64,11 @@ export const Back = styled.button`
     margin-left: 35%;
     margin-right: auto;
     margin-top: 30px;
+
+    @media screen and (max-width: 515px){
+     margin-left: 20%;
+      
+    }
 `;
 
 export const Pay = styled.button`
@@ -72,5 +83,10 @@ export const Pay = styled.button`
     margin-left: 35%;
     margin-right: auto;
     margin-top: 30px;
+
+    @media screen and (max-width: 515px){
+     margin-left: 20%;
+      
+    }
 
 `;

@@ -19,6 +19,22 @@ overflow: hidden;
 export const SubcategoriesContent = styled.div`
 display: flex;
 justify-content: space-between;
+@media screen and (max-width: 515px){
+   
+   overflow-x: scroll;
+   white-space: nowrap;
+   width: 600px;
+   height: 70px;
+   margin-top: -30px;
+   
+           overflow-y: scroll;
+           scroll-behavior: smooth;
+           
+   ::-webkit-scrollbar{
+       display: none;
+   }
+   
+}
 `;
 
 export const SubCategories = styled.div`
@@ -31,6 +47,13 @@ export const SubCategories = styled.div`
     h3{
         margin-top: 15px;
     }
+
+    @media screen and (max-width: 515px){
+   margin-right: 50px;
+   margin-top: 10px;
+    
+    
+}
 `;
 
 export const Offer =styled.div`
@@ -90,4 +113,13 @@ export const OfferContent = styled.div`
 display: flex;
 justify-content: flex-start;
 flex-wrap: wrap;
+padding-left: 6.5%;
+@media screen and (max-width: 515px){
+   
+   padding-left: 20%;
+   
+   
+   
+   
+}
 `;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Content, Wrapper, ArrowContainer, DetailsContent, Details1, Data, RadioContent, Input, NewCard, Back, Pay, Summary, Details2 } from "./Payment.styles";
 import ArrowForward from '../../assets/images/arrowforward.png'
 import Visa1 from '../../assets/images/visa1.png'
@@ -7,6 +7,12 @@ import { useNavigate } from "react-router-dom";
 
 const Payment = ()=>{
     const navigate = useNavigate()
+    const [screen, setScreen] = useState(
+        window.matchMedia("(max-width: 515px)").matches
+    )
+    useEffect(()=> {
+        window.matchMedia("(max-width: 515px)").addEventListener('change', e =>setScreen(e.screen));
+    }, []);
     return(
         <Wrapper>
             <Content>
@@ -45,15 +51,15 @@ const Payment = ()=>{
                         <h4>Name on Card</h4>
                         <Input placeholder="John Doe"/>
 
-                        <div style={{width: 400, display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 50}}>
+                        <div style={{width: screen ? '90%' : 400, display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 50}}>
                             <div>
                             <h4>Expiry Date MM/YY</h4>
-                        <Input placeholder="12/24" style={{width: 190}}/>
+                        <Input placeholder="12/24" style={{width: screen ? 160: 190, textAlign: 'center'}}/>
                             </div>
 
                             <div>
                             <h4>Security CodeY</h4>
-                        <Input placeholder="_ _ _" style={{width: 190, textAlign: 'center'}}/>
+                        <Input placeholder="_ _ _" style={{width: screen ? 160: 190, textAlign: 'center'}}/>
                             </div>
                         </div>
                     </Data>

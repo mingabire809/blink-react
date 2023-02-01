@@ -29,15 +29,32 @@ display: flex;
 width: 100%;
 align-items: baseline;
 justify-content: space-between;
+
+@media screen and (max-width: 515px){
+      display: contents;
+    }
 `;
 
 export const Details1 = styled.div`
 width: 67%;
 
+@media screen and (max-width: 515px){
+      width: 100%;
+      padding-left: 2px;
+      
+    }
+
 `;
 
 export const Details2 = styled.div`
 width: 27%;
+@media screen and (max-width: 515px){
+      width: 100%;
+      padding-left: 2px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      
+    }
 `;
 
 export const Data = styled.div`
@@ -61,6 +78,12 @@ export const Input = styled.input`
     width: 400px;
     height: 50px;
     font-size: 18px;
+
+    @media screen and (max-width: 515px){
+     margin-left: -2%;
+     width: 90%;
+      
+    }
 `;
 
 export const NewCard = styled.button`
@@ -75,6 +98,11 @@ export const NewCard = styled.button`
     cursor: pointer;
     margin-top: 20px;
     margin-bottom: 20px;
+
+    @media screen and (max-width: 515px){
+      margin-left: 30%;
+      
+    }
 `;
 
 export const Back = styled.button`

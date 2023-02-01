@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { Accessory, AccessoryContent, Category, CategoryContent, Content, Gas, GasContent, Wrapper } from "./GasProduct.styles";
 import Line from '../../assets/images/line.png'
 import Gas1 from '../../assets/images/gas1.png'
@@ -9,6 +9,12 @@ import Pump from '../../assets/images/pump.png'
 
 const GasProduct=()=>{
     const [product, setProduct] = useState(true)
+    const [screen, setScreen] = useState(
+        window.matchMedia("(max-width: 515px)").matches
+    )
+    useEffect(()=> {
+        window.matchMedia("(max-width: 515px)").addEventListener('change', e =>setScreen(e.screen));
+    }, []);
     return(
         <Wrapper>
                 <Content>
@@ -16,7 +22,7 @@ const GasProduct=()=>{
                         <Category style={{
                             backgroundColor: product ? '#FFC903': 'white'
                         }} onClick={()=>setProduct(true)}>Products</Category>
-                        <img src={Line} alt="line"/>
+                        <img src={Line} alt="line" style={{width: screen && '35%'}}/>
                         <Category style={{
                             backgroundColor: !product ? '#FFC903': 'transparent'
                         }} onClick={()=>setProduct(false)}>Accessories</Category>

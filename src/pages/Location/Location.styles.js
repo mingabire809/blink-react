@@ -7,6 +7,12 @@ export const Wrapper = styled.div`
     font-family: "Montserrat";
     background-color: #EBEBEB;
     display: flex;
+    overflow: hidden;
+
+    @media screen and (max-width: 515px){
+     display: contents;
+     overflow: hidden;
+    }
 `;
 
 export const Content = styled.div`
@@ -15,15 +21,28 @@ overflow: hidden;
 width: 30%;
 @media screen and (max-width: 515px){
     padding: 2px;
+    width: 100%;
+    margin-bottom: 30px;
 }
 `;
 
 export const Details = styled.div`
-
+    @media screen and (max-width: 515px){
+   
+   overflow: hidden;
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+}
 `;
 
 export const Map = styled.img`
 width: 70%;
+
+@media screen and (max-width: 515px){
+    
+    width: 100%;
+}
 `;
 
 export const Input = styled.input`

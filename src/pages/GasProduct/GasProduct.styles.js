@@ -21,6 +21,14 @@ align-items: center;
 width: 90%;
 margin-left: auto;
 margin-right: auto;
+
+@media screen and (max-width: 515px){
+   margin-bottom: 30px;
+   width: 90%;
+   margin-top: 20px;
+   
+   
+}
 `;
 
 export const Category = styled.div`
@@ -37,6 +45,16 @@ export const GasContent = styled.div`
 display: flex;
 justify-content: space-between;
 margin-top: 50px;
+
+@media screen and (max-width: 515px){
+   
+  display: contents;
+ 
+   
+   
+   
+   
+}
 `;
 
 export const AccessoryContent = styled.div`
@@ -45,6 +63,12 @@ justify-content: flex-start;
 flex-wrap: wrap;
 margin-top: 50px;
 margin-left: 3%;
+
+@media screen and (max-width: 515px){
+padding-left: 14%
+   
+}
+
 `;
 
 export const Gas = styled.div`
@@ -54,6 +78,16 @@ background-color: white;
 border: 1px solid rgba(0,0,0,0.5);
 border-radius: 10px;
 cursor: pointer;
+
+@media screen and (max-width: 515px){
+   
+   width: 100%;
+   margin-top: 20px;
+   
+   
+   
+   
+}
 
 `;
 

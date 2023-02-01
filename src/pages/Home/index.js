@@ -37,6 +37,7 @@ import { DealContent, Deal, DealButton, UnderDeal } from "../Groceries/Groceries
 
 import { useNavigate } from "react-router-dom";
 import Heart from '../../assets/images/heart.png'
+import { url } from "../../constant";
 
 
 const Home = () =>{
@@ -138,6 +139,36 @@ const Home = () =>{
                         </Advertisment>,
 
     ]
+    
+
+    const data = ()=>{
+        
+        fetch(`${url}/getCategories.php`,{
+            method: 'POST',
+           
+           
+            headers:{
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                
+            }
+        }).then(res => {
+            if (res.ok){
+                return res.json()
+                
+            } else {
+                throw res.json()
+            }
+        }).then(json=>{
+            console.log(json)
+        }).catch(err=>{
+            console.log(err)
+        })
+    }
+
+    useEffect(()=>{
+        data()
+    },[])
 
     
     return(

@@ -28,15 +28,26 @@ display: flex;
 width: 100%;
 align-items: baseline;
 justify-content: space-between;
+
+@media screen and (max-width: 515px){
+      display: contents;
+    }
 `;
 
 export const Details1 = styled.div`
 width: 67%;
 
+@media screen and (max-width: 515px){
+      width: 100%;
+    }
+
 `;
 
 export const Details2 = styled.div`
 width: 27%;
+@media screen and (max-width: 515px){
+      width: 100%;
+    }
 `;
 
 export const Data = styled.div`
@@ -60,6 +71,19 @@ export const Product = styled.div`
     width: 100%;
     margin-bottom: 10px;
     margin-bottom: 20px;
+
+    @media screen and (max-width: 515px){
+      p{
+        font-size: 12px;
+      }
+
+      .price{
+        font-size: 14px;
+        margin-top: -10px;
+      }
+
+      
+    }
     
 `;
 
@@ -73,6 +97,13 @@ margin-bottom: 10px;
 display: flex;
 justify-content: space-between;
 align-items: center;
+
+@media screen and (max-width: 515px){
+     margin-left: -15px;
+      
+    }
+
+
 `;
 
 export const DeleteImage = styled.img`
@@ -80,6 +111,11 @@ position: absolute;
 margin-left: 59.5%;
 margin-top: -6%;
 cursor: pointer;
+
+@media screen and (max-width: 515px){
+     margin-top: -25%;
+     margin-left: 90%;
+    }
 
 `;
 

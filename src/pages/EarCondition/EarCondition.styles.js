@@ -21,6 +21,25 @@ align-items: center;
 margin-top: 80px;
 width: 100%;
 height: 260px;
+
+@media screen and (max-width: 515px){
+   
+   margin-top: 50px;
+   margin-bottom: 30px;
+   height: 180px;
+
+   h2{
+    font-size: 17px;
+   }
+
+   p{
+    font-size: 14px;
+   }
+   
+   
+   
+   
+}
 `;
 
 export const Description = styled.div`
@@ -92,4 +111,13 @@ export const OfferContent = styled.div`
 display: flex;
 justify-content: flex-start;
 flex-wrap: wrap;
+
+@media screen and (max-width: 515px){
+   
+   padding-left: 20%;
+   
+   
+   
+   
+}
 `;

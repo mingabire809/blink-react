@@ -51,7 +51,7 @@ const Cart =()=>{
                         <h5>50</h5>
                         <img src={Add} alt="add" style={{marginRight: 5, cursor: 'pointer'}}/>
                     </QuantityContent>
-                    <h3 style={{marginRight: 10}}>Kes 970</h3>
+                    <h3 className="price" style={{marginRight: 10}}>Kes 970</h3>
                     <DeleteImage src={Delete}/>
                         </Product>
 
@@ -71,7 +71,7 @@ const Cart =()=>{
                         <h5>50</h5>
                         <img src={Add} alt="add" style={{marginRight: 5, cursor: 'pointer'}}/>
                     </QuantityContent>
-                    <h3 style={{marginRight: 10}}>Kes 970</h3>
+                    <h3 className="price" style={{marginRight: 10}}>Kes 970</h3>
                     <DeleteImage src={Delete}/>
                         </Product>
 
@@ -91,7 +91,7 @@ const Cart =()=>{
                         <h5>50</h5>
                         <img src={Add} alt="add" style={{marginRight: 5, cursor: 'pointer'}}/>
                     </QuantityContent>
-                    <h3 style={{marginRight: 10}}>Kes 970</h3>
+                    <h3 className="price" style={{marginRight: 10}}>Kes 970</h3>
                     <DeleteImage src={Delete}/>
                         </Product>
 
@@ -111,7 +111,7 @@ const Cart =()=>{
                         <h5>50</h5>
                         <img src={Add} alt="add" style={{marginRight: 5, cursor: 'pointer'}}/>
                     </QuantityContent>
-                    <h3 style={{marginRight: 10}}>Kes 970</h3>
+                    <h3 className="price" style={{marginRight: 10}}>Kes 970</h3>
                     <DeleteImage src={Delete}/>
                         </Product>
 
@@ -131,7 +131,7 @@ const Cart =()=>{
                         <h5>50</h5>
                         <img src={Add} alt="add" style={{marginRight: 5, cursor: 'pointer'}}/>
                     </QuantityContent>
-                    <h3 style={{marginRight: 10}}>Kes 970</h3>
+                    <h3 className="price" style={{marginRight: 10}}>Kes 970</h3>
                     <DeleteImage src={Delete}/>
                         </Product>
 
@@ -151,7 +151,7 @@ const Cart =()=>{
                         <h5>50</h5>
                         <img src={Add} alt="add" style={{marginRight: 5, cursor: 'pointer'}}/>
                     </QuantityContent>
-                    <h3 style={{marginRight: 10}}>Kes 970</h3>
+                    <h3 className="price" style={{marginRight: 10}}>Kes 970</h3>
                     <DeleteImage src={Delete}/>
                         </Product>
 
@@ -171,7 +171,7 @@ const Cart =()=>{
                         <h5>50</h5>
                         <img src={Add} alt="add" style={{marginRight: 5, cursor: 'pointer'}}/>
                     </QuantityContent>
-                    <h3 style={{marginRight: 10}}>Kes 970</h3>
+                    <h3 className="price" style={{marginRight: 10}}>Kes 970</h3>
                     <DeleteImage src={Delete}/>
                         </Product>
 
