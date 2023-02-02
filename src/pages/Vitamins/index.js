@@ -287,34 +287,7 @@ const Vitamins = ()=>{
         
         </Offer>
 
-        <Offer>
-                <Badge>
-                    -14%
-                </Badge>
-        
-        <OfferImageContent>
-                    <OfferImage src={WomenVitamin}/>
-        </OfferImageContent>
-        <h2 style={{marginTop: -10, color: 'gray'}}>Women Vitamin</h2>
-        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
-        <div style={{display: 'flex', marginTop: -35, color: 'rgba(255,200,1,255)'}}>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>(4.0)</h3>
-        </div>
-        <h4 style={{marginTop: -15}}>By Cerevit</h4>
-        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: -25}}>
-            <h3 style={{color: '#00FF85'}}>KES 345 <span style={{color: 'gray', fontSize: 14, textDecoration: 'line-through' }}>KES 678</span></h3>
-            <OfferButton>
-            &#128722; Add
-            </OfferButton>
-        </div>
        
-        
-        </Offer>
                </OfferContent>
 
                <h2>Prescribed</h2>

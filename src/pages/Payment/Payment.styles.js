@@ -14,6 +14,16 @@ overflow: hidden;
 @media screen and (max-width: 515px){
     padding: 2px;
 }
+
+@media only screen and (max-width: 1023px) and (min-width: 516px){
+       padding: 10px;
+       
+}
+
+@media only screen and (max-width: 1030px) and (min-width: 1024px){
+  padding: 10px;
+       
+}
 `;
 
 export const ArrowContainer = styled.div`
@@ -44,6 +54,8 @@ width: 67%;
       
     }
 
+   
+
 `;
 
 export const Details2 = styled.div`
@@ -55,6 +67,11 @@ width: 27%;
       margin-bottom: 20px;
       
     }
+
+    @media only screen and (max-width: 1023px) and (min-width: 516px){
+       width: 29.5%;
+       
+}
 `;
 
 export const Data = styled.div`
@@ -131,5 +148,12 @@ export const Pay = styled.button`
 export const Summary = styled.div`
     width: 100%;
 background-color: white;
+
+@media only screen and (max-width: 1023px) and (min-width: 516px){
+       h3{
+        font-size: 15px;
+       }
+       
+}
 `;
 

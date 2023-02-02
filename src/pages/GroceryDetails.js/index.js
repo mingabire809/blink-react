@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
 import { Content, OfferContent, SubCategories, SubcategoriesContent, Wrapper, Offer, OfferButton, OfferImage, OfferImageContent, Badge} from './GroceryDetails.styles'
 import Grocery0 from '../../assets/images/grocerybanner.png'
@@ -12,6 +12,13 @@ import Meat2 from '../../assets/images/meatgrocery2.png'
 const GroceryDetails = ()=>{
     const navigate = useNavigate()
     const location = useLocation()
+
+    const [screen, setScreen] = useState(
+        window.matchMedia("(max-width: 515px)").matches
+    )
+    useEffect(()=> {
+        window.matchMedia("(max-width: 515px)").addEventListener('change', e =>setScreen(e.screen));
+    }, []);
 
     const freshArray = [
         <WelcomeBanner>
@@ -84,7 +91,7 @@ const GroceryDetails = ()=>{
                <Offer>
         
         <OfferImageContent>
-                    <OfferImage src={Grocery0} style={{width: 200, marginTop: 50}}/>
+                    <OfferImage src={Grocery0} style={{width: screen ? '100%': 200, marginTop: 50}}/>
         </OfferImageContent>
         <h2 style={{marginTop: -10, color: 'gray'}}>Green</h2>
         <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
@@ -110,7 +117,7 @@ const GroceryDetails = ()=>{
         <Offer>
         
         <OfferImageContent>
-                    <OfferImage src={Grocery0} style={{width: 200, marginTop: 50}}/>
+                    <OfferImage src={Grocery0} style={{width:screen ? '100%':  200, marginTop: 50}}/>
         </OfferImageContent>
         <h2 style={{marginTop: -10, color: 'gray'}}>Green</h2>
         <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
@@ -136,7 +143,7 @@ const GroceryDetails = ()=>{
         <Offer>
         
         <OfferImageContent>
-                    <OfferImage src={Grocery0} style={{width: 200, marginTop: 50}}/>
+                    <OfferImage src={Grocery0} style={{width:screen ? '100%':  200, marginTop: 50}}/>
         </OfferImageContent>
         <h2 style={{marginTop: -10, color: 'gray'}}>Green</h2>
         <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
@@ -162,7 +169,7 @@ const GroceryDetails = ()=>{
         <Offer>
         
         <OfferImageContent>
-                    <OfferImage src={Grocery0} style={{width: 200, marginTop: 50}}/>
+                    <OfferImage src={Grocery0} style={{width: screen ? '100%': 200, marginTop: 50}}/>
         </OfferImageContent>
         <h2 style={{marginTop: -10, color: 'gray'}}>Green</h2>
         <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
@@ -188,7 +195,7 @@ const GroceryDetails = ()=>{
         <Offer>
         
         <OfferImageContent>
-                    <OfferImage src={Grocery0} style={{width: 200, marginTop: 50}}/>
+                    <OfferImage src={Grocery0} style={{width: screen ? '100%': 200, marginTop: 50}}/>
         </OfferImageContent>
         <h2 style={{marginTop: -10, color: 'gray'}}>Green</h2>
         <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
@@ -214,7 +221,7 @@ const GroceryDetails = ()=>{
         <Offer>
         
         <OfferImageContent>
-                    <OfferImage src={Grocery0} style={{width: 200, marginTop: 50}}/>
+                    <OfferImage src={Grocery0} style={{width: screen ? '100%': 200, marginTop: 50}}/>
         </OfferImageContent>
         <h2 style={{marginTop: -10, color: 'gray'}}>Green</h2>
         <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
@@ -240,7 +247,7 @@ const GroceryDetails = ()=>{
         <Offer>
         
         <OfferImageContent>
-                    <OfferImage src={Grocery0} style={{width: 200, marginTop: 50}}/>
+                    <OfferImage src={Grocery0} style={{width: screen ? '100%': 200, marginTop: 50}}/>
         </OfferImageContent>
         <h2 style={{marginTop: -10, color: 'gray'}}>Green</h2>
         <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
@@ -263,31 +270,7 @@ const GroceryDetails = ()=>{
         
         </Offer>
 
-        <Offer>
         
-        <OfferImageContent>
-                    <OfferImage src={Grocery0} style={{width: 200, marginTop: 50}}/>
-        </OfferImageContent>
-        <h2 style={{marginTop: -10, color: 'gray'}}>Green</h2>
-        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
-        <div style={{display: 'flex', marginTop: -35, color: 'rgba(255,200,1,255)'}}>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>(4.0)</h3>
-        </div>
-        <h4 style={{marginTop: -15}}>By Nestle</h4>
-        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: -25}}>
-            <h3 style={{color: '#00FF85'}}>KES 345 <span style={{color: 'gray', fontSize: 14, textDecoration: 'line-through' }}>KES 678</span></h3>
-            <OfferButton>
-            &#128722; Add
-            </OfferButton>
-        </div>
-       
-        
-        </Offer>
                </OfferContent>
 
                <h2>Meat & Fish</h2>
@@ -503,35 +486,7 @@ const GroceryDetails = ()=>{
         
         </Offer>
 
-        <Offer>
-                <Badge>
-                    -14%
-                </Badge>
         
-        <OfferImageContent>
-                    <OfferImage src={Meat}/>
-                    <OfferImage src={Meat2} style={{marginLeft: 0}}/>
-        </OfferImageContent>
-        <h2 style={{marginTop: -10, color: 'gray'}}>Meat</h2>
-        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
-        <div style={{display: 'flex', marginTop: -35, color: 'rgba(255,200,1,255)'}}>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>(4.0)</h3>
-        </div>
-        <h4 style={{marginTop: -15}}>By Nestle</h4>
-        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: -25}}>
-            <h3 style={{color: '#00FF85'}}>KES 345 <span style={{color: 'gray', fontSize: 14, textDecoration: 'line-through' }}>KES 678</span></h3>
-            <OfferButton>
-            &#128722; Add
-            </OfferButton>
-        </div>
-       
-        
-        </Offer>
                </OfferContent>
 
                <h2>Beverage</h2>
@@ -747,35 +702,7 @@ const GroceryDetails = ()=>{
         
         </Offer>
 
-        <Offer>
-                <Badge>
-                    -14%
-                </Badge>
         
-        <OfferImageContent>
-                    <OfferImage src={Meat}/>
-                    <OfferImage src={Meat2} style={{marginLeft: 0}}/>
-        </OfferImageContent>
-        <h2 style={{marginTop: -10, color: 'gray'}}>Meat</h2>
-        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
-        <div style={{display: 'flex', marginTop: -35, color: 'rgba(255,200,1,255)'}}>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>(4.0)</h3>
-        </div>
-        <h4 style={{marginTop: -15}}>By Nestle</h4>
-        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: -25}}>
-            <h3 style={{color: '#00FF85'}}>KES 345 <span style={{color: 'gray', fontSize: 14, textDecoration: 'line-through' }}>KES 678</span></h3>
-            <OfferButton>
-            &#128722; Add
-            </OfferButton>
-        </div>
-       
-        
-        </Offer>
                </OfferContent>
 
                <h2>Milk & Yoghurt</h2>
@@ -991,69 +918,13 @@ const GroceryDetails = ()=>{
         
         </Offer>
 
-        <Offer>
-                <Badge>
-                    -14%
-                </Badge>
         
-        <OfferImageContent>
-                    <OfferImage src={Meat}/>
-                    <OfferImage src={Meat2} style={{marginLeft: 0}}/>
-        </OfferImageContent>
-        <h2 style={{marginTop: -10, color: 'gray'}}>Meat</h2>
-        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
-        <div style={{display: 'flex', marginTop: -35, color: 'rgba(255,200,1,255)'}}>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>(4.0)</h3>
-        </div>
-        <h4 style={{marginTop: -15}}>By Nestle</h4>
-        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: -25}}>
-            <h3 style={{color: '#00FF85'}}>KES 345 <span style={{color: 'gray', fontSize: 14, textDecoration: 'line-through' }}>KES 678</span></h3>
-            <OfferButton>
-            &#128722; Add
-            </OfferButton>
-        </div>
-       
-        
-        </Offer>
                </OfferContent>
 
                <h2>Snacks</h2>
 
                <OfferContent>
-               <Offer>
-                <Badge>
-                    -14%
-                </Badge>
-        
-        <OfferImageContent>
-                    <OfferImage src={Meat}/>
-                    <OfferImage src={Meat2} style={{marginLeft: 0}}/>
-        </OfferImageContent>
-        <h2 style={{marginTop: -10, color: 'gray'}}>Meat</h2>
-        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
-        <div style={{display: 'flex', marginTop: -35, color: 'rgba(255,200,1,255)'}}>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>(4.0)</h3>
-        </div>
-        <h4 style={{marginTop: -15}}>By Nestle</h4>
-        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: -25}}>
-            <h3 style={{color: '#00FF85'}}>KES 345 <span style={{color: 'gray', fontSize: 14, textDecoration: 'line-through' }}>KES 678</span></h3>
-            <OfferButton>
-            &#128722; Add
-            </OfferButton>
-        </div>
-       
-        
-        </Offer>
+               
 
         <Offer>
                 <Badge>
@@ -1479,35 +1350,7 @@ const GroceryDetails = ()=>{
         
         </Offer>
 
-        <Offer>
-                <Badge>
-                    -14%
-                </Badge>
         
-        <OfferImageContent>
-                    <OfferImage src={Meat}/>
-                    <OfferImage src={Meat2} style={{marginLeft: 0}}/>
-        </OfferImageContent>
-        <h2 style={{marginTop: -10, color: 'gray'}}>Meat</h2>
-        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
-        <div style={{display: 'flex', marginTop: -35, color: 'rgba(255,200,1,255)'}}>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>&#10025;</h3>
-        <h3>(4.0)</h3>
-        </div>
-        <h4 style={{marginTop: -15}}>By Nestle</h4>
-        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: -25}}>
-            <h3 style={{color: '#00FF85'}}>KES 345 <span style={{color: 'gray', fontSize: 14, textDecoration: 'line-through' }}>KES 678</span></h3>
-            <OfferButton>
-            &#128722; Add
-            </OfferButton>
-        </div>
-       
-        
-        </Offer>
                </OfferContent>
             </Content>
         </Wrapper>

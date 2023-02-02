@@ -25,6 +25,16 @@ width: 30%;
     width: 100%;
     margin-bottom: 30px;
 }
+
+@media only screen and (max-width: 1023px) and (min-width: 516px){
+      
+      padding: 10px;
+}
+
+@media only screen and (max-width: 1030px) and (min-width: 1024px){
+      
+   padding: 10px;
+}
 `;
 
 export const Details = styled.div`

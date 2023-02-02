@@ -68,14 +68,61 @@ export const Offer =styled.div`
     box-sizing: border-box;
     background-color: white;
     margin-right: 5%;
+
+    @media screen and (max-width: 515px){
+   
+   width: 45%;
+   height: fit-content;
+  
+
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 516px){
+       width: 28%;
+       height: fit-content;
+}
+
+@media only screen and (max-width: 1030px) and (min-width: 1024px){
+       width: 28%;
+       height: fit-content;
+}
 `;
 export const OfferImageContent = styled.div`
 width: 100%;
 height: 250px;
+
+@media screen and (max-width: 515px){
+   
+   width: 100%;
+   height: 210px;
+ 
+
+}
 `;
 
 export const OfferImage = styled.img`
     margin-left: 10%;
+
+    @media screen and (max-width: 515px){
+   
+   margin-left: 0%;
+
+   width: 100%;
+  
+
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 516px){
+       width: 100%;
+       margin-left: 0%;
+       
+}
+
+@media only screen and (max-width: 1030px) and (min-width: 1024px){
+       width: 100%;
+       margin-left: 0%;
+       
+}
 `;
 
 export const Badge = styled.div`
@@ -105,6 +152,15 @@ export const OfferButton = styled.button`
     background-color: #A6FFD4;
     border-radius: 20px;
 
+    @media screen and (max-width: 515px){
+        font-size: 12px;
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 516px){
+       font-size: 16px;
+       
+}
+
 `;
 
 export const OfferContent = styled.div`
@@ -114,10 +170,20 @@ flex-wrap: wrap;
 
 @media screen and (max-width: 515px){
    
-   padding-left: 20%;
-   
-   
-   
-   
+   padding-left: 2%;
+   justify-content: space-between;
+
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 516px){
+       padding-left: 0%;
+       justify-content: space-between;
+       
+}
+
+@media only screen and (max-width: 1030px) and (min-width: 1024px){
+       padding-left: 0%;
+       justify-content: space-between;
+       
 }
 `;

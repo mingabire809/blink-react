@@ -27,7 +27,26 @@ margin-right: auto;
    width: 90%;
    margin-top: 20px;
    
+   .line{
+    width: 35%;
+   }
    
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 516px){
+       .line{
+        width: 70%;
+        
+       }
+       
+}
+
+@media only screen and (max-width: 1030px) and (min-width: 1024px){
+      
+    .line{
+        width: 80%;
+        
+       }
 }
 `;
 
@@ -69,6 +88,16 @@ padding-left: 14%
    
 }
 
+@media only screen and (max-width: 1023px) and (min-width: 516px){
+       padding-left: 8%;
+       
+}
+
+@media only screen and (max-width: 1030px) and (min-width: 1024px){
+      
+    padding-left: 2%;
+}
+
 `;
 
 export const Gas = styled.div`
@@ -83,11 +112,25 @@ cursor: pointer;
    
    width: 100%;
    margin-top: 20px;
-   
-   
-   
-   
+ 
 }
+@media only screen and (max-width: 1023px) and (min-width: 516px){
+       .angle{
+        width: 100%;
+        margin-bottom: 50px;
+       }
+       
+}
+
+@media only screen and (max-width: 1030px) and (min-width: 1024px){
+      
+    .angle{
+        width: 100%;
+        margin-bottom: 20px;
+       }
+}
+
+
 
 `;
 

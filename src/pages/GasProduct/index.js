@@ -15,6 +15,21 @@ const GasProduct=()=>{
     useEffect(()=> {
         window.matchMedia("(max-width: 515px)").addEventListener('change', e =>setScreen(e.screen));
     }, []);
+
+    const [screen2, setScreen2] = useState(
+        window.matchMedia("(max-width: 516px)").matches
+    )
+    useEffect(()=> {
+        window.matchMedia("(max-width: 516px)").addEventListener('change', e =>setScreen2(e.screen));
+    }, []);
+
+    const [screen3, setScreen3] = useState(
+        window.matchMedia("(max-width: 1024px)").matches
+    )
+    useEffect(()=> {
+        window.matchMedia("(max-width: 1024px)").addEventListener('change', e =>setScreen3(e.screen));
+    }, []);
+
     return(
         <Wrapper>
                 <Content>
@@ -22,7 +37,7 @@ const GasProduct=()=>{
                         <Category style={{
                             backgroundColor: product ? '#FFC903': 'white'
                         }} onClick={()=>setProduct(true)}>Products</Category>
-                        <img src={Line} alt="line" style={{width: screen && '35%'}}/>
+                        <img src={Line} alt="line" className="line" />
                         <Category style={{
                             backgroundColor: !product ? '#FFC903': 'transparent'
                         }} onClick={()=>setProduct(false)}>Accessories</Category>
@@ -34,7 +49,7 @@ const GasProduct=()=>{
                             marginLeft: '40%',
                            
                         }}/>
-                        <img src={Angle} alt="angle"/>
+                        <img src={Angle} alt="angle" className="angle"/>
                         <img src={Gas2} alt="gas" style={{
                             marginLeft: '40%',
                             marginTop: -50
@@ -53,7 +68,7 @@ const GasProduct=()=>{
                             marginLeft: '40%',
                            
                         }}/>
-                        <img src={Angle} alt="angle"/>
+                        <img src={Angle} alt="angle" className="angle"/>
                         <img src={Gas2} alt="gas" style={{
                             marginLeft: '40%',
                             marginTop: -50
