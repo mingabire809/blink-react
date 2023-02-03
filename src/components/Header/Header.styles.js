@@ -13,9 +13,9 @@ font-family: "Montserrat";
 
 @media screen and (max-width: 515px){
     width: 100%;
-    background-color: transparent;
-    height: 135px;
-    background-image: url(${MobileHeader});
+    background-color: rgba(255,200,1,255);
+    height: 100px;
+   // background-image: url(${MobileHeader});
     background-size: cover;
     
 }
@@ -67,5 +67,16 @@ border-radius: 100%;
 position: absolute;
 margin-top: -23px;
 margin-left: 9px;
+`;
+
+export const UnderHeader = styled.div`
+    width: 100%;
+    background-color: rgba(255,200,1,255);
+    height: 60px;
+    border-radius: 0 0 50% 50%/ 0 0 75% 75%;
+    @media screen and (min-width: 515px){
+    display: none;
+    
+}
 `;
 

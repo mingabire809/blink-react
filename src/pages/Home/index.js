@@ -142,32 +142,37 @@ const Home = () =>{
     
 
     const data = ()=>{
+        try {
+            fetch(`${url}/getCategories.php`,{
+                method: 'POST',
+               
+               
+                headers:{
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    
+                }
+            }).then(res => {
+                if (res.ok){
+                    return res.json()
+                    
+                } else {
+                    throw res.json()
+                }
+            }).then(json=>{
+                console.log(json)
+            }).catch(err=>{
+                console.log(err)
+            })
+        } catch (error) {
+            console.log(error)
+        }
         
-        fetch(`${url}/getCategories.php`,{
-            method: 'POST',
-           
-           
-            headers:{
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                
-            }
-        }).then(res => {
-            if (res.ok){
-                return res.json()
-                
-            } else {
-                throw res.json()
-            }
-        }).then(json=>{
-            console.log(json)
-        }).catch(err=>{
-            console.log(err)
-        })
+        
     }
 
     useEffect(()=>{
-        data()
+        data();
     },[])
 
     
